@@ -40,6 +40,7 @@ clean:  ## Remove built TTF file and temporary files
 	$(MAKE) $(_make_args) clean
 	-rm $(noto_emoji_dir)/$(name).tmpl.ttx.tmpl
 	-rm $(dist_dir)/$(name).ttf
+	-rm $(png_dir)/*.png
 
 debug:  ## Print all SVG and PNG file paths
 	@echo "SVGs:"

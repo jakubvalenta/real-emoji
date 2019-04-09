@@ -1,6 +1,8 @@
 # Emoji
 
-## Pre-requisites
+## Installation
+
+Install the following dependencies using your package manager:
 
 - make
 - librsvg
@@ -8,11 +10,13 @@
 - optipng
 - pngquant
 
-## Build
+## Build the TTF file
 
 ```
 make
 ```
+
+If everything succeeds, you will find the TTF file in the `dist/` directory.
 
 ## Contributing
 

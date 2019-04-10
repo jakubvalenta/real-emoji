@@ -18,6 +18,18 @@ make
 
 If everything succeeds, you will find the TTF file in the `dist/` directory.
 
+## Preview the font
+
+Dependencies:
+
+- webify (available in [Arch Linux User Repository](https://aur.archlinux.org/packages/webify/))
+- woff2
+- jekyll
+
+```
+make serve
+```
+
 ## Contributing
 
 __Feel free to remix this piece of software.__

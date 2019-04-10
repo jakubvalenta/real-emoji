@@ -11,7 +11,6 @@ exclude:
   - Makefile
   - NOTICE
   - README.md
-  - dist/
   - node_modules/
   - noto-emoji/
   - package-lock.json

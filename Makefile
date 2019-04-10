@@ -17,7 +17,7 @@ _png_names = $(_svg_names:%.svg=%.png)
 _all_svgs = $(addprefix $(svg_dir)/,$(_svg_names))
 _all_pngs = $(addprefix $(png_dir)/,$(_png_names))
 
-.PHONY: all debug clean
+.PHONY: all clean debug serve help
 
 all: $(dist_dir)/$(name).ttf  ## Build the TTF file
 
@@ -39,7 +39,7 @@ clean:  ## Remove built TTF file and temporary files
 	cd $(noto_emoji_dir) && \
 	$(MAKE) $(_make_args) clean
 	-rm $(noto_emoji_dir)/$(name).tmpl.ttx.tmpl
-	-rm $(dist_dir)/$(name).ttf
+	-rm $(dist_dir)/$(name).*
 	-rm $(png_dir)/*.png
 
 debug:  ## Print all SVG and PNG file paths
@@ -47,6 +47,15 @@ debug:  ## Print all SVG and PNG file paths
 	@echo $(_all_svgs)
 	@echo "PNGs:"
 	@echo $(_all_pngs)
+
+$(dist_dir)/$(name).eot $(dist_dir)/$(name).woff $(dist_dir)/$(name).svg: $(dist_dir)/$(name).ttf
+	webify $(dist_dir)/$(name).ttf
+
+$(dist_dir)/$(name).woff2: $(dist_dir)/$(name).ttf
+	woff2_compress $(dist_dir)/$(name).ttf
+
+serve: $(dist_dir)/$(name).eot $(dist_dir)/$(name).woff $(dist_dir)/$(name).woff2 $(dist_dir)/$(name).svg $(dist_dir)/$(name).ttf  ## Serve preview HTML
+	jekyll serve
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-16s\033[0m %s\n", $$1, $$2}'

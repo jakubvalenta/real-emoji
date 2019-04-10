@@ -1,0 +1,26 @@
+title: Emojis for grown-ups
+description: 30 new emojis that go beyond the hugs and kisses of the standard emoji set.
+baseurl: "/emoji"
+url: ""
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - LICENSE-GRAPHICS
+  - Makefile
+  - NOTICE
+  - README.md
+  - dist/
+  - node_modules/
+  - noto-emoji/
+  - package-lock.json
+  - package.json
+  - png/
+  - svg/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+fontname: Emoji

@@ -1,0 +1,134 @@
+[
+    {
+        "name": "test 1",
+        "sequence": ["1F9C0"]
+    },
+    {
+        "name": "test 2",
+        "sequence": ["1F9C1", "1F9C2"]
+    },
+    {
+        "name": "weed",
+        "sequence": ["1F6AC", "1F33F"]
+    },
+    {
+        "name": "ecstasy",
+        "sequence": ["1F48A", "0065"]
+    },
+    {
+        "name": "cocaine",
+        "sequence": []
+    },
+    {
+        "name": "LSD",
+        "sequence": []
+    },
+    {
+        "name": "sex",
+        "sequence": ["1F449", "1F44C"]
+    },
+    {
+        "name": "penis",
+        "sequence": ["1F346"]
+    },
+    {
+        "name": "vagina",
+        "sequence": []
+    },
+    {
+        "name": "masturbation",
+        "sequence": []
+    },
+    {
+        "name": "menstruation",
+        "sequence": ["1FA78"]
+    },
+    {
+        "name": "abortion",
+        "sequence": ["1F3E5"]
+    },
+    {
+        "name": "accident",
+        "sequence": []
+    },
+    {
+        "name": "error",
+        "sequence": []
+    },
+    {
+        "name": "poverty",
+        "sequence": []
+    },
+    {
+        "name": "polution",
+        "sequence": []
+    },
+    {
+        "name": "climate change",
+        "sequence": []
+    },
+    {
+        "name": "protest",
+        "sequence": []
+    },
+    {
+        "name": "non-material art",
+        "sequence": []
+    },
+    {
+        "name": "crime",
+        "sequence": ["1F9B9"]
+    },
+    {
+        "name": "racism",
+        "sequence": []
+    },
+    {
+        "name": "immoral behavior",
+        "sequence": []
+    },
+    {
+        "name": "mental illness",
+        "sequence": []
+    },
+    {
+        "name": "suicide",
+        "sequence": ["1FA92"]
+    },
+    {
+        "name": "embarrassment",
+        "sequence": ["1F573"]
+    },
+    {
+        "name": "ugliness",
+        "sequence": []
+    },
+    {
+        "name": "boredom",
+        "sequence": ["1F610", "1F611", "1F612"]
+    },
+    {
+        "name": "condescending behavior",
+        "sequence": []
+    },
+    {
+        "name": "stupidity",
+        "sequence": []
+    },
+    {
+        "name": "laziness",
+        "sequence": []
+    },
+    {
+        "name": "violence",
+        "sequence": []
+    },
+    {
+        "name": "sexual harassment",
+        "sequence": []
+    },
+    {
+        "name": "punishment",
+        "sequence": []
+    }
+]

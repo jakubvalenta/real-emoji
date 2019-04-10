@@ -1,0 +1,45 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>{{ site.title }}</title>
+        <meta name="description" content="{{ site.description }}" />
+        <style>
+         body {
+             max-width: 60em;
+             padding: 2em;
+             margin: auto;
+         }
+         .emoji {
+             font-family: '{{ site.fontname }}';
+             font-size: 200%;
+         }
+        </style>
+    </head>
+    <body>
+        <h1>{{ site.title }}</h1>
+        <p>{{ site.description }}</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Emoji</th>
+                    <th>Sequence</th>
+                    <th>Code</th>
+                </tr>
+            </thead>
+            {% for emoji in site.data.emoji %}
+            <tr>
+                <td>{{ emoji.name }}</td>
+                <td class="emoji">{% for code in emoji.sequence %}&#x{{ code }};{% if forloop.last == false %}&#x200D;{% endif %}{% endfor %}</td>
+                <td class="emoji">{% for code in emoji.sequence %}&#x{{ code }};{% if forloop.last == false %}&#x200B;{% endif %}{% endfor %}</td>
+                <td>
+                    <code>{% for code in emoji.sequence %}U+{{ code }}{% if forloop.last == false %} + {% endif %}{% endfor %}</code>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

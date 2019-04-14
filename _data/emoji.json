@@ -13,39 +13,71 @@
     },
     {
         "name": "ecstasy",
-        "sequence": ["1F48A", "0065"]
+        "sequence": ["1F48A", "1F930"]
     },
     {
         "name": "cocaine",
-        "sequence": []
+        "sequence": ["1F32C", "2744"]
     },
     {
         "name": "LSD",
-        "sequence": []
+        "sequence": ["1F9EA", "1F308"]
     },
     {
         "name": "sex",
         "sequence": ["1F449", "1F44C"]
     },
     {
-        "name": "penis",
-        "sequence": ["1F346"]
-    },
-    {
-        "name": "vagina",
-        "sequence": []
+        "name": "safe sex",
+        "sequence": ["1F449", "1F44C", "26D1"]
     },
     {
         "name": "masturbation",
-        "sequence": []
+        "sequence": ["1F44B", "1F4A6"]
+    },
+    {
+        "name": "penis",
+        "sequence": ["1F346", "1F468"]
+    },
+    {
+        "name": "vagina",
+        "sequence": ["1F351", "1F469"]
+    },
+    {
+        "name": "panties",
+        "sequence": ["1FA72", "1F469"]
     },
     {
         "name": "menstruation",
-        "sequence": ["1FA78"]
+        "sequence": ["1FA78", "1F469"]
     },
     {
         "name": "abortion",
-        "sequence": ["1F3E5"]
+        "sequence": ["1FA78", "1F930"]
+    },
+    {
+        "name": "poverty",
+        "sequence": []
+    },
+    {
+        "name": "protest",
+        "sequence": []
+    },
+    {
+        "name": "polution",
+        "sequence": ["1F30D", "1F3ED"]
+    },
+    {
+        "name": "climate change",
+        "sequence": ["1F30D", "1F525"]
+    },
+    {
+        "name": "mental illness",
+        "sequence": []
+    },
+    {
+        "name": "suicide",
+        "sequence": ["1F9D1", "1FA92"]
     },
     {
         "name": "accident",
@@ -56,59 +88,11 @@
         "sequence": []
     },
     {
-        "name": "poverty",
-        "sequence": []
-    },
-    {
-        "name": "polution",
-        "sequence": []
-    },
-    {
-        "name": "climate change",
-        "sequence": []
-    },
-    {
-        "name": "protest",
-        "sequence": []
-    },
-    {
-        "name": "non-material art",
-        "sequence": []
-    },
-    {
-        "name": "crime",
-        "sequence": ["1F9B9"]
-    },
-    {
-        "name": "racism",
-        "sequence": []
-    },
-    {
-        "name": "immoral behavior",
-        "sequence": []
-    },
-    {
-        "name": "mental illness",
-        "sequence": []
-    },
-    {
-        "name": "suicide",
-        "sequence": ["1FA92"]
-    },
-    {
-        "name": "embarrassment",
-        "sequence": ["1F573"]
-    },
-    {
-        "name": "ugliness",
-        "sequence": []
-    },
-    {
         "name": "boredom",
         "sequence": ["1F610", "1F611", "1F612"]
     },
     {
-        "name": "condescending behavior",
+        "name": "laziness",
         "sequence": []
     },
     {
@@ -116,11 +100,27 @@
         "sequence": []
     },
     {
-        "name": "laziness",
+        "name": "condescending behavior",
         "sequence": []
     },
     {
+        "name": "embarrassment",
+        "sequence": ["1F9D1", "1F573"]
+    },
+    {
+        "name": "ugliness",
+        "sequence": []
+    },
+    {
+        "name": "crime",
+        "sequence": ["1F9B9"]
+    },
+    {
         "name": "violence",
+        "sequence": []
+    },
+    {
+        "name": "racism",
         "sequence": []
     },
     {
@@ -130,5 +130,13 @@
     {
         "name": "punishment",
         "sequence": []
+    },
+    {
+        "name": "immoral behavior",
+        "sequence": []
+    },
+    {
+        "name": "non-material art",
+        "sequence": ["1F9E0"]
     }
 ]

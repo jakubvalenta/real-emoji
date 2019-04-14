@@ -17,6 +17,7 @@ exclude:
   - package.json
   - png/
   - svg/
+  - twemoji/
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/

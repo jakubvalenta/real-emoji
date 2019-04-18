@@ -23,7 +23,7 @@
             {% for emoji in site.data.emoji %}
             <tr>
                 <td>{{ emoji.name }}</td>
-                <td class="emoji">{% for code in emoji.sequence %}&#x{{ code }};{% if forloop.last == false %}&#x200D;{% endif %}{% endfor %}</td>
+                <td class="emoji">{% for code in emoji.sequence %}&#x{{ code }};{% endfor  %}</td>
                 <td class="emoji">{% for code in emoji.sequence %}&#x{{ code }};{% if forloop.last == false %}&#x200B;{% endif %}{% endfor %}</td>
                 <td>
                     <code>{% for code in emoji.sequence %}U+{{ code }}{% if forloop.last == false %} + {% endif %}{% endfor %}</code>

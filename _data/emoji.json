@@ -1,13 +1,5 @@
 [
     {
-        "name": "test 1",
-        "sequence": ["1F9C0"]
-    },
-    {
-        "name": "test 2",
-        "sequence": ["1F9C1", "1F9C2"]
-    },
-    {
         "name": "weed",
         "sequence": ["1F6AC", "1F33F"]
     },

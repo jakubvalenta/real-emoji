@@ -21,6 +21,17 @@ body {
 }
 
 .emoji {
+  display: inline-block;
+  padding: 0.5em;
+}
+.emoji-emoji {
   font-family: $fontname;
   font-size: 200%;
+  margin: 0;
+}
+.emoji-details {
+  display: none;
+}
+.emoji--standard {
+  filter: grayscale(1);
 }

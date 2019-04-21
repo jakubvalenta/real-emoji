@@ -21,8 +21,10 @@ body {
 }
 
 .emoji {
-  display: inline-block;
-  padding: 0.5em;
+  display: block;
+  float: left;
+  padding: 0.25em;
+  border: 0.25em solid black;
 }
 .emoji-emoji {
   font-family: $fontname;
@@ -34,4 +36,6 @@ body {
 }
 .emoji--standard {
   filter: grayscale(1);
+  border-color: #f9f9f9;
+  background: #f9f9f9;
 }

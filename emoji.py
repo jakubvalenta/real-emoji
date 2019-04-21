@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import csv
 import dataclasses
@@ -10,6 +10,7 @@ from typing import Dict, List
 
 @dataclasses.dataclass
 class Emoji:
+    path: str
     name: str
     sequence: List[str]
 
@@ -18,7 +19,7 @@ class Emoji:
         name = names.get(path)
         m = re.search(r'^emoji_u(?P<sequence>.*)\.png$', path)
         sequence = [x.upper() for x in m.group('sequence').split('_')]
-        return cls(name=name, sequence=sequence)
+        return cls(path=path, name=name, sequence=sequence)
 
 
 def main(

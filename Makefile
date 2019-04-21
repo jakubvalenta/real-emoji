@@ -61,7 +61,10 @@ $(dist_dir)/$(name).eot $(dist_dir)/$(name).woff $(dist_dir)/$(name).svg: $(dist
 $(dist_dir)/$(name).woff2: $(dist_dir)/$(name).ttf
 	woff2_compress "$<"
 
-serve: $(dist_dir)/$(name).eot $(dist_dir)/$(name).woff $(dist_dir)/$(name).woff2 $(dist_dir)/$(name).svg $(dist_dir)/$(name).ttf  ## Serve preview HTML
+_data/emoji.json: $(noto_emoji_dir)/build/quantized_pngs
+	python3 emoji.py
+
+serve: _data/emoji.json $(dist_dir)/$(name).eot $(dist_dir)/$(name).woff $(dist_dir)/$(name).woff2 $(dist_dir)/$(name).svg $(dist_dir)/$(name).ttf  ## Serve preview HTML
 	jekyll serve
 
 help:

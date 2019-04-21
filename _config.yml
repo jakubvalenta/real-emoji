@@ -4,6 +4,8 @@ baseurl: "/emoji"
 url: ""
 markdown: kramdown
 exclude:
+  - emoji.csv
+  - emoji.py
   - Gemfile
   - Gemfile.lock
   - LICENSE

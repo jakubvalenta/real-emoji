@@ -26,7 +26,7 @@ body {
   padding: 0.25em;
   border: 0.25em solid black;
 }
-.emoji-emoji {
+.emoji-string {
   font-family: $fontname;
   font-size: 200%;
   margin: 0;
@@ -38,4 +38,8 @@ body {
   filter: grayscale(1);
   border-color: #f9f9f9;
   background: #f9f9f9;
+
+  &:hover {
+    filter: none;
+  }
 }

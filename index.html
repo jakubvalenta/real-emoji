@@ -12,12 +12,12 @@
         <h1>{{ site.title }}</h1>
         <p>{{ site.description }}</p>
         {% for emoji in site.data.emoji %}
-        <div class="emoji{% if emoji.name == null %} emoji--standard{% endif %}">
-            <p class="emoji-emoji">{{ emoji.html }}</p>
+        <div class="emoji{% if emoji.standard %} emoji--standard{% endif %}">
+            <p class="emoji-string" title="{{ emoji.title }}">{{ emoji.string }}</p>
             <div class="emoji-details">
                 <p class="emoji-name">{{ emoji.name }}</p>
-                <p class="emoji-emoji">{{ emoji.sequence_html }}</p>
-                <p class="emoji-sequence"><code>{{ emoji.sequence_text }}</code></p>
+                <p class="emoji-sequence">{{ emoji.sequence }}</p>
+                <p class="emoji-code"><code>{{ emoji.code }}</code></p>
             </div>
         </div>
         {% endfor %}

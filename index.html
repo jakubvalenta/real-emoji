@@ -11,15 +11,10 @@
     <body>
         <h1>{{ site.title }}</h1>
         <p>{{ site.description }}</p>
-        {% for emoji in site.data.emoji %}
-        <div class="emoji{% if emoji.standard %} emoji--standard{% endif %}">
-            <p class="emoji-string" title="{{ emoji.title }}">{{ emoji.string }}</p>
-            <div class="emoji-details">
-                <p class="emoji-name">{{ emoji.name }}</p>
-                <p class="emoji-sequence">{{ emoji.sequence }}</p>
-                <p class="emoji-code"><code>{{ emoji.code }}</code></p>
-            </div>
-        </div>
-        {% endfor %}
+        <h2 class="sr-only">New emojis</h2>
+        {% assign custom_emojis = site.data.emoji | where: "custom", true %}
+        {% include emojis.html emojis=custom_emojis %}
+        <h2>Complete emoji set</h2>
+        {% include emojis.html emojis=site.data.emoji %}
     </body>
 </html>

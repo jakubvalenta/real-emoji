@@ -1,0 +1,15 @@
+<ul class="emojis">
+    {% for emoji in include.emojis %}
+    <li class="emoji{% if emoji.custom %} emoji--custom{% endif %}">
+        <h3 class="emoji-string">{{ emoji.string }}</h3>
+        <dl class="emoji-details">
+            <dt>name</dt>
+            <dd class="emoji-name">{{ emoji.name }}</dd>
+            <dt>sequence</dt>
+            <dd class="emoji-sequence">{{ emoji.sequence }}</dd>
+            <dt>code</dt>
+            <dd class="emoji-code"><code>{{ emoji.code }}</code></dd>
+        </dl>
+    </li>
+    {% endfor %}
+</ul>

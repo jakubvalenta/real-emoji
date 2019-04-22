@@ -1,0 +1,6 @@
+{
+  "name": "emoji",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

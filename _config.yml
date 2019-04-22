@@ -13,7 +13,6 @@ exclude:
   - Makefile
   - NOTICE
   - README.md
-  - node_modules/
   - noto-emoji/
   - package-lock.json
   - package.json

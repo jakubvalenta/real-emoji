@@ -1,6 +1,12 @@
 ---
 ---
+@import '../node_modules/normalize.css/normalize.css';
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic&subset=latin,latin-ext);
+@import '_mixins';
+
 $fontname: '{{ site.fontname }}';
+$color_black: #333;
+$color_white: #fff;
 
 @font-face {
   font-family: '#{$fontname}';
@@ -15,16 +21,72 @@ $fontname: '{{ site.fontname }}';
 }
 
 body {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 10/12*100%;
+  line-height: 1.3;
   max-width: 60em;
   padding: 2em;
   margin: auto;
 }
 
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+p,
+ul {
+  margin-bottom: 1em;
+}
+code {
+  font-size: 90%;
+}
+
+.emojis {
+  list-style: none;
+
+  @extend %clearfix;
+}
 .emoji {
   display: block;
+  position: relative;
   float: left;
-  padding: 0.25em;
-  border: 0.25em solid black;
+  margin: 0.5em;
+  filter: grayscale(1);
 }
 .emoji-string {
   font-family: $fontname;
@@ -33,13 +95,40 @@ body {
 }
 .emoji-details {
   display: none;
-}
-.emoji--standard {
-  filter: grayscale(1);
-  border-color: #f9f9f9;
-  background: #f9f9f9;
+  padding: 0.5em;
 
-  &:hover {
-    filter: none;
+  dt {
+    float: left;
+    clear: left;
+    padding-right: 1em;
+    font-weight: bold;
+  }
+  dd {
+    float: left;
+  }
+}
+.emoji--custom,
+.emoji:hover {
+  filter: none;
+}
+
+.emoji-details {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: $color_white;
+  z-index: 1;
+  min-width: 20em;
+}
+
+.emoji-name,
+.emoji-sequence,
+.emoji-code {
+  white-space: nowrap;
+}
+
+.emoji:hover {
+  .emoji-details {
+    display: block;
   }
 }

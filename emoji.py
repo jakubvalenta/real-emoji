@@ -42,12 +42,8 @@ class Emoji:
         return ' + '.join(f'U+{hex_str.upper()}' for hex_str in hex_strs)
 
     @property
-    def title(self) -> str:
-        return ' | '.join(x for x in [self.name, self.code] if x)
-
-    @property
-    def standard(self) -> bool:
-        return not self.custom_name
+    def custom(self) -> bool:
+        return bool(self.custom_name)
 
     @classmethod
     def from_path(cls, path: str, custom_names: Dict[str, str]) -> 'Emoji':
@@ -65,8 +61,7 @@ class Emoji:
             'string': self.string,
             'sequence': self.sequence,
             'code': self.code,
-            'title': self.title,
-            'standard': self.standard,
+            'custom': self.custom,
         }
 
 

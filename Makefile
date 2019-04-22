@@ -61,7 +61,7 @@ $(dist_dir)/$(name).eot $(dist_dir)/$(name).woff $(dist_dir)/$(name).svg: $(dist
 $(dist_dir)/$(name).woff2: $(dist_dir)/$(name).ttf
 	woff2_compress "$<"
 
-_data/emoji.json: emoji.csv $(dist_dir)/$(name).ttf
+_data/emoji.json: emoji.py emoji.csv $(dist_dir)/$(name).ttf
 	python3 emoji.py
 
 serve: _data/emoji.json $(dist_dir)/$(name).eot $(dist_dir)/$(name).woff $(dist_dir)/$(name).woff2 $(dist_dir)/$(name).svg $(dist_dir)/$(name).ttf  ## Serve preview HTML

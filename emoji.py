@@ -6,7 +6,7 @@ import os
 import re
 import unicodedata
 from dataclasses import dataclass
-from typing import Dict, List, Optional
+from typing import Dict, Optional
 
 
 @dataclass
@@ -39,7 +39,7 @@ class Emoji:
     @property
     def code(self) -> str:
         hex_strs = (hex(ord(char))[2:] for char in self.string)
-        return ' + '.join(f'U+{hex_str.upper()}' for hex_str in hex_strs)
+        return ' '.join(f'U+{hex_str.upper()}' for hex_str in hex_strs)
 
     @property
     def custom(self) -> bool:

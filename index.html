@@ -13,7 +13,7 @@
         <p>{{ site.description }}</p>
         <h2 class="sr-only">New emojis</h2>
         {% assign custom_emojis = site.data.emoji | where: "custom", true %}
-        {% include emojis.html emojis=custom_emojis %}
+        {% include emojis.html emojis=custom_emojis large=true %}
         <h2>Complete emoji set</h2>
         {% include emojis.html emojis=site.data.emoji %}
     </body>

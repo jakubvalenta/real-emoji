@@ -91,7 +91,10 @@ code {
 .emoji-string {
   font-family: $fontname;
   font-size: 200%;
-  margin: 0;
+
+  .emojis--large & {
+    font-size: 400%;
+  }
 }
 .emoji-details {
   display: none;

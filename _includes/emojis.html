@@ -1,4 +1,4 @@
-<ul class="emojis">
+<ul class="emojis{% if include.large %} emojis--large{% endif %}">
     {% for emoji in include.emojis %}
     <li class="emoji{% if emoji.custom %} emoji--custom{% endif %}">
         <h3 class="emoji-string">{{ emoji.string }}</h3>

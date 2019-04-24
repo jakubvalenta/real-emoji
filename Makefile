@@ -21,9 +21,9 @@ _twemoji_src_pngs = $(wildcard $(twemoji_png_dir)/*.png)
 _twemoji_pngs = $(addprefix $(png_dir)/emoji_u,$(subst -,_,$(notdir $(_twemoji_src_pngs))))
 _all_pngs = $(_custom_pngs) $(_twemoji_pngs)
 
-.PHONY: all clean debug serve help
+.PHONY: font clean debug serve help
 
-all: $(dist_dir)/$(name).ttf  ## Build the TTF file
+font: $(dist_dir)/$(name).ttf  ## Build the TTF file
 
 $(dist_dir)/$(name).ttf: $(noto_emoji_dir)/$(name).tmpl.ttx.tmpl $(_all_pngs) | $(dist_dir)
 	cd $(noto_emoji_dir) && \

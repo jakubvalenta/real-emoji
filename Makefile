@@ -42,12 +42,18 @@ $(_twemoji_pngs): $(_twemoji_src_pngs) | $(png_dir)
 $(_custom_pngs): $(png_dir)/%.png: $(svg_dir)/%.svg | $(png_dir)
 	rsvg-convert -w 72 -h 72 "$<" > "$@"
 
-clean:  ## Remove built TTF file and temporary files
+clean:  ## Remove the built TTF file, TTX file and PNG files
 	cd $(noto_emoji_dir) && \
 	$(MAKE) $(_make_args) clean
 	-rm $(noto_emoji_dir)/$(name).tmpl.ttx.tmpl
 	-rm $(dist_dir)/$(name).*
 	-rm $(png_dir)/*.png
+
+clean-font-only:  ## Remove the built TTF file and TTX file
+	-rm $(noto_emoji_dir)/$(name).ttf
+	-rm $(noto_emoji_dir)/$(name).tmpl.ttf
+	-rm $(noto_emoji_dir)/$(name).tmpl.ttx
+	-rm $(dist_dir)/$(name).*
 
 debug:  ## Print all PNG file paths
 	@echo "Custom PNGs:"

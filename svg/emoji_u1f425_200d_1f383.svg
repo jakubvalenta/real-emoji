@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497476"
-     inkscape:cx="321.63225"
-     inkscape:cy="299.60401"
+     inkscape:cx="448.5703"
+     inkscape:cy="380.44879"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -98,12 +98,12 @@
        cy="351.78571"
        r="69.369049"
        id="circle1580"
-       style="fill:#000000;stroke-width:46.24603271" />
+       style="fill:#292f33;stroke-width:46.24603271;fill-opacity:1" />
     <circle
        cx="680.51715"
        cy="351.78571"
        r="41.669998"
        id="circle1582"
-       style="fill:#000000;stroke-width:27.78000069" />
+       style="fill:#292f33;stroke-width:27.78000069;fill-opacity:1" />
   </g>
 </svg>

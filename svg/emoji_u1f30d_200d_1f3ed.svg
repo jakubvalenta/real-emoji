@@ -10,7 +10,7 @@
    viewBox="0 0 1000 1000"
    version="1.1"
    id="svg976"
-   sodipodi:docname="emoji_u1f30d_1f3ed.svg"
+   sodipodi:docname="emoji_u1f30d_200d_1f3ed.svg"
    inkscape:version="0.92.4 5da689c313, 2019-01-14"
    width="1000mm"
    height="1000mm">
@@ -49,8 +49,8 @@
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-midpoints="true"
      inkscape:zoom="0.13334978"
-     inkscape:cx="2526.7845"
-     inkscape:cy="1523.4111"
+     inkscape:cx="1145.8223"
+     inkscape:cy="1607.1432"
      inkscape:window-x="0"
      inkscape:window-y="20"
      inkscape:window-maximized="1"
@@ -90,7 +90,7 @@
      id="path1207" />
   <path
      inkscape:connector-curvature="0"
-     style="fill:#333333;stroke-width:28.5714798"
+     style="fill:#292f33;stroke-width:28.5714798;fill-opacity:1"
      d="m 777.79577,108.56766 c -22.93637,0 -44.99805,3.40158 -65.82869,9.71881 C 687.34612,49.457896 620.51315,0 541.66127,0 457.11848,0 386.31161,56.886309 366.71202,133.57198 c -20.93862,-15.48528 -46.73664,-25 -75.02915,-25 -69.0575,0 -124.9946,54.68555 -124.9946,122.14267 0,16.37187 3.45557,31.94355 9.39483,46.22911 -11.91092,-3.22881 -24.2322,-5.51812 -37.20141,-5.51812 C 62.167941,271.42564 0,332.16816 0,407.14008 0,482.11092 62.167941,542.85452 138.88169,542.85452 H 777.77418 C 900.51186,542.85452 1000,445.65353 1000,325.71055 1000,205.76757 900.51186,108.56766 777.79577,108.56766 Z"
      id="path2104" />
 </svg>

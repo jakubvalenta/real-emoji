@@ -88,7 +88,7 @@ font](https://twitter.github.io/twemoji/) by Twitter licensed under
 __Feel free to remix this project.__
 
 The code is licensed under the [Apache License, Version
-2.0.](http://www.apache.org/licenses/LICENSE-2.0).
+2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 The graphics (emoji SVG images) are licensed under the [Creative Commons
 Attribution-ShareAlike 4.0 International

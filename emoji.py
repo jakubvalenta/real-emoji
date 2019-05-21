@@ -3,17 +3,18 @@
 import csv
 import json
 import os
+import os.path
 import re
 import unicodedata
 from typing import Any, Optional, Sequence
 
 
 class Emoji:
-    path: str
+    path_base: str
     string: str
 
-    def __init__(self, path: str, string: str):
-        self.path = path
+    def __init__(self, path_base: str, string: str):
+        self.path_base = path_base
         self.string = string
 
     @property
@@ -41,16 +42,16 @@ class Emoji:
         return ' '.join(f'U+{hex_str.upper()}' for hex_str in hex_strs)
 
     @classmethod
-    def from_path(cls, path: str) -> 'Emoji':
-        m = re.search(r'^emoji_u(?P<sequence>.*)\.png$', path)
+    def from_path_base(cls, path_base: str) -> 'Emoji':
+        m = re.search(r'^emoji_u(?P<sequence>.*)$', path_base)
         string = ''.join(
             chr(int(hex_str, 16)) for hex_str in m.group('sequence').split('_')
         )
-        return cls(path=path, string=string)
+        return cls(path_base=path_base, string=string)
 
     def to_dict(self) -> dict:
         return {
-            'path': self.path,
+            'path_base': self.path_base,
             'name': self.name,
             'string': self.string,
             'sequence': self.sequence,
@@ -61,13 +62,13 @@ class Emoji:
 class CustomEmoji(Emoji):
     _name: str
     category: str
-    display_name: str
+    _display_name: str
     description: str
     related: Sequence[str]
 
     def __init__(
         self,
-        path: str,
+        path_base: str,
         string: str,
         name: str,
         display_name: str,
@@ -75,10 +76,10 @@ class CustomEmoji(Emoji):
         category: str,
         related: Sequence[str],
     ):
-        super().__init__(path, string)
+        super().__init__(path_base, string)
         self._name = name
         self.category = category
-        self.display_name = display_name
+        self._display_name = display_name
         self.description = description
         self.related = related
 
@@ -86,10 +87,14 @@ class CustomEmoji(Emoji):
     def name(self) -> str:
         return self._name
 
+    @property
+    def display_name(self) -> str:
+        return self._display_name or self._name.lower()
+
     @classmethod
-    def from_path(cls, path: str, **kwargs):
-        emoji = Emoji.from_path(path)
-        return cls(path=emoji.path, string=emoji.string, **kwargs)
+    def from_path_base(cls, path_base: str, **kwargs):
+        emoji = Emoji.from_path_base(path_base)
+        return cls(path_base=emoji.path_base, string=emoji.string, **kwargs)
 
     def to_dict(self) -> dict:
         return dict(
@@ -114,8 +119,8 @@ def main(
 ):
     with open(csv_file) as f:
         custom_emojis = [
-            CustomEmoji.from_path(
-                path=row['path_base'] + '.png',
+            CustomEmoji.from_path_base(
+                path_base=row['path_base'],
                 name=row['name'],
                 display_name=row['display_name'],
                 description=row['description'],
@@ -125,7 +130,8 @@ def main(
             for row in csv.DictReader(f)
         ]
     all_emojis = [
-        Emoji.from_path(path).to_dict() for path in sorted(os.listdir(png_dir))
+        Emoji.from_path_base(os.path.splitext(path)[0]).to_dict()
+        for path in sorted(os.listdir(png_dir))
     ]
     write_json(custom_emojis, custom_emojis_output_file)
     write_json(all_emojis, all_emojis_output_file)

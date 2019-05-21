@@ -12,34 +12,22 @@
         <h1>{{ site.title }}</h1>
         <p>{{ site.description }}</p>
         <h2 class="sr-only">New emojis</h2>
-        <ul class="emojis emojis--large">
+        <ul class="emojis emojis--custom">
             {% for emoji in site.data.custom_emojis %}
-            <li class="emoji emoji--custom">
-                <h3 class="emoji-string">{{ emoji.string }}</h3>
-                <dl class="emoji-details">
-                    <dt>name</dt>
-                    <dd class="emoji-name">{{ emoji.name }}</dd>
-                    <dt>sequence</dt>
-                    <dd class="emoji-sequence">{{ emoji.sequence }}</dd>
-                    <dt>code</dt>
-                    <dd class="emoji-code"><code>{{ emoji.code }}</code></dd>
-                </dl>
+            <li class="emoji">
+                <img src="svg/{{ emoji.path_base }}.svg" alt="{{ emoji.display_name }} emoji"
+                     class="emoji-img">
+                <p class="emoji-sequence"><span class="emoji-string" title="{{ emoji.code }} {{ emoji.name }}">{{ emoji.sequence }}</span></p>
+                <h3>{{ emoji.display_name }}</h3>
+                <p class="emoji-description">{{ emoji.description }}</p>
             </li>
             {% endfor %}
         </ul>
         <h2>Complete emoji set</h2>
-        <ul class="emojis{% if include.large %} emojis--large{% endif %}">
+        <ul class="emojis emojis--all">
             {% for emoji in site.data.all_emojis %}
             <li class="emoji{% if emoji.custom %} emoji--custom{% endif %}">
-                <h3 class="emoji-string">{{ emoji.string }}</h3>
-                <dl class="emoji-details">
-                    <dt>name</dt>
-                    <dd class="emoji-name">{{ emoji.name }}</dd>
-                    <dt>sequence</dt>
-                    <dd class="emoji-sequence">{{ emoji.sequence }}</dd>
-                    <dt>code</dt>
-                    <dd class="emoji-code"><code>{{ emoji.code }}</code></dd>
-                </dl>
+                <h3 class="emoji-string" title="{{ emoji.code }} {{ emoji.name }}">{{ emoji.string }}</h3>
             </li>
             {% endfor %}
         </ul>

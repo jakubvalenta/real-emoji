@@ -85,20 +85,25 @@ code {
   display: block;
   position: relative;
   float: left;
-  margin: 0.5em;
-  filter: grayscale(1);
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+.emoji-description,
+.emoji-sequence {
+  min-height: 1.3em;
+  margin: 0;
+}
+.emoji-sequence {
+  float: right;
 }
 .emoji-string {
   font-family: $fontname;
-  font-size: 200%;
-
-  .emojis--large & {
-    font-size: 400%;
-  }
+}
+.emoji-img {
+  width: 100%;
 }
 .emoji-details {
-  display: none;
-  padding: 0.5em;
+  @extend %clearfix;
 
   dt {
     float: left;
@@ -110,28 +115,27 @@ code {
     float: left;
   }
 }
-.emoji--custom,
-.emoji:hover {
-  filter: none;
+
+.emojis--custom {
+  .emoji {
+    width: 25%;
+    padding: 1em;
+
+    &:nth-child(4n+1) {
+      clear: left;
+    }
+  }
 }
 
-.emoji-details {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background: $color_white;
-  z-index: 1;
-  min-width: 20em;
-}
+.emojis--all {
+  .emoji {
+    filter: grayscale(1);
 
-.emoji-name,
-.emoji-sequence,
-.emoji-code {
-  white-space: nowrap;
-}
-
-.emoji:hover {
-  .emoji-details {
-    display: block;
+    &:hover {
+      filter: none;
+    }
+  }
+  .emoji-string {
+    font-size: 200%;
   }
 }

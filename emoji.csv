@@ -1,7 +1,7 @@
 path_base,name,display_name,description,category,related
 emoji_u1f6ac_200d_1f33f,MARIHUANA LEAF,weed,,drugs,1f341
 emoji_u1f48a_200d_1f483,MDMA PILL,ecstasy,,drugs,1f48a
-emoji_u1f4b3_200d_1f4b3,COCAINE,,or another drug in white powder form ,drugs
+emoji_u1f4b3_200d_1f4b3,WHITE DRUG POWDER,cocaine, ,drugs
 emoji_u1f445_200d_1f308,LSD,,,drugs
 emoji_u1f6b6_200d_1f3fa,BEER BOTTLE,,,drugs,1f37a
 emoji_u1f468_200d_1f346,NAKED MAN,,,body,1f346
@@ -28,5 +28,5 @@ emoji_u1f64f_200d_1f35e,BEGGAR,poverty,,society
 emoji_u1f600_200d_1f600_200d_1f4e2,PEOPLE PROTESTING,protest,"demonstration, revolution",society
 emoji_u1f574_200d_1f4b0,PERSON WITH MONEY BAGS,crime,"theft, corruption",society,1f9b9
 emoji_u1f468_200d_1f6ab,PERSON IN JAIL,punishment,,society
-emoji_u26ea_200d_1f44e,CHASTENING PRIEST,immoral behavior,especially heresy and blasphemy,society,1f608
-emoji_u1f468_200d_1f91a,HAND PETTING ADULT PERSON,condescending behavior,patronizing behavior,society
+emoji_u26ea_200d_1f44e,CHASTENING PRIEST,immoral behavior,"heresy, blasphemy",society,1f608
+emoji_u1f468_200d_1f91a,HAND PETTING ADULT PERSON,condescending behavior,patronizing,society

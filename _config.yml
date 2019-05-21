@@ -17,7 +17,6 @@ exclude:
   - package-lock.json
   - package.json
   - png/
-  - svg/
   - twemoji/
   - vendor/bundle/
   - vendor/cache/

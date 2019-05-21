@@ -5,20 +5,19 @@ import json
 import os
 import re
 import unicodedata
-from dataclasses import dataclass
-from typing import Dict, Optional
+from typing import Any, Optional, Sequence
 
 
-@dataclass
 class Emoji:
     path: str
     string: str
-    custom_name: Optional[str]
+
+    def __init__(self, path: str, string: str):
+        self.path = path
+        self.string = string
 
     @property
     def name(self) -> Optional[str]:
-        if self.custom_name:
-            return self.custom_name
         if not self.char:
             return None
         try:
@@ -41,18 +40,13 @@ class Emoji:
         hex_strs = (hex(ord(char))[2:] for char in self.string)
         return ' '.join(f'U+{hex_str.upper()}' for hex_str in hex_strs)
 
-    @property
-    def custom(self) -> bool:
-        return bool(self.custom_name)
-
     @classmethod
-    def from_path(cls, path: str, custom_names: Dict[str, str]) -> 'Emoji':
-        custom_name = custom_names.get(path)
+    def from_path(cls, path: str) -> 'Emoji':
         m = re.search(r'^emoji_u(?P<sequence>.*)\.png$', path)
         string = ''.join(
             chr(int(hex_str, 16)) for hex_str in m.group('sequence').split('_')
         )
-        return cls(path=path, string=string, custom_name=custom_name)
+        return cls(path=path, string=string)
 
     def to_dict(self) -> dict:
         return {
@@ -61,24 +55,80 @@ class Emoji:
             'string': self.string,
             'sequence': self.sequence,
             'code': self.code,
-            'custom': self.custom,
         }
+
+
+class CustomEmoji(Emoji):
+    _name: str
+    category: str
+    display_name: str
+    description: str
+    related: Sequence[str]
+
+    def __init__(
+        self,
+        path: str,
+        string: str,
+        name: str,
+        display_name: str,
+        description: str,
+        category: str,
+        related: Sequence[str],
+    ):
+        super().__init__(path, string)
+        self._name = name
+        self.category = category
+        self.display_name = display_name
+        self.description = description
+        self.related = related
+
+    @property
+    def name(self) -> str:
+        return self._name
+
+    @classmethod
+    def from_path(cls, path: str, **kwargs):
+        emoji = Emoji.from_path(path)
+        return cls(path=emoji.path, string=emoji.string, **kwargs)
+
+    def to_dict(self) -> dict:
+        return dict(
+            **super().to_dict(),
+            category=self.category,
+            display_name=self.display_name,
+            description=self.description,
+            related=self.related,
+        )
+
+
+def write_json(data: Any, path: str):
+    with open(path, 'w') as f:
+        json.dump(data, f, ensure_ascii=False, sort_keys=True, indent=2)
 
 
 def main(
     png_dir: str = './noto-emoji/build/quantized_pngs/',
     csv_file: str = './emoji.csv',
-    output_file: str = './_data/emoji.json',
+    all_emojis_output_file: str = './_data/all_emojis.json',
+    custom_emojis_output_file: str = './_data/custom_emojis.json',
 ):
     with open(csv_file) as f:
-        reader = csv.reader(f)
-        custom_names = {path + '.png': name for path, name in reader}
-    emojis = [
-        Emoji.from_path(path, custom_names).to_dict()
-        for path in sorted(os.listdir(png_dir))
+        custom_emojis = [
+            CustomEmoji.from_path(
+                path=row['path_base'] + '.png',
+                name=row['name'],
+                display_name=row['display_name'],
+                description=row['description'],
+                category=row['category'],
+                related=(row['related'] or '').split(','),
+            ).to_dict()
+            for row in csv.DictReader(f)
+        ]
+    all_emojis = [
+        Emoji.from_path(path).to_dict() for path in sorted(os.listdir(png_dir))
     ]
-    with open(output_file, 'w') as f:
-        json.dump(emojis, f, ensure_ascii=False, sort_keys=True, indent=2)
+    write_json(custom_emojis, custom_emojis_output_file)
+    write_json(all_emojis, all_emojis_output_file)
 
 
 if __name__ == '__main__':

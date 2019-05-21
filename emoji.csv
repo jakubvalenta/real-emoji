@@ -1,31 +1,32 @@
-emoji_u1f6ac_200d_1f33f,WEED
-emoji_u1f48a_200d_1f483,ECSTASY
-emoji_u1f4b3_200d_1f4b3,COCAINE
-emoji_u1f445_200d_1f308,LSD
-emoji_u1f468_200d_1f346,NAKED MAN
-emoji_u1f469_200d_1f351,NAKED WOMAN
-emoji_u1f449_200d_1f44c,SEX
-emoji_u1f346_200d_1f6e1,SAFE SEX
-emoji_u1f44b_200d_1f4a6,MASTURBATION
-emoji_u1fa72_200d_1f7ea,PANTIES
-emoji_u1fa72_200d_1fa78,MENSTRUATION
-emoji_u1f930_200d_1f6ab,ABORTION
-emoji_u1f64f_200d_1f35e,POVERTY
-emoji_u1f600_200d_1f600_200d_1f4e2,PROTEST
-emoji_u1f30d_200d_1f3ed,POLUTION
-emoji_u1f30d_200d_1f525,CLIMATE CHANGE
-emoji_u1f61f_200d_1f5a4,MENTAL ILLNESS
-emoji_u1f468_200d_1f52a,SUICIDE
-emoji_u1f4f1_200d_1f494,ACCIDENT
-emoji_u1f6b6_200d_1f9f1,FAILURE
-emoji_u1f971_200d_1f971,LAZY PERSON
-emoji_u1f926_200d_1f926,STUPID FACE
-emoji_u1f468_200d_1f91a,CONDESCENDING BEHAVIOR
-emoji_u1f425_200d_1f383,UGLINESS
-emoji_u1f574_200d_1f4b0,CRIME
-emoji_u1f91c_200d_1f610,VIOLENCE
-emoji_u1f468_1f3fc_200d_1f6ab,RACISM
-emoji_u1f486_200d_1f631,SEXUAL HARASSMENT
-emoji_u1f468_200d_1f6ab,PUNISHMENT
-emoji_u26ea_200d_1f44e,IMMORAL BEHAVIOR
-emoji_u1f6b6_200d_1f3fa,BEER BOTTLE
+path_base,name,display_name,description,category,related
+emoji_u1f6ac_200d_1f33f,MARIHUANA LEAF,weed,,drugs,1f341
+emoji_u1f48a_200d_1f483,MDMA PILL,ecstasy,,drugs,1f48a
+emoji_u1f4b3_200d_1f4b3,COCAINE,,or another drug in white powder form ,drugs
+emoji_u1f445_200d_1f308,LSD,,,drugs
+emoji_u1f6b6_200d_1f3fa,BEER BOTTLE,,,drugs,1f37a
+emoji_u1f468_200d_1f346,NAKED MAN,,,body,1f346
+emoji_u1f469_200d_1f351,NAKED WOMAN,,,body
+emoji_u1f449_200d_1f44c,SEX,,,body,"1f6cf,1f449,1f44c"
+emoji_u1f346_200d_1f6e1,CONDOM,,safe sex,body,2614
+emoji_u1f44b_200d_1f4a6,WOMAN MASTURBATING,masturbation,,body
+emoji_u1fa72_200d_1f7ea,PANTIES,,a female version of U+1FA72 BRIEFS ,body,1fa72
+emoji_u1fa72_200d_1fa78,MENSTRUATION,,an explicit version U+1FA78 DROP OF BLOOD,body,"1fa78,1fa72"
+emoji_u1f930_200d_1f6ab,ABORTION,,,body
+emoji_u1f30d_200d_1f525,GLOBE SHOWING EUROPE-AFRICA IN FLAMES,climate change,ecological crisis,ecology
+emoji_u1f30d_200d_1f3ed,SMOKING FACTORY,polution,,ecology
+emoji_u1f61f_200d_1f5a4,BROKEN HEAD,mental illness,depression,mental health
+emoji_u1f468_200d_1f52a,SUICIDE,,,mental health
+emoji_u1f926_200d_1f926,STUPID FACE,stupidity,,life
+emoji_u1f425_200d_1f383,UGLY BIRD,ugliness,,life
+emoji_u1f971_200d_1f971,LAZY PERSON,laziness,,life
+emoji_u1f4f1_200d_1f494,BROKEN PHONE,accident,,life
+emoji_u1f6b6_200d_1f9f1,FALLING PERSON ,failure,"error, mistake",life
+emoji_u1f91c_200d_1f610,FIST PUNCHING FACE,violence,,violence
+emoji_u1f468_1f3fc_200d_1f6ab,RACISM,,,violence
+emoji_u1f486_200d_1f631,SEXUAL HARASSMENT,,,violence
+emoji_u1f64f_200d_1f35e,BEGGAR,poverty,,society
+emoji_u1f600_200d_1f600_200d_1f4e2,PEOPLE PROTESTING,protest,"demonstration, revolution",society
+emoji_u1f574_200d_1f4b0,PERSON WITH MONEY BAGS,crime,"theft, corruption",society,1f9b9
+emoji_u1f468_200d_1f6ab,PERSON IN JAIL,punishment,,society
+emoji_u26ea_200d_1f44e,CHASTENING PRIEST,immoral behavior,especially heresy and blasphemy,society,1f608
+emoji_u1f468_200d_1f91a,HAND PETTING ADULT PERSON,condescending behavior,patronizing behavior,society

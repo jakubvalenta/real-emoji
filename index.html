@@ -12,9 +12,36 @@
         <h1>{{ site.title }}</h1>
         <p>{{ site.description }}</p>
         <h2 class="sr-only">New emojis</h2>
-        {% assign custom_emojis = site.data.emoji | where: "custom", true %}
-        {% include emojis.html emojis=custom_emojis large=true %}
+        <ul class="emojis emojis--large">
+            {% for emoji in site.data.custom_emojis %}
+            <li class="emoji emoji--custom">
+                <h3 class="emoji-string">{{ emoji.string }}</h3>
+                <dl class="emoji-details">
+                    <dt>name</dt>
+                    <dd class="emoji-name">{{ emoji.name }}</dd>
+                    <dt>sequence</dt>
+                    <dd class="emoji-sequence">{{ emoji.sequence }}</dd>
+                    <dt>code</dt>
+                    <dd class="emoji-code"><code>{{ emoji.code }}</code></dd>
+                </dl>
+            </li>
+            {% endfor %}
+        </ul>
         <h2>Complete emoji set</h2>
-        {% include emojis.html emojis=site.data.emoji %}
+        <ul class="emojis{% if include.large %} emojis--large{% endif %}">
+            {% for emoji in site.data.all_emojis %}
+            <li class="emoji{% if emoji.custom %} emoji--custom{% endif %}">
+                <h3 class="emoji-string">{{ emoji.string }}</h3>
+                <dl class="emoji-details">
+                    <dt>name</dt>
+                    <dd class="emoji-name">{{ emoji.name }}</dd>
+                    <dt>sequence</dt>
+                    <dd class="emoji-sequence">{{ emoji.sequence }}</dd>
+                    <dt>code</dt>
+                    <dd class="emoji-code"><code>{{ emoji.code }}</code></dd>
+                </dl>
+            </li>
+            {% endfor %}
+        </ul>
     </body>
 </html>

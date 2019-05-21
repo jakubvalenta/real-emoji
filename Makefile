@@ -70,10 +70,10 @@ $(dist_dir)/$(name).woff2: $(dist_dir)/$(name).ttf
 node_modules/normalize.css/normalize.css:
 	npm install
 
-_data/emoji.json: emoji.py emoji.csv $(dist_dir)/$(name).ttf
+_data/all_emojis.json _data/custom_emojis.json: emoji.py emoji.csv $(dist_dir)/$(name).ttf
 	python3 emoji.py
 
-serve: _data/emoji.json $(dist_dir)/$(name).eot $(dist_dir)/$(name).woff $(dist_dir)/$(name).woff2 $(dist_dir)/$(name).svg $(dist_dir)/$(name).ttf node_modules/normalize.css/normalize.css  ## Serve preview HTML
+serve: _data/all_emojis.json _data/custom_emojis.json $(dist_dir)/$(name).eot $(dist_dir)/$(name).woff $(dist_dir)/$(name).woff2 $(dist_dir)/$(name).svg $(dist_dir)/$(name).ttf node_modules/normalize.css/normalize.css  ## Serve preview HTML
 	jekyll serve
 
 help:

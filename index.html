@@ -1,35 +1,60 @@
 ---
 ---
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>{{ site.title }}</title>
-        <meta name="description" content="{{ site.description }}" />
-        <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
-    </head>
-    <body>
-        <h1>{{ site.title }}</h1>
-        <p>{{ site.description }}</p>
-        <h2 class="sr-only">New emojis</h2>
-        <ul class="emojis emojis--custom">
-            {% for emoji in site.data.custom_emojis %}
-            <li class="emoji">
-                <img src="svg/{{ emoji.path_base }}.svg" alt="{{ emoji.display_name }} emoji"
-                     class="emoji-img">
-                <p class="emoji-sequence"><span class="emoji-string" title="{{ emoji.code }} {{ emoji.name }}">{{ emoji.sequence }}</span></p>
-                <h3>{{ emoji.display_name }}</h3>
-                <p class="emoji-description">{{ emoji.description }}</p>
-            </li>
-            {% endfor %}
-        </ul>
-        <h2>Complete emoji set</h2>
-        <ul class="emojis emojis--all">
-            {% for emoji in site.data.all_emojis %}
-            <li class="emoji{% if emoji.custom %} emoji--custom{% endif %}">
-                <h3 class="emoji-string" title="{{ emoji.code }} {{ emoji.name }}">{{ emoji.string }}</h3>
-            </li>
-            {% endfor %}
-        </ul>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+    <h2 class="sr-only">New emojis</h2>
+    <ul class="emojis emojis--custom">
+      {% for emoji in site.data.custom_emojis %}
+      <li class="emoji">
+        <img
+          src="svg/{{ emoji.path_base }}.svg"
+          alt="{{ emoji.display_name }} emoji"
+          class="emoji-img"
+        />
+        <h3>{{ emoji.display_name }}</h3>
+        <p class="emoji-description">{{ emoji.description }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    <h2>Try it out</h2>
+    <p>
+      You can write the new emojis by writing specific sequences of the standard
+      emojis.
+    </p>
+    <ul class="emojis emojis--sequences">
+      {% for emoji in site.data.custom_emojis %}
+      <li class="emoji">
+        <span class="emoji-string" title="{{ emoji.display_name }} emoji"
+          >{{ emoji.string }}</span
+        >
+        =
+        <span class="emoji-string">{{ emoji.sequence }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    <h2>All emojis</h2>
+    <p>
+      This is the full list of all standard emojis plus the new ones for
+      reference.
+    </p>
+    <ul class="emojis emojis--all">
+      {% for emoji in site.data.all_emojis %}
+      <li class="emoji{% if emoji.custom %} emoji--custom{% endif %}">
+        <h3 class="emoji-string" title="{{ emoji.code }} {{ emoji.name }}">
+          {{ emoji.string }}
+        </h3>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
 </html>

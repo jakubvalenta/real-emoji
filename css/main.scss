@@ -88,13 +88,9 @@ code {
   padding: 0.5em;
   box-sizing: border-box;
 }
-.emoji-description,
-.emoji-sequence {
+.emoji-description {
   min-height: 1.3em;
   margin: 0;
-}
-.emoji-sequence {
-  float: right;
 }
 .emoji-string {
   font-family: $fontname;
@@ -116,6 +112,19 @@ code {
   }
 }
 
+.emojis--sequences {
+  .emoji {
+    width: 20%;
+
+    &:nth-child(5n+1) {
+      clear: left;
+    }
+  }
+  .emoji-string {
+    font-size: 200%;
+  }
+}
+
 .emojis--custom {
   .emoji {
     width: 25%;
@@ -128,13 +137,6 @@ code {
 }
 
 .emojis--all {
-  .emoji {
-    filter: grayscale(1);
-
-    &:hover {
-      filter: none;
-    }
-  }
   .emoji-string {
     font-size: 200%;
   }

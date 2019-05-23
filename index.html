@@ -29,7 +29,7 @@ layout: default
   </div>
 </div>
 
-<div class="bg-gray">
+<div class="bg-green">
   <div class="container">
     <h2 id="try-it-out" class="sr-only">Try it out</h2>
     <div class="emoji-panel">
@@ -46,8 +46,7 @@ You can type the new emojis by typing specific sequences of the standard emojis.
 Write something here using the picker on the right...
 {% for emoji in site.data.custom_emojis %}
 {{ emoji.string }} is {{ emoji.sequence | join: " and " }}
-{% endfor %}
-    </textarea
+{%- endfor %}</textarea
         >
       </div>
       <div id="js-emoji-panel-picker" class="emoji-panel__picker"></div>
@@ -120,70 +119,77 @@ Write something here using the picker on the right...
       <!-- TODO: Cite some source -->
     </li>
   </ul>
+</div>
 
-  <h2 id="making-these-emojis-official">Making these emojis official</h2>
+<div class="bg-white">
+  <div class="container">
+    <h2 id="making-these-emojis-official">Making these emojis official</h2>
 
-  <p>
-    Emojis are approved by the Unicode consorcium. There are rigorous rules to
-    that.
-  </p>
+    <p>
+      Emojis are approved by the Unicode consorcium. There are rigorous rules to
+      that.
+    </p>
 
-  <p>A table of submissions:</p>
+    <p>A table of submissions:</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th>emoji</th>
-        <th>status</th>
-        <th>reason</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>foo</td>
-        <td>bar</td>
-        <td>baz</td>
-      </tr>
-    </tbody>
-  </table>
+    <table>
+      <thead>
+        <tr>
+          <th>emoji</th>
+          <th>status</th>
+          <th>reason</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>foo</td>
+          <td>bar</td>
+          <td>baz</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-  <h2 id="contributing-and-contact">Contributing and contact</h2>
+<div class="container">
+  <h2 id="contributing-and-contact">Contributing</h2>
 
   <p>
     If you have a suggestion for more emojis to add or if you have technical
     problems with the emojis, please file a
     <a href="https://www.github.com/jakubvalenta/emoji/issues">GitHub issue</a>.
   </p>
-
-  <p>
-    You can also write me an email (for whatever reason) to
-    <script>
-      document.write(
-        '<n uers="rzbwv@znvyobk.bet" ery="absbyybj">rzbwv@znvyobk.bet</n>'.replace(
-          /[a-zA-Z]/g,
-          function(c) {
-            return String.fromCharCode(
-              (c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26
-            );
-          }
-        )
-      );
-    </script>
-  </p>
 </div>
 
-<div class="container">
-  <p>Copyright 2019 <a href="https://www.jakubvalenta.cz/">Jakub Valenta</a></p>
-  <p>
-    The code is licensed under the
-    <a href="http://www.apache.org/licenses/LICENSE-2.0"
-      >Apache License, Version 2.0</a
-    >.
-  </p>
-  <p>
-    The graphics (emoji SVG images) are licensed under the
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/"
-      >Creative Commons Attribution-ShareAlike 4.0 International License</a
-    >.
-  </p>
+<div class="bg-white">
+  <div class="container">
+    <p>
+      Copyright 2019
+      <a href="https://www.jakubvalenta.cz/">Jakub Valenta</a>
+      &lt;<script>
+        document.write(
+          '<n uers="rzbwv@znvyobk.bet" ery="absbyybj">rzbwv@znvyobk.bet</n>'.replace(
+            /[a-zA-Z]/g,
+            function(c) {
+              return String.fromCharCode(
+                (c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26
+              );
+            }
+          )
+        );</script
+      >&gt;
+    </p>
+    <p>
+      The code is licensed under the
+      <a href="http://www.apache.org/licenses/LICENSE-2.0"
+        >Apache License, Version 2.0</a
+      >.
+    </p>
+    <p>
+      The graphics (emoji SVG images) are licensed under the
+      <a href="http://creativecommons.org/licenses/by-sa/4.0/"
+        >Creative Commons Attribution-ShareAlike 4.0 International License</a
+      >.
+    </p>
+  </div>
 </div>

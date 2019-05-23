@@ -74,7 +74,7 @@ _data/all_emojis.json _data/custom_emojis.json: emoji.py emoji.csv $(dist_dir)/$
 	python3 emoji.py
 
 serve: _data/all_emojis.json _data/custom_emojis.json $(dist_dir)/$(name).eot $(dist_dir)/$(name).woff $(dist_dir)/$(name).woff2 $(dist_dir)/$(name).svg $(dist_dir)/$(name).ttf node_modules/normalize.css/normalize.css  ## Serve preview HTML
-	jekyll serve
+	jekyll serve --livereload
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-16s\033[0m %s\n", $$1, $$2}'

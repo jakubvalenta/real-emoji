@@ -89,7 +89,7 @@ class CustomEmoji(Emoji):
 
     @property
     def display_name(self) -> str:
-        return self._display_name or self._name.lower()
+        return self._display_name or self._name
 
     @classmethod
     def from_path_base(cls, path_base: str, **kwargs):

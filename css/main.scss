@@ -26,7 +26,7 @@ $fontname: '{{ site.fontname }}';
 }
 
 body {
-  font-family: 'Roboto', 'Arial', sans-serif;
+  font-family: 'Source Sans Pro', 'Arial', sans-serif;
   font-size: 10/12*100%;
   line-height: 1.3;
   background: #f0f0f0;
@@ -143,19 +143,6 @@ code {
 }
 .emoji-img {
   width: 100%;
-}
-.emoji-details {
-  @extend %clearfix;
-
-  dt {
-    float: left;
-    clear: left;
-    padding-right: 1em;
-    font-weight: bold;
-  }
-  dd {
-    float: left;
-  }
 }
 
 .emojis--sequences {

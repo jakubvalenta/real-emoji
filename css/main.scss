@@ -37,13 +37,21 @@ body {
 .container {
   max-width: 60em;
   margin: auto;
-  padding: 2em 0;
+  padding-top: 2em;
+  padding-bottom: 2.5em;
 }
 .bg-white {
   background: $color_white;
 }
 .bg-green {
   background: linear-gradient(#5fd38d, #2ca05a);
+  padding: 3em 0;
+
+  .container {
+    background: $color_gray_light;
+    padding: 2.5em;
+    border-radius: 0.25rem;
+  }
 }
 
 .sr-only {
@@ -115,11 +123,6 @@ body {
   list-style: none;
 
   @extend %clearfix;
-
-  h3 {
-    font-size: 100%;
-    margin: 0;
-  }
 }
 .emoji {
   display: block;
@@ -128,10 +131,25 @@ body {
   margin: 0;
   padding: 0.5em;
   box-sizing: border-box;
-}
-.emoji-description {
-  min-height: 1.3em;
-  margin: 0;
+
+  h3,
+  p {
+    margin: 0;
+    visibility: hidden;
+  }
+  h3 {
+    font-size: 100%;
+  }
+  p {
+    min-height: 1.3em;
+  }
+
+  &:hover {
+    h3,
+    p {
+      visibility: visible;
+    }
+  }
 }
 .emoji-string {
   font-family: $fontname;
@@ -169,9 +187,7 @@ body {
 
 .emoji-panel {
   display: flex;
-  margin: 1em 0;
-  background: $color_gray_light;
-  padding: 2.5em;
+  padding-top: 1em;
 }
 .emoji-panel__form {
   min-width: 30em;

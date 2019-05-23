@@ -22,7 +22,7 @@ layout: default
           class="emoji-img"
         />
         <h3>{{ emoji.display_name }}</h3>
-        <p class="emoji-description">{{ emoji.description }}</p>
+        <p>{{ emoji.description }}</p>
       </li>
       {% endfor %}
     </ul>
@@ -31,7 +31,13 @@ layout: default
 
 <div class="bg-green">
   <div class="container">
-    <h2 id="try-it-out" class="sr-only">Try it out</h2>
+    <div class="rich">
+      <h2 id="try-it-out">Try it out</h2>
+      <p>
+        You can type the new emojis by typing specific sequences of the standard
+        emojis.
+      </p>
+    </div>
     <div class="emoji-panel">
       <div class="emoji-panel__form">
         <textarea
@@ -39,10 +45,6 @@ layout: default
           id="js-emoji-panel-input"
           class="emoji-panel__input emoji-string"
         >
-TRY IT OUT
-
-You can type the new emojis by typing specific sequences of the standard emojis.
-
 Write something here using the picker on the right...
 {% for emoji in site.data.custom_emojis %}
 {{ emoji.string }} is {{ emoji.sequence | join: " and " }}

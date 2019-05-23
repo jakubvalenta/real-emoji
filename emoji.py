@@ -6,7 +6,7 @@ import os
 import os.path
 import re
 import unicodedata
-from typing import Any, Optional, Sequence
+from typing import Any, List, Optional, Sequence
 
 
 class Emoji:
@@ -33,8 +33,8 @@ class Emoji:
         return None
 
     @property
-    def sequence(self) -> str:
-        return '\N{ZERO WIDTH SPACE}'.join(self.string)
+    def sequence(self) -> List[str]:
+        return list(self.string)
 
     @property
     def code(self) -> str:

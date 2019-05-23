@@ -10,7 +10,7 @@ layout: default
   </p>
 </div>
 
-<div class="white">
+<div class="bg-white">
   <div class="container">
     <h2 class="sr-only">New emojis</h2>
     <ul class="emojis emojis--custom">
@@ -29,32 +29,81 @@ layout: default
   </div>
 </div>
 
-<div class="container">
-  <h2 id="try-it-out">Try it out</h2>
-  <p>
-    You can write the new emojis by writing specific sequences of the standard
-    emojis.
-  </p>
-  <ul class="emojis emojis--sequences">
-    {% for emoji in site.data.custom_emojis %}
-    <li class="emoji">
-      <span class="emoji-string" title="{{ emoji.display_name }} emoji"
-        >{{ emoji.string }}</span
-      >
-      =
-      <span class="emoji-string">{{ emoji.sequence }}</span>
-    </li>
-    {% endfor %}
-  </ul>
-  <!-- TODO On screen keyboard -->
+<div class="bg-gray">
+  <div class="container">
+    <h2 id="try-it-out" class="sr-only">Try it out</h2>
+    <div class="emoji-panel">
+      <div class="emoji-panel__form">
+        <textarea
+          type="text"
+          id="js-emoji-panel-input"
+          class="emoji-panel__input emoji-string"
+        >
+TRY IT OUT
 
+You can type the new emojis by typing specific sequences of the standard emojis.
+
+Write something here using the picker on the right...
+{% for emoji in site.data.custom_emojis %}
+{{ emoji.string }} is {{ emoji.sequence | join: " and " }}
+{% endfor %}
+    </textarea
+        >
+      </div>
+      <div id="js-emoji-panel-picker" class="emoji-panel__picker"></div>
+      <noscript>
+        JavaScript is required to show the emoji picker.
+      </noscript>
+      <script src="./node_modules/emojipanel/dist/emojipanel.js"></script>
+      <script>
+        (function() {
+          function typeText(input, text) {
+            var selStart = input.selectionStart;
+            var selEnd = input.selectionEnd;
+            var oldValue = input.value;
+            input.value =
+              oldValue.substring(0, selStart) +
+              text +
+              oldValue.substring(selEnd);
+            input.setSelectionRange(
+              selStart === selEnd ? selStart + text.length : selStart,
+              selStart + text.length
+            );
+            input.focus();
+          }
+
+          function cursorAfterText(input, text) {
+            var index = input.value.lastIndexOf(text);
+            var cursorPos = index + text.length;
+            input.setSelectionRange(cursorPos, cursorPos);
+          }
+
+          var input = document.getElementById('js-emoji-panel-input');
+          cursorAfterText(input, '...');
+
+          var emojiPanel = new EmojiPanel({
+            container: '#js-emoji-panel-picker',
+            json_url: './node_modules/emojipanel/dist/emojis.json',
+            search: false,
+            fitzpatrick: false
+          });
+          emojiPanel.addListener('select', emoji =>
+            typeText(input, emoji.char)
+          );
+        })();
+      </script>
+    </div>
+  </div>
+</div>
+
+<div class="container">
   <h2 id="download">Download</h2>
 
   <p>
     Emojis for grown-ups are currently available as an Emoji font. This font is
     based on
     <a href="https://twitter.github.io/twemoji/">Twitter’s emojis</a> so it also
-    contains <a href="#all-emojis">all standard emojis</a>.
+    contains all standard emojis.
   </p>
 
   <ul>
@@ -121,27 +170,6 @@ layout: default
       );
     </script>
   </p>
-</div>
-
-<div class="white">
-  <div class="container">
-    <h2 id="all-emojis">All emojis</h2>
-
-    <p>
-      For reference, here is a full list of all standard emojis plus the new
-      ones:
-    </p>
-
-    <ul class="emojis emojis--all">
-      {% for emoji in site.data.all_emojis %}
-      <li class="emoji{% if emoji.custom %} emoji--custom{% endif %}">
-        <h3 class="emoji-string" title="{{ emoji.code }} {{ emoji.name }}">
-          {{ emoji.string }}
-        </h3>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
 </div>
 
 <div class="container">

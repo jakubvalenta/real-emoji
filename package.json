@@ -1,6 +1,7 @@
 {
   "name": "emoji",
   "dependencies": {
+    "emojipanel": "git+https://github.com/danbovey/EmojiPanel.git",
     "normalize.css": "^8.0.1"
   }
 }

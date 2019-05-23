@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="container">
+<div class="container rich">
   <h1 id="emojis-for-grown-ups">Emojis for grown-ups</h1>
   <p>
     A proposal for 31 new emojis that go beyond the hugs and kisses of the
@@ -95,34 +95,102 @@ Write something here using the picker on the right...
   </div>
 </div>
 
-<div class="container">
-  <h2 id="download">Download</h2>
-
-  <p>
-    Emojis for grown-ups are currently available as an Emoji font. This font is
-    based on
-    <a href="https://twitter.github.io/twemoji/">Twitter’s emojis</a> so it also
-    contains all standard emojis.
-  </p>
-
-  <ul>
-    <li>Linux and Android: <a href="dist/Emoji.ttf">Emoji.ttf</a></li>
-    <li>Webfont: <a href="dist/Emoji.zip">Emoji.zip</a></li>
-    <li>
-      Windows: Not technically possible, because Windows doesn’t support the
-      format of Twitter’s emoji font.
-      <!-- TODO: Add name of the font format -->
-    </li>
-    <li>
-      iOS: Not technically possible, because Apple doesn’t allow changing the
-      system font.
-      <!-- TODO: Cite some source -->
-    </li>
-  </ul>
+<div class="container rich">
+  <h2 id="download">Installation</h2>
+  <div class="cols">
+    <div class="col">
+      <p>
+        {{ site.title }} are available as an emoji font, which is also how the
+        standard emojis work. The font is based on
+        <a href="https://twitter.github.io/twemoji/">Twitter’s emoji set</a>,
+        therefore it contains not only the new emojis but also all the standard
+        emojis.
+      </p>
+    </div>
+  </div>
+  <hr />
+  <div class="cols">
+    <div class="col">
+      <h3>&#x1f4bb; Windows</h3>
+      <ol>
+        <li>Download <a href="dist/Emoji.ttf">Emoji.ttf</a>.</li>
+        <li>Copy the font file to the <em>Fonts</em> folder.</li>
+        <li>
+          See
+          <a
+            href="https://github.com/eosrei/twemoji-color-font#install-on-windows"
+            >Twemoji Color Font - Install on Windows</a
+          >
+          for more information.
+        </li>
+      </ol>
+      <h3>&#x1f34e; macOS</h3>
+      <ol>
+        <li>Download <a href="dist/Emoji-mac.zip">Emoji-mac.zip</a>.</li>
+        <li>
+          Install the font file using <em>FontBook</em> and accept the warning.
+        </li>
+        <li>
+          See
+          <a href="https://github.com/eosrei/twemoji-color-font#install-on-os-x"
+            >Twemoji Color Font - Install on OS X</a
+          >
+          for more information.
+        </li>
+      </ol>
+      <h3>&#x1f427; Linux</h3>
+      <ol>
+        <li>Download <a href="dist/Emoji.ttf">Emoji.ttf</a>.</li>
+        <li>Copy the file to <code>~/.fonts/</code>.</li>
+        <li>
+          See
+          <a
+            href="https://github.com/eosrei/twemoji-color-font#install-on-linux"
+            >Twemoji Color Font - Install on Linux</a
+          >
+          for more information.
+        </li>
+      </ol>
+    </div>
+    <div class="col">
+      <h3>&#x1f4f1; iOS</h3>
+      <ol>
+        <li>
+          Your device needs to be <strong>jailbroken</strong>. This poses a
+          security risk, so unless your device is already jailbroken, we don't
+          suggest jailbreaking it just to install some emojis.
+        </li>
+        <li>Install the app BytaFont from a Cydia repository.</li>
+        <li>Use the app BytaFont to replace the default emoji font.</li>
+        <li>Please search the internet for more information.</li>
+      </ol>
+      <h3>&#x1f916; Android</h3>
+      <ol>
+        <li>
+          Your device needs to <strong>rooted</strong>. This poses a security
+          risk, so unless your device is already rooted, we don't suggest
+          rooting it just to install some emojis.
+        </li>
+        <li>Download <a href="dist/Emoji.ttf">Emoji.ttf</a>.</li>
+        <li>
+          Copy the font file using <code>adb</code> to
+          <code>/system/fonts</code> and replace the default emoji font.
+        </li>
+        <li>
+          See
+          <a
+            href="https://joyofandroid.com/how-to-install-custom-fonts-on-your-android-device/"
+            >How to Install Custom Fonts on your Android Device</a
+          >
+          for more information.
+        </li>
+      </ol>
+    </div>
+  </div>
 </div>
 
 <div class="bg-white">
-  <div class="container">
+  <div class="container rich">
     <h2 id="making-these-emojis-official">Making these emojis official</h2>
 
     <p>
@@ -151,7 +219,7 @@ Write something here using the picker on the right...
   </div>
 </div>
 
-<div class="container">
+<div class="container rich">
   <h2 id="contributing-and-contact">Contributing</h2>
 
   <p>
@@ -162,7 +230,7 @@ Write something here using the picker on the right...
 </div>
 
 <div class="bg-white">
-  <div class="container">
+  <div class="container rich">
     <p>
       Copyright 2019
       <a href="https://www.jakubvalenta.cz/">Jakub Valenta</a>

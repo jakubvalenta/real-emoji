@@ -106,14 +106,14 @@ Write something here using the picker on the right...
         standard emojis work. The font is based on
         <a href="https://twitter.github.io/twemoji/">Twitter’s emoji set</a>,
         therefore it contains not only the new emojis but also all the standard
-        emojis.
+        ones.
       </p>
     </div>
   </div>
   <hr />
   <div class="cols">
     <div class="col">
-      <h3>&#x1f4bb; Windows</h3>
+      <h3>Windows</h3>
       <ol>
         <li>Download <a href="dist/Emoji.ttf">Emoji.ttf</a>.</li>
         <li>Copy the font file to the <em>Fonts</em> folder.</li>
@@ -126,7 +126,7 @@ Write something here using the picker on the right...
           for more information.
         </li>
       </ol>
-      <h3>&#x1f34e; macOS</h3>
+      <h3>macOS</h3>
       <ol>
         <li>Download <a href="dist/Emoji-mac.zip">Emoji-mac.zip</a>.</li>
         <li>
@@ -140,7 +140,7 @@ Write something here using the picker on the right...
           for more information.
         </li>
       </ol>
-      <h3>&#x1f427; Linux</h3>
+      <h3>Linux</h3>
       <ol>
         <li>Download <a href="dist/Emoji.ttf">Emoji.ttf</a>.</li>
         <li>Copy the file to <code>~/.fonts/</code>.</li>
@@ -155,7 +155,7 @@ Write something here using the picker on the right...
       </ol>
     </div>
     <div class="col">
-      <h3>&#x1f4f1; iOS</h3>
+      <h3>iOS</h3>
       <ol>
         <li>
           Your device needs to be <strong>jailbroken</strong>. This poses a
@@ -166,7 +166,7 @@ Write something here using the picker on the right...
         <li>Use the app BytaFont to replace the default emoji font.</li>
         <li>Please search the internet for more information.</li>
       </ol>
-      <h3>&#x1f916; Android</h3>
+      <h3>Android</h3>
       <ol>
         <li>
           Your device needs to <strong>rooted</strong>. This poses a security
@@ -191,17 +191,71 @@ Write something here using the picker on the right...
   </div>
 </div>
 
-<div class="bg-white">
+<div class="bg-yellow">
   <div class="container rich">
-    <h2 id="making-these-emojis-official">Making these emojis official</h2>
-
+    <h2 id="making-these-emojis-official">Making {{ site.title }} official</h2>
     <p>
-      Emojis are approved by the Unicode consorcium. There are rigorous rules to
-      that.
+      How could we get these new emojis to all phones and computers without the
+      need for the complicated installation? To answer this question we need to
+      first introduce a few technical details:
     </p>
-
-    <p>A table of submissions:</p>
-
+    <h3>How do emojis work</h3>
+    <p>
+      Emojis are characters like letters, numbers or punctuation. There is one
+      list called
+      <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a> which contains
+      all characters of all scripts (latin, chinese...) including emojis. All
+      software manufacturers use the Unicode list to ensure compatibility
+      between their programs. This way text writen in one computer program
+      displays the same in a different program. Which also means that an emoji
+      created on an iPhone looks similarly when displayed on an Android phone
+      and vice versa.
+    </p>
+    <h3>How are new emojis added</h3>
+    <p>
+      The Unicode list of characters is regularly updated to add new characters
+      (e.g. of historic scripts) and also new emojis. This is a bureaucratic
+      process managed by the
+      <a href="https://en.wikipedia.org/wiki/Unicode_Consortium"
+        >Unicode Consortium</a
+      >, which is an organization in which all major companies (Apple, Google,
+      Facebook, Microsoft etc.) have their seat.
+    </p>
+    <p>
+      Any person can submit a proposal for a new emoji to the Unicode Consortium
+      and it will be assesed using a
+      <a href="https://www.unicode.org/emoji/proposals.html">defined process</a
+      >.
+    </p>
+    <h3>Which emojis can be accepted?</h3>
+    <p>
+      There are many
+      <a href="https://www.unicode.org/emoji/proposals.html#selection_factors"
+        >selection factors</a
+      >. For example:
+    </p>
+    <ul>
+      <li>High expected frequence of use</li>
+      <li>Not already representable by existing emoji</li>
+      <li>Doesn't show specific person, logo, building etc.</li>
+      <li>Manufactures are expected to implement the emoji</li>
+      <li>and others</li>
+    </ul>
+    <h3>Submitting {{ site.title }}</h3>
+    <p>
+      We can see now that to make the new emojis official, they would need to
+      meet the selection criteria of the Unicode Consortium and be submitted
+      using the defined process.
+    </p>
+    <p>
+      I intend to submit only those emojis that have higher chance of being
+      accepted. I do not want to bother the Unicode Consortium just to show how
+      the submission process works or to make some point.
+    </p>
+    <p>
+      The following table tracks the submissions of {{ site.title }} to the
+      Unicode Consortium.
+    </p>
     <table>
       <thead>
         <tr>
@@ -221,45 +275,46 @@ Write something here using the picker on the right...
   </div>
 </div>
 
-<div class="container rich">
-  <h2 id="contributing-and-contact">Contributing</h2>
-
-  <p>
-    If you have a suggestion for more emojis to add or if you have technical
-    problems with the emojis, please file a
-    <a href="https://www.github.com/jakubvalenta/emoji/issues">GitHub issue</a>.
-  </p>
-</div>
-
 <div class="bg-white">
   <div class="container rich">
+    <h2 id="contributing-and-contact">Contributing</h2>
+
     <p>
-      Copyright 2019
-      <a href="https://www.jakubvalenta.cz/">Jakub Valenta</a>
-      &lt;<script>
-        document.write(
-          '<n uers="rzbwv@znvyobk.bet" ery="absbyybj">rzbwv@znvyobk.bet</n>'.replace(
-            /[a-zA-Z]/g,
-            function(c) {
-              return String.fromCharCode(
-                (c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26
-              );
-            }
-          )
-        );</script
-      >&gt;
-    </p>
-    <p>
-      The code is licensed under the
-      <a href="http://www.apache.org/licenses/LICENSE-2.0"
-        >Apache License, Version 2.0</a
-      >.
-    </p>
-    <p>
-      The graphics (emoji SVG images) are licensed under the
-      <a href="http://creativecommons.org/licenses/by-sa/4.0/"
-        >Creative Commons Attribution-ShareAlike 4.0 International License</a
+      If you have a suggestion for more emojis to add or if you have technical
+      problems with the emojis, please file a
+      <a href="https://www.github.com/jakubvalenta/emoji/issues">GitHub issue</a
       >.
     </p>
   </div>
+</div>
+
+<div class="container rich">
+  <p>
+    Copyright 2019
+    <a href="https://www.jakubvalenta.cz/">Jakub Valenta</a>
+    &lt;<script>
+      document.write(
+        '<n uers="rzbwv@znvyobk.bet" ery="absbyybj">rzbwv@znvyobk.bet</n>'.replace(
+          /[a-zA-Z]/g,
+          function(c) {
+            return String.fromCharCode(
+              (c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26
+            );
+          }
+        )
+      );</script
+    >&gt;
+  </p>
+  <p>
+    The code is licensed under the
+    <a href="http://www.apache.org/licenses/LICENSE-2.0"
+      >Apache License, Version 2.0</a
+    >.
+  </p>
+  <p>
+    The graphics (emoji SVG images) are licensed under the
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/"
+      >Creative Commons Attribution-ShareAlike 4.0 International License</a
+    >.
+  </p>
 </div>

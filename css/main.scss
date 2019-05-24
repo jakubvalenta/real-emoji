@@ -12,6 +12,7 @@ $color_blue: #06f;
 $color_red: #d00;
 $color_gray: #767676;
 $color_gray_light: #f0f0f0;
+$color_yellow: lighten(#ffeeaa, 10%);
 
 $fontname: '{{ site.fontname }}';
 
@@ -42,6 +43,9 @@ body {
 }
 .bg-white {
   background: $color_white;
+}
+.bg-yellow {
+  background: $color_yellow;
 }
 .bg-green {
   background: linear-gradient(#5fd38d, #2ca05a);
@@ -102,7 +106,6 @@ body {
     font-size: 100%;
   }
   ul li {
-    margin-left: 1.3em;
     list-style-type: '- ';
   }
   code {
@@ -190,8 +193,8 @@ body {
   padding-top: 1em;
 }
 .emoji-panel__form {
-  min-width: 30em;
   margin-right: 2em;
+  flex-grow: 1;
 }
 .emoji-panel__input {
   width: 100%;

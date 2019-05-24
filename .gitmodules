@@ -4,3 +4,6 @@
 [submodule "twemoji"]
 	path = twemoji
 	url = https://github.com/twitter/twemoji.git
+[submodule "twemoji-color-font"]
+	path = twemoji-color-font
+	url = https://lab.saloun.cz/jakub/twemoji-color-font

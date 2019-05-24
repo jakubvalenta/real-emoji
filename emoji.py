@@ -4,7 +4,6 @@ import csv
 import json
 import os
 import os.path
-import re
 import unicodedata
 from typing import Any, List, Optional, Sequence
 
@@ -43,9 +42,8 @@ class Emoji:
 
     @classmethod
     def from_path_base(cls, path_base: str) -> 'Emoji':
-        m = re.search(r'^emoji_u(?P<sequence>.*)$', path_base)
         string = ''.join(
-            chr(int(hex_str, 16)) for hex_str in m.group('sequence').split('_')
+            chr(int(hex_str, 16)) for hex_str in path_base.split('-')
         )
         return cls(path_base=path_base, string=string)
 
@@ -112,7 +110,7 @@ def write_json(data: Any, path: str):
 
 
 def main(
-    png_dir: str = './noto-emoji/build/quantized_pngs/',
+    svg_dir: str = './twemoji-color-font/build/svg-color/',
     csv_file: str = './emoji.csv',
     all_emojis_output_file: str = './_data/all_emojis.json',
     custom_emojis_output_file: str = './_data/custom_emojis.json',
@@ -131,7 +129,7 @@ def main(
         ]
     all_emojis = [
         Emoji.from_path_base(os.path.splitext(path)[0]).to_dict()
-        for path in sorted(os.listdir(png_dir))
+        for path in sorted(os.listdir(svg_dir))
     ]
     write_json(custom_emojis, custom_emojis_output_file)
     write_json(all_emojis, all_emojis_output_file)

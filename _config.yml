@@ -13,11 +13,10 @@ exclude:
   - Makefile
   - NOTICE
   - README.md
-  - noto-emoji/
   - package-lock.json
   - package.json
   - png/
-  - twemoji/
+  - twemoji-color-font/
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/

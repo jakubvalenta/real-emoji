@@ -1,7 +1,5 @@
 .sass-cache
 _data
 _site
-build
-dist
+fonts
 node_modules
-png

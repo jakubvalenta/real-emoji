@@ -1,5 +1,8 @@
+.mypy_cache
 .sass-cache
+__pycache__
 _data
 _site
+build
 fonts
 node_modules

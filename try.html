@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="container rich">
+  <h1 id="emojis-for-grown-ups">Emojis for grown-ups</h1>
+</div>
+
+<div class="bg-white">
+  <div class="container">
+    <div class="rich">
+      <h2>Test sequences</h2>
+    </div>
+    <ul class="emojis-test">
+      {% for emoji in site.data.EmojiTry.emojis %}
+      <li class="emoji-string">
+        {{ emoji.string }} = {{ emoji.chars | join: " and " }} {{ emoji.sequence
+        | join: "+" }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

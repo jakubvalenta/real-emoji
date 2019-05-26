@@ -5,47 +5,101 @@ url = https://lab.saloun.cz/jakub/emoji
 license = Creative Commons Attribution 4.0 International
 license_url = http://creativecommons.org/licenses/by/4.0/
 
+_python_pkg = emoji
 curr_dir = $(shell pwd)
-svg_dir = $(curr_dir)/svg
 twemoji_color_font_dir = $(curr_dir)/twemoji-color-font
-build_dir = $(twemoji_color_font_dir)/build
-fonts_dir = $(curr_dir)/fonts
+build_dir = $(curr_dir)/build/$(name)
+src_dir = svg
+svg_dir = $(build_dir)/svg
+svg_twemoji = $(twemoji_color_font_dir)/assets/twemoji-svg
+svg_extra_bw = $(twemoji_color_font_dir)/assets/svg-bw
+build_font = $(build_dir)/$(name).ttf
+emojis_json = emojis.json
+web_fonts_dir = $(curr_dir)/fonts
+web_font = $(web_fonts_dir)/$(name).ttf
+web_fonts = $(web_fonts_dir)/$(name).eot $(web_fonts_dir)/$(name).woff $(web_fonts_dir)/$(name).svg
+web_font_woff2 = $(web_fonts_dir)/$(name).woff2
+web_data_dir = _data/$(name)
+web_data_file = $(web_data_dir)/emojis.json
+web_npm_installed = node_modules/normalize.css/normalize.css
+web_deps = $(web_data_file) $(web_fonts) $(web_font_woff2) $(web_npm_installed)
 
-.PHONY: font clean serve help
+.PHONY: font clean clean-font-only serve try setup setup-dev lint reformat help
 
-font: $(fonts_dir)/$(name).ttf  ## Build the TTF file
+font: $(web_font)  ## Build the TTF file
 
-$(fonts_dir):
+$(web_fonts_dir):
 	mkdir -p "$@"
 
-$(fonts_dir)/$(name).ttf: $(build_dir)/$(name).ttf | $(fonts_dir)
+$(web_font): $(build_font) | $(web_fonts_dir)
 	cp -a "$<" "$@"
 
-$(build_dir)/$(name).ttf:
+$(svg_dir): $(_python_pkg)/copy.py $(emojis_json) $(src_dir)
+	mkdir -p "$@"
+	python3 -m emoji.copy -s "$(src_dir)" -d "$@" < $(emojis_json)
+
+$(build_font): | $(svg_dir)
 	cd $(twemoji_color_font_dir) && \
-	$(MAKE) FONT_PREFIX="$(name)" SVG_EXTRA="$(svg_dir)"
+	$(MAKE) BUILD_DIR="$(build_dir)" \
+		FONT_PREFIX="$(name)" \
+		SVG_TWEMOJI="$(svg_twemoji)" \
+		SVG_EXTRA_BW="$(svg_extra_bw)" \
+		SVG_EXTRA="$(svg_dir)"
 
 clean:  ## Remove the built TTF file, TTX file and PNG files
 	cd $(twemoji_color_font_dir) && \
 	$(MAKE) clean
 
 clean-font-only:  ## Remove the built TTF files
-	-rm $(build_dir)/$(name)*.ttf
+	-rm -f $(build_dir)/$(name)*.ttf
 
-$(fonts_dir)/$(name).eot $(fonts_dir)/$(name).woff $(fonts_dir)/$(name).svg: $(fonts_dir)/$(name).ttf
+$(web_fonts): $(web_font)
 	webify "$<"
 
-$(fonts_dir)/$(name).woff2: $(fonts_dir)/$(name).ttf
+$(web_font_woff2): $(web_font)
 	woff2_compress "$<"
 
-node_modules/normalize.css/normalize.css:
+$(web_npm_installed):
 	npm install
 
-_data/all_emojis.json _data/custom_emojis.json: emoji.py emoji.csv $(build_dir)/$(name).ttf
-	python3 emoji.py
+$(web_data_dir):
+	mkdir -p "$@"
 
-serve: _data/all_emojis.json _data/custom_emojis.json $(fonts_dir)/$(name).eot $(fonts_dir)/$(name).woff $(fonts_dir)/$(name).woff2 $(fonts_dir)/$(name).svg node_modules/normalize.css/normalize.css  ## Serve preview HTML
+$(web_data_file): $(_python_pkg)/build.py $(emojis_json) $(build_font) | $(web_data_dir)
+	python3 -m emoji.build < $(emojis_json) > $(web_data_file)
+
+build: $(web_deps)  ## Build website
+	jekyll build
+
+serve: $(web_deps)  ## Serve website
 	jekyll serve --livereload
+
+build/EmojiTry/emojis.json: $(_python_pkg)/try.py emojis.json
+	mkdir -p build/EmojiTry
+	python3 -m emoji.try < emojis.json > "$@"
+
+build/EmojiTry/empty:
+	mkdir -p "$@"
+
+try: build/EmojiTry/emojis.json | build/EmojiTry/empty
+	$(MAKE) serve \
+		name="EmojiTry" \
+		emojis_json="build/EmojiTry/emojis.json"
+
+setup:  ## Create Pipenv virtual environment and install dependencies.
+	pipenv --three --site-packages
+	pipenv install
+
+setup-dev:  ## Install development dependencies
+	pipenv install --dev
+
+lint:  ## Run linting
+	pipenv run flake8 $(_python_pkg)
+	pipenv run mypy $(_python_pkg) --ignore-missing-imports
+	pipenv run isort -c -rc $(_python_pkg)
+
+reformat:  ## Reformat Python code using Black
+	black -l 79 --skip-string-normalization $(_python_pkg)
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-16s\033[0m %s\n", $$1, $$2}'

@@ -15,6 +15,7 @@ $color_gray_light: #f0f0f0;
 $color_yellow: lighten(#ffeeaa, 10%);
 
 $fontname: '{{ site.fontname }}';
+$fontname_try: '{{ site.fontname_try }}';
 
 @font-face {
   font-family: '#{$fontname}';
@@ -24,6 +25,17 @@ $fontname: '{{ site.fontname }}';
     url('../fonts/#{$fontname}.woff') format('woff'),
     url('../fonts/#{$fontname}.ttf') format('truetype'),
     url('../fonts/#{$fontname}.svg##{$fontname}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: '#{$fontname_try}';
+  src: url('../fonts/#{$fontname_try}.eot');
+  src: url('../fonts/#{$fontname_try}.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/#{$fontname_try}.woff2') format('woff2'),
+    url('../fonts/#{$fontname_try}.woff') format('woff'),
+    url('../fonts/#{$fontname_try}.ttf') format('truetype'),
+    url('../fonts/#{$fontname_try}.svg##{$fontname_try}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -159,6 +171,21 @@ body {
 }
 .emoji-img {
   width: 100%;
+}
+
+.emojis-test {
+  margin: 1em 0;
+  padding: 0;
+  font-size: 200%;
+
+  li {
+    list-style-type: none;
+    margin: 0.5em 0;
+  }
+
+  .emoji-string {
+    font-family: $fontname_try;
+  }
 }
 
 .emojis--custom {

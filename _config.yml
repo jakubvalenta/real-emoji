@@ -4,8 +4,9 @@ baseurl: "/emoji"
 url: ""
 markdown: kramdown
 exclude:
-  - emoji.csv
-  - emoji.py
+  - build/
+  - emoji/
+  - emojis.json
   - Gemfile
   - Gemfile.lock
   - LICENSE
@@ -15,7 +16,10 @@ exclude:
   - README.md
   - package-lock.json
   - package.json
+  - Pipfile
+  - Pipfile.lock
   - png/
+  - setup.cfg
   - twemoji-color-font/
   - vendor/bundle/
   - vendor/cache/
@@ -23,3 +27,4 @@ exclude:
   - vendor/ruby/
 
 fontname: Emoji
+fontname_try: EmojiTry

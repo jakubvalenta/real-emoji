@@ -14,7 +14,7 @@ layout: default
   <div class="container">
     <h2 class="sr-only">New emojis</h2>
     <ul class="emojis emojis--custom">
-      {% for emoji in site.data.custom_emojis %}
+      {% for emoji in site.data.Emoji.emojis %}
       <li class="emoji">
         <img
           src="svg/{{ emoji.path_base }}.svg"
@@ -46,8 +46,8 @@ layout: default
           class="emoji-panel__input emoji-string"
         >
 Write something here using the picker on the right...
-{% for emoji in site.data.custom_emojis %}
-{{ emoji.string }} is {{ emoji.sequence | join: " and " }}
+{% for emoji in site.data.Emoji.emojis %}
+{{ emoji.chars | join: "" }} is {{ emoji.chars | join: " and " }}
 {%- endfor %}</textarea
         >
       </div>
@@ -85,7 +85,7 @@ Write something here using the picker on the right...
           var emojiPanel = new EmojiPanel({
             container: '#js-emoji-panel-picker',
             json_url: './node_modules/emojipanel/dist/emojis.json',
-            search: false,
+            search: true,
             fitzpatrick: false
           });
           emojiPanel.addListener('select', emoji =>

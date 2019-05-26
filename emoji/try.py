@@ -3,19 +3,9 @@
 import itertools
 import json
 import sys
-import unicodedata
 from typing import Any, Dict, Iterator, List
 
-from emoji.common import write_json
-
-
-def codes(names: List[str]) -> List[str]:
-    return [
-        name
-        if name.startswith('1f')
-        else hex(ord(unicodedata.lookup(name)))[2:]
-        for name in names
-    ]
+from emoji.common import unicode_name_to_code, write_json
 
 
 def join_list(l: list, sep: Any) -> Iterator:
@@ -27,17 +17,13 @@ def join_list(l: list, sep: Any) -> Iterator:
 
 def product(emojis: List[Dict]) -> Iterator[Dict]:
     for emoji in emojis:
-        for sequence in itertools.product(
-            emoji['try_chars'], emoji['try_chars']
-        ):
+        try_chars = emoji.get('try')
+        if not try_chars:
+            continue
+        for sequence in itertools.product(try_chars, try_chars):
             new_emoji = emoji.copy()
-            new_emoji['sequence'] = codes(sequence)
+            new_emoji['sequence'] = list(map(unicode_name_to_code, sequence))
             yield new_emoji
-            new_emoji_with_zwj = emoji.copy()
-            new_emoji_with_zwj['sequence'] = list(
-                join_list(new_emoji['sequence'], '200d')
-            )
-            yield new_emoji_with_zwj
 
 
 def main():

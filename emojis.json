@@ -4,553 +4,277 @@
     "description": "",
     "display_name": "weed",
     "name": "marihuana leaf",
-    "path_base": "1f6ac-200d-1f33f",
-    "related": [
-      "MAPLE LEAF"
-    ],
-    "sequence": [
-      "1f6ac",
-      "1f33f"
-    ],
-    "try_chars": [
-      "HERB",
-      "SMOKING SYMBOL",
-      "MAPLE LEAF"
-    ]
+    "filename": "weed.svg",
+    "related": ["MAPLE LEAF"],
+    "sequence": ["SMOKING SYMBOL", "HERB"]
   },
   {
     "category": "drugs",
     "description": "",
     "display_name": "ecstasy",
     "name": "MDMA pill",
-    "path_base": "1f48a-200d-1f483",
-    "related": [
-      "PILL"
-    ],
-    "sequence": [
-      "1f48a",
-      "1f483"
-    ],
-    "try_chars": [
-      "DANCER",
-      "PILL"
-    ]
+    "filename": "ecstasy.svg",
+    "related": [],
+    "sequence": ["PILL", "DANCER"]
   },
   {
     "category": "drugs",
     "description": "",
     "display_name": "cocaine",
     "name": "white drug powder",
-    "path_base": "1f4b3-200d-1f4b3",
-    "related": [],
-    "sequence": [
-      "1f328",
-      "1f4b3"
-    ],
-    "try_chars": [
-      "CREDIT CARD",
-      "CLOUD WITH SNOW"
-    ]
+    "filename": "cocaine.svg",
+    "related": ["CREDIT CARD"],
+    "sequence": ["WIND BLOWING FACE", "CLOUD WITH SNOW"]
   },
   {
     "category": "drugs",
     "description": "",
     "display_name": "",
     "name": "LSD",
-    "path_base": "1f445-200d-1f308",
+    "filename": "lsd.svg",
     "related": [],
-    "sequence": [
-      "1f445",
-      "1f308"
-    ],
-    "try_chars": [
-      "RAINBOW",
-      "TONGUE"
-    ]
+    "sequence": ["TONGUE", "RAINBOW"]
   },
   {
     "category": "drugs",
     "description": "",
     "display_name": "",
     "name": "beer bottle",
-    "path_base": "1f6b6-200d-1f3fa",
-    "related": [
-      "BEER MUG"
-    ],
-    "sequence": [
-      "1f6b6",
-      "200d",
-      "1f3fa"
-    ],
-    "try_chars": [
-      "BEER MUG",
-      "PEDESTRIAN",
-      "AMPHORA"
-    ]
+    "filename": "beer_bottle.svg",
+    "related": [],
+    "sequence": ["BEER MUG", "PEDESTRIAN"]
   },
   {
     "category": "body",
     "description": "",
     "display_name": "",
     "name": "naked man",
-    "path_base": "1f468-200d-1f346",
-    "related": [
-      "AUBERGINE"
-    ],
-    "sequence": [
-      "1f468",
-      "200d",
-      "1f346"
-    ],
-    "try_chars": [
-      "MAN",
-      "AUBERGINE"
-    ]
+    "filename": "naked_man.svg",
+    "related": [],
+    "sequence": ["MAN", "AUBERGINE"]
   },
   {
     "category": "body",
     "description": "",
     "display_name": "",
     "name": "naked woman",
-    "path_base": "1f469-200d-1f351",
+    "filename": "naked_woman.svg",
     "related": [],
-    "sequence": [
-      "1f469",
-      "200d",
-      "1f351"
-    ],
-    "try_chars": [
-      "PEACH",
-      "WOMAN"
-    ]
+    "sequence": ["WOMAN", "PEACH"]
   },
   {
     "category": "body",
     "description": "",
     "display_name": "",
     "name": "sex",
-    "path_base": "1f449-200d-1f44c",
-    "related": [
-      "WHITE RIGHT POINTING BACKHAND INDEX",
-      "OK HAND SIGN",
-      "BED"
-    ],
-    "sequence": [
-      "1f449",
-      "200d",
-      "1f44c"
-    ],
-    "try_chars": [
-      "WHITE RIGHT POINTING BACKHAND INDEX",
-      "OK HAND SIGN",
-      "BED"
-    ]
+    "filename": "sex.svg",
+    "related": ["BED"],
+    "sequence": ["WHITE RIGHT POINTING BACKHAND INDEX", "OK HAND SIGN"]
   },
   {
     "category": "body",
     "description": "safe sex",
     "display_name": "",
     "name": "condom",
-    "path_base": "1f346-200d-1f6e1",
-    "related": [
-      "UMBRELLA WITH RAIN DROPS"
-    ],
-    "sequence": [
-      "1f346",
-      "200d",
-      "1f6e1"
-    ],
-    "try_chars": [
-      "UMBRELLA WITH RAIN DROPS",
-      "AUBERGINE",
-      "SHIELD"
-    ]
+    "filename": "condom.svg",
+    "related": ["SHIELD"],
+    "sequence": ["AUBERGINE", "UMBRELLA WITH RAIN DROPS"]
   },
   {
     "category": "body",
     "description": "",
     "display_name": "masturbation",
     "name": "woman masturbating",
-    "path_base": "1f44b-200d-1f4a6",
+    "filename": "masturbation.svg",
     "related": [],
-    "sequence": [
-      "1f44b",
-      "200d",
-      "1f4a6"
-    ],
-    "try_chars": [
-      "SPLASHING SWEAT SYMBOL",
-      "WAVING HAND SIGN"
-    ]
+    "sequence": ["WAVING HAND SIGN", "SPLASHING SWEAT SYMBOL"]
   },
   {
     "category": "body",
     "description": "a female version of BRIEFS",
     "display_name": "",
     "name": "panties",
-    "path_base": "1fa72-200d-1f7ea",
-    "related": [
-      "1fa72"
-    ],
-    "sequence": [
-      "1fa72",
-      "200d",
-      "1f7ea"
-    ],
-    "try_chars": [
-      "1fa72",
-      "1f7ea"
-    ]
+    "filename": "panties.svg",
+    "sequence": ["1fa72", "1f7ea"]
   },
   {
     "category": "body",
     "description": "an explicit version DROP OF BLOOD",
     "display_name": "",
     "name": "menstruation",
-    "path_base": "1fa72-200d-1fa78",
-    "related": [
-      "1fa72",
-      "1fa78"
-    ],
-    "sequence": [
-      "1fa72",
-      "200d",
-      "1fa78"
-    ],
-    "try_chars": [
-      "1fa72",
-      "1fa78"
-    ]
+    "filename": "menstruation.svg",
+    "related": [],
+    "sequence": ["1fa72", "1fa78"]
   },
   {
     "category": "body",
     "description": "",
     "display_name": "",
     "name": "abortion",
-    "path_base": "1f930-200d-1f6ab",
+    "filename": "abortion.svg",
     "related": [],
-    "sequence": [
-      "1f930",
-      "200d",
-      "1f6ab"
-    ],
-    "try_chars": [
-      "PREGNANT WOMAN",
-      "NO ENTRY SIGN"
-    ]
+    "sequence": ["PREGNANT WOMAN", "NO ENTRY SIGN"]
   },
   {
     "category": "ecology",
-    "description": "ecological crisis",
-    "display_name": "climate change",
+    "description": "",
+    "display_name": "climate crisis",
     "name": "globe showing europe-africa in flames",
-    "path_base": "1f30d-200d-1f525",
+    "filename": "climate_crisis.svg",
     "related": [],
-    "sequence": [
-      "1f30d",
-      "200d",
-      "1f525"
-    ],
-    "try_chars": [
-      "FIRE",
-      "EARTH GLOBE EUROPE-AFRICA"
-    ]
+    "sequence": ["EARTH GLOBE EUROPE-AFRICA", "FIRE"]
   },
   {
     "category": "ecology",
     "description": "",
     "display_name": "polution",
     "name": "smoking factory",
-    "path_base": "1f30d-200d-1f3ed",
+    "filename": "polution.svg",
     "related": [],
-    "sequence": [
-      "1f30d",
-      "200d",
-      "1f3ed"
-    ],
-    "try_chars": [
-      "EARTH GLOBE EUROPE-AFRICA",
-      "FACTORY"
-    ]
+    "sequence": ["EARTH GLOBE EUROPE-AFRICA", "FACTORY"]
   },
   {
     "category": "mental health",
     "description": "depression",
     "display_name": "mental illness",
     "name": "broken head",
-    "path_base": "1f61f-200d-1f5a4",
+    "filename": "depression.svg",
     "related": [],
-    "sequence": [
-      "1f61f",
-      "200d",
-      "1f5a4"
-    ],
-    "try_chars": [
-      "BLACK HEART",
-      "WORRIED FACE"
-    ]
+    "sequence": ["WORRIED FACE", "BLACK HEART"]
   },
   {
     "category": "mental health",
     "description": "",
     "display_name": "",
     "name": "suicide",
-    "path_base": "1f468-200d-1f52a",
+    "filename": "suicide.svg",
     "related": [],
-    "sequence": [
-      "1f468",
-      "200d",
-      "1f52a"
-    ],
-    "try_chars": [
-      "MAN",
-      "HOCHO"
-    ]
+    "sequence": ["CRYING FACE", "HOCHO"]
   },
   {
     "category": "life",
     "description": "",
     "display_name": "stupidity",
     "name": "stupid face",
-    "path_base": "1f926-200d-1f926",
-    "related": [],
-    "sequence": [
-      "1f926",
-      "200d",
-      "1f926"
-    ],
-    "try_chars": [
-      "FACE PALM"
-    ]
+    "filename": "stupid.svg",
+    "related": ["FACE PALM"],
+    "sequence": ["BRAIN", "NO ENTRY SIGN"]
   },
   {
     "category": "life",
     "description": "",
     "display_name": "ugliness",
     "name": "ugly bird",
-    "path_base": "1f425-200d-1f383",
+    "filename": "ugly.svg",
     "related": [],
-    "sequence": [
-      "1f425",
-      "200d",
-      "1f383"
-    ],
-    "try_chars": [
-      "JACK-O-LANTERN",
-      "FRONT-FACING BABY CHICK"
-    ]
+    "sequence": ["FRONT-FACING BABY CHICK", "JACK-O-LANTERN"]
   },
   {
     "category": "life",
     "description": "",
     "display_name": "laziness",
     "name": "lazy person",
-    "path_base": "1f971-200d-1f971",
+    "filename": "lazy.svg",
     "related": [],
-    "sequence": [
-      "1f971",
-      "200d",
-      "1f971"
-    ],
-    "try_chars": [
-      "1f971"
-    ]
+    "sequence": ["COUCH AND LAMP", "1f971"]
   },
   {
     "category": "life",
     "description": "",
     "display_name": "accident",
     "name": "broken phone",
-    "path_base": "1f4f1-200d-1f494",
+    "filename": "accident.svg",
     "related": [],
-    "sequence": [
-      "1f4f1",
-      "200d",
-      "1f494"
-    ],
-    "try_chars": [
-      "MOBILE PHONE",
-      "BROKEN HEART"
-    ]
+    "sequence": ["MOBILE PHONE", "BROKEN HEART"]
   },
   {
     "category": "life",
     "description": "error, mistake",
     "display_name": "failure",
     "name": "falling person ",
-    "path_base": "1f6b6-200d-1f9f1",
+    "filename": "fail.svg",
     "related": [],
-    "sequence": [
-      "1f6b6",
-      "200d",
-      "1f9f1"
-    ],
-    "try_chars": [
-      "BRICK",
-      "PEDESTRIAN"
-    ]
+    "sequence": ["PEDESTRIAN", "BRICK"]
   },
   {
     "category": "violence",
     "description": "",
     "display_name": "violence",
     "name": "fist punching face",
-    "path_base": "1f91c-200d-1f610",
+    "filename": "violence.svg",
     "related": [],
-    "sequence": [
-      "1f91c",
-      "200d",
-      "1f610"
-    ],
-    "try_chars": [
-      "RIGHT-FACING FIST",
-      "NEUTRAL FACE"
-    ]
+    "sequence": ["RIGHT-FACING FIST", "NEUTRAL FACE"]
   },
   {
     "category": "violence",
     "description": "",
     "display_name": "",
     "name": "racism",
-    "path_base": "1f468-1f3fc-200d-1f6ab",
+    "filename": "racism.svg",
     "related": [],
-    "sequence": [
-      "1f468",
-      "1f3fc",
-      "200d",
-      "1f6ab"
-    ],
-    "try_chars": [
-      "MAN",
-      "NO ENTRY SIGN",
-      "EMOJI MODIFIER FITZPATRICK TYPE-3"
-    ]
+    "sequence": ["ADULT", "EMOJI MODIFIER FITZPATRICK TYPE-6", "NO ENTRY SIGN"]
   },
   {
     "category": "violence",
     "description": "",
     "display_name": "",
     "name": "sexual harassment",
-    "path_base": "1f486-200d-1f631",
+    "filename": "harassment.svg",
     "related": [],
-    "sequence": [
-      "1f486",
-      "200d",
-      "1f631"
-    ],
-    "try_chars": [
-      "FACE MASSAGE",
-      "FACE SCREAMING IN FEAR"
-    ]
+    "sequence": ["SMIRKING FACE", "FACE WITH NO GOOD GESTURE"]
   },
   {
     "category": "society",
     "description": "",
     "display_name": "poverty",
     "name": "beggar",
-    "path_base": "1f64f-200d-1f35e",
+    "filename": "poverty.svg",
     "related": [],
-    "sequence": [
-      "1f64f",
-      "200d",
-      "1f35e"
-    ],
-    "try_chars": [
-      "BREAD",
-      "PERSON WITH FOLDED HANDS"
-    ]
+    "sequence": ["PERSON WITH FOLDED HANDS", "BREAD"]
   },
   {
     "category": "society",
     "description": "demonstration, revolution",
     "display_name": "protest",
     "name": "people protesting",
-    "path_base": "1f600-200d-1f600-200d-1f4e2",
-    "related": [],
-    "sequence": [
-      "1f600",
-      "200d",
-      "1f600",
-      "200d",
-      "1f4e2"
-    ],
-    "try_chars": [
-      "GRINNING FACE",
-      "PUBLIC ADDRESS LOUDSPEAKER"
-    ]
+    "filename": "protest.svg",
+    "related": ["WAVING WHITE FLAG"],
+    "sequence": ["PEDESTRIAN", "PUBLIC ADDRESS LOUDSPEAKER"]
   },
   {
     "category": "society",
     "description": "theft, corruption",
     "display_name": "crime",
     "name": "person with money bags",
-    "path_base": "1f574-200d-1f4b0",
-    "related": [
-      "SUPERVILLAIN"
-    ],
-    "sequence": [
-      "1f574",
-      "200d",
-      "1f4b0"
-    ],
-    "try_chars": [
-      "MAN IN BUSINESS SUIT LEVITATING",
-      "SUPERVILLAIN",
-      "MONEY BAG"
-    ]
+    "filename": "crime.svg",
+    "related": [],
+    "sequence": ["SUPERVILLAIN", "MONEY BAG"]
   },
   {
     "category": "society",
     "description": "",
     "display_name": "punishment",
     "name": "person in jail",
-    "path_base": "1f468-200d-1f6ab",
-    "related": [],
-    "sequence": [
-      "1f468",
-      "200d",
-      "1f6ab"
-    ],
-    "try_chars": [
-      "MAN",
-      "NO ENTRY SIGN"
-    ]
+    "filename": "punishment.svg",
+    "related": ["SCALES"],
+    "sequence": ["POLICE OFFICER", "RAISED HAND"]
   },
   {
     "category": "society",
     "description": "heresy, blasphemy",
     "display_name": "immoral behavior",
     "name": "chastening priest",
-    "path_base": "26ea-200d-1f44e",
-    "related": [
-      "SMILING FACE WITH HORNS"
-    ],
-    "sequence": [
-      "26ea",
-      "200d",
-      "1f44e"
-    ],
-    "try_chars": [
-      "SMILING FACE WITH HORNS",
-      "THUMBS DOWN SIGN",
-      "CHURCH"
-    ]
+    "filename": "immoral.svg",
+    "related": ["SMILING FACE WITH HORNS"],
+    "sequence": ["CHURCH", "THUMBS DOWN SIGN"]
   },
   {
     "category": "society",
     "description": "patronizing",
     "display_name": "condescending behavior",
     "name": "hand petting adult person",
-    "path_base": "1f468-200d-1f91a",
+    "filename": "condescending.svg",
     "related": [],
-    "sequence": [
-      "1f468",
-      "200d",
-      "1f91a"
-    ],
-    "try_chars": [
-      "MAN",
-      "RAISED BACK OF HAND"
-    ]
+    "sequence": ["ADULT", "BABY BOTTLE"]
   }
 ]

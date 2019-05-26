@@ -7,6 +7,8 @@ import os.path
 import shutil
 import sys
 
+from emoji.common import unicode_name_to_code
+
 logger = logging.getLogger(__name__)
 
 
@@ -16,8 +18,11 @@ def main():
     parser.add_argument('-d', '--dst-dir', required=True)
     args = parser.parse_args()
     for emoji in json.load(sys.stdin):
-        src = os.path.join(args.src_dir, emoji['path_base'] + '.svg')
-        dst = os.path.join(args.dst_dir, '-'.join(emoji['sequence']) + '.svg')
+        src = os.path.join(args.src_dir, emoji['filename'])
+        dst = os.path.join(
+            args.dst_dir,
+            '-'.join(map(unicode_name_to_code, emoji['sequence'])) + '.svg',
+        )
         if not os.path.exists(dst):
             logger.warning(f'Copying {src} to {dst}')
             shutil.copy2(src, dst)

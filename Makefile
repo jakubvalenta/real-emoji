@@ -24,7 +24,7 @@ web_data_file = $(web_data_dir)/emojis.json
 web_npm_installed = node_modules/normalize.css/normalize.css
 web_deps = $(web_data_file) $(web_fonts) $(web_font_woff2) $(web_npm_installed)
 
-.PHONY: font clean clean-font-only serve try setup setup-dev lint reformat help
+.PHONY: font clean clean-font-only serve try clean-try setup setup-dev lint reformat help
 
 font: $(web_font)  ## Build the TTF file
 
@@ -46,9 +46,9 @@ $(build_font): | $(svg_dir)
 		SVG_EXTRA_BW="$(svg_extra_bw)" \
 		SVG_EXTRA="$(svg_dir)"
 
-clean:  ## Remove the built TTF file, TTX file and PNG files
-	cd $(twemoji_color_font_dir) && \
-	$(MAKE) clean
+clean:  ## Remove the built TTF file, webfonts, and intermediate SVG files
+	-rm -r "$(build_dir)"
+	-rm -r "$(font_dir)"
 
 clean-font-only:  ## Remove the built TTF files
 	-rm -f $(build_dir)/$(name)*.ttf
@@ -78,13 +78,15 @@ build/EmojiTry/emojis.json: $(_python_pkg)/try.py emojis.json
 	mkdir -p build/EmojiTry
 	python3 -m emoji.try < emojis.json > "$@"
 
-build/EmojiTry/empty:
-	mkdir -p "$@"
-
-try: build/EmojiTry/emojis.json | build/EmojiTry/empty
+try: build/EmojiTry/emojis.json  ## Render sequence testing page
 	$(MAKE) serve \
 		name="EmojiTry" \
 		emojis_json="build/EmojiTry/emojis.json"
+
+clean-try:  ## Clean sequence testing files
+	-rm -r build/EmojiTry/svg
+	-rm -f build/EmojiTry/*.ttf
+	-rm build/EmojiTry/emojis.json
 
 setup:  ## Create Pipenv virtual environment and install dependencies.
 	pipenv --three --site-packages

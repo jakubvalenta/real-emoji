@@ -265,11 +265,16 @@ Write something here using the picker on the right...
         </tr>
       </thead>
       <tbody>
+        {% for emoji in site.data.Emoji.emojis %}
         <tr>
-          <td>foo</td>
-          <td>bar</td>
-          <td>baz</td>
+          <td>
+            <span class="emoji-string">{{ emoji.string }}</span> {{
+            emoji.display_name }}
+          </td>
+          <td>{{ emoji.submission.status }}</td>
+          <td>{{ emoji.submission.reason }}</td>
         </tr>
+        {% endfor %}
       </tbody>
     </table>
   </div>

@@ -50,6 +50,7 @@ Install the following dependencies using your package manager:
   Repository](https://aur.archlinux.org/packages/nototools-git/))
 - optipng
 - pngquant
+- svgo
 
 ### Building the font file
 

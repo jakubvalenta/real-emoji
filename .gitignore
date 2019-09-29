@@ -1,3 +1,4 @@
+.bundle
 .mypy_cache
 .sass-cache
 __pycache__
@@ -6,3 +7,4 @@ _site
 build
 fonts
 node_modules
+vendor

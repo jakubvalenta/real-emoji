@@ -69,10 +69,10 @@ $(web_data_file): $(_python_pkg)/build.py $(emojis_json) $(build_font) | $(web_d
 	python3 -m emoji.build < $(emojis_json) > $(web_data_file)
 
 build: $(web_deps)  ## Build website
-	jekyll build
+	bundler exec jekyll build
 
 serve: $(web_deps)  ## Serve website
-	jekyll serve --livereload
+	bundler exec jekyll serve --livereload
 
 build/EmojiTry/emojis.json: $(_python_pkg)/try.py emojis.json
 	mkdir -p build/EmojiTry
@@ -91,6 +91,7 @@ clean-try:  ## Clean sequence testing files
 setup:  ## Create Pipenv virtual environment and install dependencies.
 	pipenv --three --site-packages
 	pipenv install
+	bundler install --path vendor/bundle
 
 setup-dev:  ## Install development dependencies
 	pipenv install --dev

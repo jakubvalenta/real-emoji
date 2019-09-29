@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 5da689c313, 2019-01-14"
-   sodipodi:docname="emoji_u1f425_200d_1f383.svg">
+   sodipodi:docname="ugly.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497476"
-     inkscape:cx="448.5703"
-     inkscape:cy="380.44879"
+     inkscape:cx="510.7542"
+     inkscape:cy="427.87974"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -86,10 +86,10 @@
        inkscape:connector-curvature="0"
        d="M 833.30444,416.95797 C 829.79695,252.87158 700,100.18773 500,87.125199 485.50829,63.961402 453.10264,43.965636 416.66,60.096093 c -28.7523,14.39004 -5.36154,21.30726 27.66888,28.50228 C 286.7885,115.12827 166.64,251.83365 166.64,416.95797 c 0,1.44456 0.2778,2.83356 0.2778,4.27812 H 166.64 c -27.78,138.9 -83.34,222.24 -111.12,277.8 -12.41766,24.8631 0,83.34 55.56,55.56 33.08598,-16.55688 66.03306,-53.11536 93.25746,-103.2027 42.9201,129.3159 130.81602,242.1027 295.66254,242.1027 164.84652,0 252.74244,-112.7868 295.66254,-242.1027 27.2244,50.08734 21.25142,114.46638 54.3374,131.02326 55.56,27.78 59.38725,9.21074 50.00011,-99.99994 C 874.88582,532.41665 832.93024,524.30684 833.30444,416.95797 Z"
        id="path1576"
-       style="fill:#786721;stroke-width:27.78000069" />
+       style="fill:#4a412a;stroke-width:27.78000069" />
     <path
        inkscape:connector-curvature="0"
-       style="fill:#f4900c;stroke-width:27.78000069"
+       style="fill:#f4900c;stroke-width:27.78000069;fill-opacity:1"
        d="m 583.28444,421.23609 c 0,46.03146 -37.25298,11.18058 -83.28444,11.18058 -46.03146,0 -83.39556,34.85088 -83.39556,-11.18058 0,-46.03146 37.30854,-83.34 83.34,-83.34 46.03146,0 83.34,37.30854 83.34,83.34 z"
        id="path1578"
        sodipodi:nodetypes="sssss" />
@@ -98,12 +98,12 @@
        cy="351.78571"
        r="69.369049"
        id="circle1580"
-       style="fill:#292f33;stroke-width:46.24603271;fill-opacity:1" />
+       style="fill:#f5f8fa;stroke-width:15.05182457;fill-opacity:1" />
     <circle
        cx="680.51715"
        cy="351.78571"
        r="41.669998"
        id="circle1582"
-       style="fill:#292f33;stroke-width:27.78000069;fill-opacity:1" />
+       style="fill:#f5f8fa;stroke-width:15.05182457;fill-opacity:1" />
   </g>
 </svg>

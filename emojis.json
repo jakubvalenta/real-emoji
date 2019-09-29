@@ -397,5 +397,18 @@
       "status": "going to submit",
       "reason": ""
     }
+  },
+  {
+    "category": "local",
+    "description": "",
+    "display_name": "svíčková na smetaně",
+    "name": "svickova",
+    "filename": "svickova.svg",
+    "related": [],
+    "sequence": ["FORK AND KNIFE WITH PLATE", "CANDLE"],
+    "submission": {
+      "status": "not going to submit",
+      "reason": "too local"
+    }
   }
 ]

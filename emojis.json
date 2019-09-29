@@ -436,5 +436,18 @@
       "status": "going to submit",
       "reason": ""
     }
+  },
+  {
+    "category": "work",
+    "description": "",
+    "display_name": "",
+    "name": "platform economy",
+    "filename": "platform_economy.svg",
+    "related": [],
+    "sequence": ["BIKE", "HAMMER"],
+    "submission": {
+      "status": "not going to submit",
+      "reason": "too specific"
+    }
   }
 ]

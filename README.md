@@ -52,6 +52,12 @@ Install the following dependencies using your package manager:
 - pngquant
 - svgo
 
+Build the required Docker image:
+
+```
+cd twemoji-color-font/scfbuild && make
+```
+
 ### Building the font file
 
 ```

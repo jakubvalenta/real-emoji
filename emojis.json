@@ -410,5 +410,18 @@
       "status": "not going to submit",
       "reason": "too local"
     }
+  },
+  {
+    "category": "work",
+    "description": "",
+    "display_name": "",
+    "name": "automation",
+    "filename": "automation.svg",
+    "related": [],
+    "sequence": ["ROBOT FACE", "HAMMER"],
+    "submission": {
+      "status": "not going to submit",
+      "reason": "too local"
+    }
   }
 ]

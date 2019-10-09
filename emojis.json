@@ -52,19 +52,6 @@
     }
   },
   {
-    "category": "drugs",
-    "description": "",
-    "display_name": "",
-    "name": "beer bottle",
-    "filename": "beer_bottle.svg",
-    "related": [],
-    "sequence": ["BEER MUG", "PEDESTRIAN"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "it would be rejected, because it's too similar to BEER MUG"
-    }
-  },
-  {
     "category": "body",
     "description": "",
     "display_name": "",
@@ -105,12 +92,12 @@
   },
   {
     "category": "body",
-    "description": "safe sex",
-    "display_name": "",
-    "name": "condom",
-    "filename": "condom.svg",
-    "related": ["SHIELD"],
-    "sequence": ["AUBERGINE", "UMBRELLA WITH RAIN DROPS"],
+    "description": "",
+    "display_name": "masturbation",
+    "name": "woman masturbating",
+    "filename": "masturbation.svg",
+    "related": [],
+    "sequence": ["WAVING HAND SIGN", "SPLASHING SWEAT SYMBOL"],
     "submission": {
       "status": "not going to submit",
       "reason": "it would be rejected, because it's adult content, even though this is not in the emoji rules"
@@ -119,11 +106,37 @@
   {
     "category": "body",
     "description": "",
-    "display_name": "masturbation",
-    "name": "woman masturbating",
-    "filename": "masturbation.svg",
+    "display_name": "",
+    "name": "fetus",
+    "filename": "fetus.svg",
     "related": [],
-    "sequence": ["WAVING HAND SIGN", "SPLASHING SWEAT SYMBOL"],
+    "sequence": ["PREGNANT WOMAN", "BABY"],
+    "submission": {
+      "status": "going to submit",
+      "reason": ""
+    }
+  },
+  {
+    "category": "body",
+    "description": "",
+    "display_name": "",
+    "name": "abortion",
+    "filename": "abortion.svg",
+    "related": [],
+    "sequence": ["PREGNANT WOMAN", "NO ENTRY SIGN"],
+    "submission": {
+      "status": "not going to submit",
+      "reason": "it would be rejected, because this is a political issue in the USA"
+    }
+  },
+  {
+    "category": "body",
+    "description": "safe sex",
+    "display_name": "",
+    "name": "condom",
+    "filename": "condom.svg",
+    "related": ["SHIELD"],
+    "sequence": ["AUBERGINE", "UMBRELLA WITH RAIN DROPS"],
     "submission": {
       "status": "not going to submit",
       "reason": "it would be rejected, because it's adult content, even though this is not in the emoji rules"
@@ -155,19 +168,6 @@
     }
   },
   {
-    "category": "body",
-    "description": "",
-    "display_name": "",
-    "name": "abortion",
-    "filename": "abortion.svg",
-    "related": [],
-    "sequence": ["PREGNANT WOMAN", "NO ENTRY SIGN"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "it would be rejected, because this is a political issue in the USA"
-    }
-  },
-  {
     "category": "ecology",
     "description": "",
     "display_name": "climate crisis",
@@ -189,6 +189,32 @@
     "sequence": ["EARTH GLOBE EUROPE-AFRICA", "FACTORY"],
     "submission": {
       "status": "going to submit"
+    }
+  },
+  {
+    "category": "work",
+    "description": "",
+    "display_name": "",
+    "name": "automation",
+    "filename": "automation.svg",
+    "related": [],
+    "sequence": ["ROBOT FACE", "HAMMER"],
+    "submission": {
+      "status": "not going to submit",
+      "reason": "too local"
+    }
+  },
+  {
+    "category": "work",
+    "description": "",
+    "display_name": "",
+    "name": "platform economy",
+    "filename": "platform_economy.svg",
+    "related": [],
+    "sequence": ["BIKE", "HAMMER"],
+    "submission": {
+      "status": "not going to submit",
+      "reason": "too specific"
     }
   },
   {
@@ -401,6 +427,19 @@
   {
     "category": "local",
     "description": "",
+    "display_name": "",
+    "name": "beer bottle",
+    "filename": "beer_bottle.svg",
+    "related": [],
+    "sequence": ["BEER MUG", "PEDESTRIAN"],
+    "submission": {
+      "status": "not going to submit",
+      "reason": "it would be rejected, because it's too similar to BEER MUG"
+    }
+  },
+  {
+    "category": "local",
+    "description": "",
     "display_name": "svíčková na smetaně",
     "name": "svickova",
     "filename": "svickova.svg",
@@ -409,45 +448,6 @@
     "submission": {
       "status": "not going to submit",
       "reason": "too local"
-    }
-  },
-  {
-    "category": "work",
-    "description": "",
-    "display_name": "",
-    "name": "automation",
-    "filename": "automation.svg",
-    "related": [],
-    "sequence": ["ROBOT FACE", "HAMMER"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "too local"
-    }
-  },
-  {
-    "category": "body",
-    "description": "",
-    "display_name": "",
-    "name": "fetus",
-    "filename": "fetus.svg",
-    "related": [],
-    "sequence": ["PREGNANT WOMAN", "BABY"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
-  },
-  {
-    "category": "work",
-    "description": "",
-    "display_name": "",
-    "name": "platform economy",
-    "filename": "platform_economy.svg",
-    "related": [],
-    "sequence": ["BIKE", "HAMMER"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "too specific"
     }
   }
 ]

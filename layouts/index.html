@@ -1,8 +1,4 @@
 {{ define "main" }}
-<div class="container rich">
-  <h1 id="emojis-for-grown-ups">{{ .Site.Title }}</h1>
-  <p>{{ markdownify .Site.Params.description }}</p>
-</div>
 <div class="bg-white">
   <div class="container">
     <ul class="emojis emojis--custom">
@@ -18,36 +14,15 @@
       </li>
       {{ end }}
     </ul>
+    <ul class="buttons">
+      <li><a href="/stickers/">get Telegram stickers</a></li>
+      <li><a href="/font/">download font file</a></li>
+    </ul>
   </div>
 </div>
-<div class="container rich">
-  <p>
-    Copyright 2019
-    <a href="https://www.jakubvalenta.cz/">Jakub Valenta</a>
-    &lt;<script>
-      document.write(
-        '<n uers="rzbwv@znvyobk.bet" ery="absbyybj">rzbwv@znvyobk.bet</n>'.replace(
-          /[a-zA-Z]/g,
-          function(c) {
-            return String.fromCharCode(
-              (c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26
-            );
-          }
-        )
-      );</script
-    >&gt;
-  </p>
-  <p>
-    The code is licensed under the
-    <a href="http://www.apache.org/licenses/LICENSE-2.0"
-      >Apache License, Version 2.0</a
-    >.
-  </p>
-  <p>
-    The graphics (emoji SVG images) are licensed under the
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/"
-      >Creative Commons Attribution-ShareAlike 4.0 International License</a
-    >.
-  </p>
+<div class="container">
+  <div class="rich">
+    {{ .Content }}
+  </div>
 </div>
 {{ end }}

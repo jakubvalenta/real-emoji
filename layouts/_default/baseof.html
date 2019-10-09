@@ -17,8 +17,19 @@
     <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="{{ .Site.Title }}" />
   </head>
   <body>
-    {{ block "main" . }}
-      {{- .Content -}}
-    {{ end }}
+    <header class="container">
+      <h1 id="real-emoji">{{ .Site.Title }}</h1>
+      <p>{{ .Site.Params.description }}</p>
+    </header>
+    <main>
+      {{ block "main" . }}
+        {{- .Content -}}
+      {{ end }}
+    </main>
+    <footer class="container">
+      <div class="rich">
+        {{ partial "footer.html" . }}
+      </div>
+    </footer>
   </body>
 </html>

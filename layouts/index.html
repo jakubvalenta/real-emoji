@@ -1,24 +1,22 @@
----
-layout: default
----
+{{ define "main" }}
 <div class="container rich">
-  <h1 id="emojis-for-grown-ups">{{ site.title }}</h1>
-  <p>{{ site.description }}</p>
+  <h1 id="emojis-for-grown-ups">{{ .Site.Title }}</h1>
+  <p>{{ markdownify .Site.Params.description }}</p>
 </div>
 <div class="bg-white">
   <div class="container">
     <ul class="emojis emojis--custom">
-      {% for emoji in site.data.Emoji.emojis %}
+      {{ range .Site.Data.Emoji.emojis }}
       <li class="emoji">
         <img
-          src="svg/{{ emoji.filename }}"
-          alt="{{ emoji.display_name }} emoji"
+          src="svg/{{ .filename }}"
+          alt="{{ .display_name }} emoji"
           class="emoji-img"
         />
-        <h3>{{ emoji.display_name }}</h3>
-        <p>{{ emoji.description }}</p>
+        <h3>{{ .display_name }}</h3>
+        <p>{{ .description }}</p>
       </li>
-      {% endfor %}
+      {{ end }}
     </ul>
   </div>
 </div>
@@ -52,3 +50,4 @@ layout: default
     >.
   </p>
 </div>
+{{ end }}

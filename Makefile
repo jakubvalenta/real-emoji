@@ -9,19 +9,20 @@ _python_pkg = emoji
 curr_dir = $(shell pwd)
 twemoji_color_font_dir = $(curr_dir)/twemoji-color-font
 build_dir = $(curr_dir)/build/$(name)
-src_dir = svg
+src_dir = static/svg
 svg_dir = $(build_dir)/svg
 svg_twemoji = $(twemoji_color_font_dir)/assets/twemoji-svg
 svg_extra_bw = $(twemoji_color_font_dir)/assets/svg-bw
 build_font = $(build_dir)/$(name).ttf
 emojis_json = emojis.json
-web_fonts_dir = $(curr_dir)/fonts
+web_fonts_dir = $(curr_dir)/static/fonts
 web_font = $(web_fonts_dir)/$(name).ttf
 web_fonts = $(web_fonts_dir)/$(name).eot $(web_fonts_dir)/$(name).woff $(web_fonts_dir)/$(name).svg
 web_font_woff2 = $(web_fonts_dir)/$(name).woff2
-web_data_dir = _data/$(name)
+web_data_dir = data/$(name)
 web_data_file = $(web_data_dir)/emojis.json
-web_npm_installed = node_modules/normalize.css/normalize.css
+web_assets_dir = assets
+web_npm_installed = $(web_assets_dir)/node_modules/normalize.css/normalize.css
 web_deps = $(web_data_file) $(web_fonts) $(web_font_woff2) $(web_npm_installed)
 
 .PHONY: font clean clean-font-only serve try clean-try setup setup-dev lint reformat help
@@ -60,7 +61,7 @@ $(web_font_woff2): $(web_font)
 	woff2_compress "$<"
 
 $(web_npm_installed):
-	npm install
+	cd "$(web_assets_dir)" && npm install
 
 $(web_data_dir):
 	mkdir -p "$@"
@@ -69,10 +70,10 @@ $(web_data_file): $(_python_pkg)/build.py $(emojis_json) $(build_font) | $(web_d
 	python3 -m emoji.build < $(emojis_json) > $(web_data_file)
 
 build: $(web_deps)  ## Build website
-	bundler exec jekyll build
+	hugo
 
 serve: $(web_deps)  ## Serve website
-	bundler exec jekyll serve --livereload
+	hugo server
 
 build/EmojiTry/emojis.json: $(_python_pkg)/try.py emojis.json
 	mkdir -p build/EmojiTry

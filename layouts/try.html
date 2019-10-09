@@ -1,0 +1,17 @@
+<div class="container rich">
+  <h1 id="real-emoji">{{ .Site.Title }}</h1>
+</div>
+<div class="bg-white">
+  <div class="container">
+    <div class="rich">
+      <h2>Test sequences</h2>
+    </div>
+    <ul class="emojis-test">
+      {{ range .Site.Data.EmojiTry.emojis }}
+      <li class="emoji-string">
+        {{ .string }} = {{ delimit .chars " and " }} {{ delimit .sequence "+" }}
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>

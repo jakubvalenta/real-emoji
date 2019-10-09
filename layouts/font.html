@@ -1,6 +1,3 @@
----
-layout: default
----
 <div class="bg-green">
   <div class="container">
     <div class="rich">
@@ -18,9 +15,9 @@ layout: default
           class="emoji-panel__input emoji-string"
         >
 Write something here using the picker on the right...
-{% for emoji in site.data.Emoji.emojis %}
-{{ emoji.chars | join: "" }} is {{ emoji.chars | join: " and " }}
-{%- endfor %}</textarea
+{{ range .Site.Data.Emoji.emojis }}
+{{ delimit .chars "" }} is {{ delimit .chars " and " }}
+{{- end }}</textarea
         >
       </div>
       <div id="js-emoji-panel-picker" class="emoji-panel__picker"></div>
@@ -74,7 +71,7 @@ Write something here using the picker on the right...
   <div class="cols">
     <div class="col">
       <p>
-        {{ site.title }} are available as an emoji font, which is also how the
+        {{ .Site.title }} are available as an emoji font, which is also how the
         standard emojis work. The font is based on
         <a href="https://twitter.github.io/twemoji/">Twitter’s emoji set</a>,
         therefore it contains not only the new emojis but also all the standard

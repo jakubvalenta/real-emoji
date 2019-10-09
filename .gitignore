@@ -1,10 +1,8 @@
-.bundle
 .mypy_cache
-.sass-cache
 __pycache__
-_data
-_site
 build
-fonts
+data
 node_modules
-vendor
+public
+resources
+static

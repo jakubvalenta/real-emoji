@@ -73,7 +73,7 @@ Dependencies:
 - webify (available in [Arch Linux User
   Repository](https://aur.archlinux.org/packages/webify/))
 - woff2
-- jekyll
+- hugo
 
 ```
 make serve

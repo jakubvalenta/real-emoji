@@ -1,0 +1,30 @@
+{
+  "baseURL": "https://emoji.new",
+  "permalinks": {
+    "posts": "/:year/:month/:day/:slug"
+  },
+  "uglyURLs": true,
+  "canonifyURLs": true,
+  "rssLimit": 10,
+  "outputs": {
+    "home": ["HTML", "RSS"]
+  },
+  "mediaTypes": {
+    "application/rss": {
+      "suffixes": ["xml"]
+    }
+  },
+  "outputFormats": {
+    "RSS": {
+      "mediatype": "application/rss",
+      "baseName": "feed"
+    }
+  },
+  "title": "Real Emoji",
+  "Params": {
+    "staticURL": "https://files.jakubvalenta.cz/leaving/",
+    "description": "A proposal for 35 new emoji that go beyond the hugs and kisses of the standard emoji set.",
+    "fontname": "Emoji",
+    "fontname_try": "EmojiTry"
+  }
+}

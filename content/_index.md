@@ -29,7 +29,7 @@ License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 TODO: which emoji exists
 
-TODO: note about submission
+TODO: decisions
 
 TODO: mention gun emoji, middle finger emoji, Wikipedia GID, Ford pickup emoji,
 white wine emoji, Taiwan flag emoji

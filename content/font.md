@@ -10,6 +10,9 @@ description: |
 
   Once you have the font installed, the new emoji characters can be written as
   sequences of existing emoji characters.
+
+  The characters are displayed in Google Chrome in black and white, because of
+  technical limitations of this web browser.
 ---
 ## Installation
 

@@ -22,8 +22,9 @@ web_font_woff2 = $(web_fonts_dir)/$(name).woff2
 web_data_dir = data/$(name)
 web_data_file = $(web_data_dir)/emojis.json
 web_assets_dir = assets
+web_posts_dir = content/emoji
 web_npm_installed = $(web_assets_dir)/node_modules/normalize.css/normalize.css
-web_deps = $(web_data_file) $(web_fonts) $(web_font_woff2) $(web_npm_installed)
+web_deps = $(web_data_file) $(web_fonts) $(web_font_woff2) $(web_npm_installed) $(web_posts_dir)
 
 .PHONY: font clean clean-font-only serve try clean-try setup setup-dev lint reformat help
 
@@ -46,6 +47,10 @@ $(build_font): | $(svg_dir)
 		SVG_TWEMOJI="$(svg_twemoji)" \
 		SVG_EXTRA_BW="$(svg_extra_bw)" \
 		SVG_EXTRA="$(svg_dir)"
+
+$(web_posts_dir):
+	mkdir -p "$@"
+	python3 -m emoji.posts -d "$(web_posts_dir)" < $(emojis_json)
 
 clean:  ## Remove the built TTF file, webfonts, and intermediate SVG files
 	-rm -r "$(build_dir)"

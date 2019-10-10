@@ -1,0 +1,544 @@
+[
+  {
+    "chars": [
+      "&#x1f6ac;",
+      "&#x1f33f;"
+    ],
+    "display_name": "weed",
+    "filename": "weed.svg",
+    "name": "marihuana leaf",
+    "related": [
+      "MAPLE LEAF"
+    ],
+    "sequence": [
+      "SMOKING SYMBOL",
+      "HERB"
+    ],
+    "string": "&#x1f6ac;&#x1f33f;"
+  },
+  {
+    "chars": [
+      "&#x1f48a;",
+      "&#x1f483;"
+    ],
+    "display_name": "ecstasy",
+    "filename": "ecstasy.svg",
+    "name": "MDMA pill",
+    "related": [],
+    "sequence": [
+      "PILL",
+      "DANCER"
+    ],
+    "string": "&#x1f48a;&#x1f483;"
+  },
+  {
+    "chars": [
+      "&#x1f32c;",
+      "&#x1f328;"
+    ],
+    "display_name": "cocaine",
+    "filename": "cocaine.svg",
+    "name": "white drug powder",
+    "related": [
+      "CREDIT CARD"
+    ],
+    "sequence": [
+      "WIND BLOWING FACE",
+      "CLOUD WITH SNOW"
+    ],
+    "string": "&#x1f32c;&#x1f328;"
+  },
+  {
+    "chars": [
+      "&#x1f445;",
+      "&#x1f308;"
+    ],
+    "display_name": "LSD",
+    "filename": "lsd.svg",
+    "name": "LSD",
+    "related": [],
+    "sequence": [
+      "TONGUE",
+      "RAINBOW"
+    ],
+    "string": "&#x1f445;&#x1f308;"
+  },
+  {
+    "chars": [
+      "&#x1f468;",
+      "&#x1f346;"
+    ],
+    "display_name": "naked man",
+    "filename": "naked_man.svg",
+    "name": "naked man",
+    "related": [],
+    "sequence": [
+      "MAN",
+      "AUBERGINE"
+    ],
+    "string": "&#x1f468;&#x1f346;"
+  },
+  {
+    "chars": [
+      "&#x1f469;",
+      "&#x1f351;"
+    ],
+    "display_name": "naked woman",
+    "filename": "naked_woman.svg",
+    "name": "naked woman",
+    "related": [],
+    "sequence": [
+      "WOMAN",
+      "PEACH"
+    ],
+    "string": "&#x1f469;&#x1f351;"
+  },
+  {
+    "chars": [
+      "&#x1f449;",
+      "&#x1f44c;"
+    ],
+    "display_name": "sex",
+    "filename": "sex.svg",
+    "name": "sex",
+    "related": [
+      "BED"
+    ],
+    "sequence": [
+      "WHITE RIGHT POINTING BACKHAND INDEX",
+      "OK HAND SIGN"
+    ],
+    "string": "&#x1f449;&#x1f44c;"
+  },
+  {
+    "chars": [
+      "&#x1f44b;",
+      "&#x1f4a6;"
+    ],
+    "display_name": "masturbation",
+    "filename": "masturbation.svg",
+    "name": "woman masturbating",
+    "related": [],
+    "sequence": [
+      "WAVING HAND SIGN",
+      "SPLASHING SWEAT SYMBOL"
+    ],
+    "string": "&#x1f44b;&#x1f4a6;"
+  },
+  {
+    "chars": [
+      "&#x1f930;",
+      "&#x1f476;"
+    ],
+    "display_name": "fetus",
+    "filename": "fetus.svg",
+    "name": "fetus",
+    "related": [],
+    "sequence": [
+      "PREGNANT WOMAN",
+      "BABY"
+    ],
+    "string": "&#x1f930;&#x1f476;"
+  },
+  {
+    "chars": [
+      "&#x1f930;",
+      "&#x1f6ab;"
+    ],
+    "display_name": "abortion",
+    "filename": "abortion.svg",
+    "name": "abortion",
+    "related": [],
+    "sequence": [
+      "PREGNANT WOMAN",
+      "NO ENTRY SIGN"
+    ],
+    "string": "&#x1f930;&#x1f6ab;"
+  },
+  {
+    "chars": [
+      "&#x1f346;",
+      "&#x2614;"
+    ],
+    "display_name": "condom",
+    "filename": "condom.svg",
+    "name": "condom",
+    "related": [
+      "SHIELD"
+    ],
+    "sequence": [
+      "AUBERGINE",
+      "UMBRELLA WITH RAIN DROPS"
+    ],
+    "string": "&#x1f346;&#x2614;"
+  },
+  {
+    "chars": [
+      "&#x1fa72;",
+      "&#x1f7ea;"
+    ],
+    "display_name": "panties",
+    "filename": "panties.svg",
+    "name": "panties",
+    "sequence": [
+      "1fa72",
+      "1f7ea"
+    ],
+    "string": "&#x1fa72;&#x1f7ea;"
+  },
+  {
+    "chars": [
+      "&#x1fa72;",
+      "&#x1fa78;"
+    ],
+    "display_name": "menstruation",
+    "filename": "menstruation.svg",
+    "name": "menstruation",
+    "related": [],
+    "sequence": [
+      "1fa72",
+      "1fa78"
+    ],
+    "string": "&#x1fa72;&#x1fa78;"
+  },
+  {
+    "chars": [
+      "&#x1f30d;",
+      "&#x1f525;"
+    ],
+    "display_name": "climate crisis",
+    "filename": "climate_crisis.svg",
+    "name": "globe showing europe-africa in flames",
+    "related": [],
+    "sequence": [
+      "EARTH GLOBE EUROPE-AFRICA",
+      "FIRE"
+    ],
+    "string": "&#x1f30d;&#x1f525;"
+  },
+  {
+    "chars": [
+      "&#x1f30d;",
+      "&#x1f3ed;"
+    ],
+    "display_name": "polution",
+    "filename": "polution.svg",
+    "name": "smoking factory",
+    "related": [],
+    "sequence": [
+      "EARTH GLOBE EUROPE-AFRICA",
+      "FACTORY"
+    ],
+    "string": "&#x1f30d;&#x1f3ed;"
+  },
+  {
+    "chars": [
+      "&#x1f916;",
+      "&#x1f528;"
+    ],
+    "display_name": "automation",
+    "filename": "automation.svg",
+    "name": "automation",
+    "related": [],
+    "sequence": [
+      "ROBOT FACE",
+      "HAMMER"
+    ],
+    "string": "&#x1f916;&#x1f528;"
+  },
+  {
+    "chars": [
+      "&#x1f6b2;",
+      "&#x1f528;"
+    ],
+    "display_name": "platform economy",
+    "filename": "platform_economy.svg",
+    "name": "platform economy",
+    "related": [],
+    "sequence": [
+      "BICYCLE",
+      "HAMMER"
+    ],
+    "string": "&#x1f6b2;&#x1f528;"
+  },
+  {
+    "chars": [
+      "&#x1f61f;",
+      "&#x1f5a4;"
+    ],
+    "display_name": "mental illness",
+    "filename": "depression.svg",
+    "name": "broken head",
+    "related": [],
+    "sequence": [
+      "WORRIED FACE",
+      "BLACK HEART"
+    ],
+    "string": "&#x1f61f;&#x1f5a4;"
+  },
+  {
+    "chars": [
+      "&#x1f622;",
+      "&#x1f52a;"
+    ],
+    "display_name": "suicide",
+    "filename": "suicide.svg",
+    "name": "suicide",
+    "related": [],
+    "sequence": [
+      "CRYING FACE",
+      "HOCHO"
+    ],
+    "string": "&#x1f622;&#x1f52a;"
+  },
+  {
+    "chars": [
+      "&#x1f9e0;",
+      "&#x1f6ab;"
+    ],
+    "display_name": "stupidity",
+    "filename": "stupid.svg",
+    "name": "stupid face",
+    "related": [
+      "FACE PALM"
+    ],
+    "sequence": [
+      "BRAIN",
+      "NO ENTRY SIGN"
+    ],
+    "string": "&#x1f9e0;&#x1f6ab;"
+  },
+  {
+    "chars": [
+      "&#x1f425;",
+      "&#x1f383;"
+    ],
+    "display_name": "ugliness",
+    "filename": "ugly.svg",
+    "name": "ugly bird",
+    "related": [],
+    "sequence": [
+      "FRONT-FACING BABY CHICK",
+      "JACK-O-LANTERN"
+    ],
+    "string": "&#x1f425;&#x1f383;"
+  },
+  {
+    "chars": [
+      "&#x1f6cb;",
+      "&#x1f971;"
+    ],
+    "display_name": "laziness",
+    "filename": "lazy.svg",
+    "name": "lazy person",
+    "related": [],
+    "sequence": [
+      "COUCH AND LAMP",
+      "1f971"
+    ],
+    "string": "&#x1f6cb;&#x1f971;"
+  },
+  {
+    "chars": [
+      "&#x1f4f1;",
+      "&#x1f494;"
+    ],
+    "display_name": "accident",
+    "filename": "accident.svg",
+    "name": "broken phone",
+    "related": [],
+    "sequence": [
+      "MOBILE PHONE",
+      "BROKEN HEART"
+    ],
+    "string": "&#x1f4f1;&#x1f494;"
+  },
+  {
+    "chars": [
+      "&#x1f6b6;",
+      "&#x1f9f1;"
+    ],
+    "display_name": "failure",
+    "filename": "fail.svg",
+    "name": "falling person ",
+    "related": [],
+    "sequence": [
+      "PEDESTRIAN",
+      "BRICK"
+    ],
+    "string": "&#x1f6b6;&#x1f9f1;"
+  },
+  {
+    "chars": [
+      "&#x1f91c;",
+      "&#x1f610;"
+    ],
+    "display_name": "violence",
+    "filename": "violence.svg",
+    "name": "fist punching face",
+    "related": [],
+    "sequence": [
+      "RIGHT-FACING FIST",
+      "NEUTRAL FACE"
+    ],
+    "string": "&#x1f91c;&#x1f610;"
+  },
+  {
+    "chars": [
+      "&#x1f9d1;",
+      "&#x1f3ff;",
+      "&#x1f6ab;"
+    ],
+    "display_name": "racism",
+    "filename": "racism.svg",
+    "name": "racism",
+    "related": [],
+    "sequence": [
+      "ADULT",
+      "EMOJI MODIFIER FITZPATRICK TYPE-6",
+      "NO ENTRY SIGN"
+    ],
+    "string": "&#x1f9d1;&#x1f3ff;&#x1f6ab;"
+  },
+  {
+    "chars": [
+      "&#x1f60f;",
+      "&#x1f645;"
+    ],
+    "display_name": "sexual harassment",
+    "filename": "harassment.svg",
+    "name": "sexual harassment",
+    "related": [],
+    "sequence": [
+      "SMIRKING FACE",
+      "FACE WITH NO GOOD GESTURE"
+    ],
+    "string": "&#x1f60f;&#x1f645;"
+  },
+  {
+    "chars": [
+      "&#x1f64f;",
+      "&#x1f35e;"
+    ],
+    "display_name": "poverty",
+    "filename": "poverty.svg",
+    "name": "beggar",
+    "related": [],
+    "sequence": [
+      "PERSON WITH FOLDED HANDS",
+      "BREAD"
+    ],
+    "string": "&#x1f64f;&#x1f35e;"
+  },
+  {
+    "chars": [
+      "&#x1f6b6;",
+      "&#x1f4e2;"
+    ],
+    "display_name": "protest",
+    "filename": "protest.svg",
+    "name": "people protesting",
+    "related": [
+      "WAVING WHITE FLAG"
+    ],
+    "sequence": [
+      "PEDESTRIAN",
+      "PUBLIC ADDRESS LOUDSPEAKER"
+    ],
+    "string": "&#x1f6b6;&#x1f4e2;"
+  },
+  {
+    "chars": [
+      "&#x1f9b9;",
+      "&#x1f4b0;"
+    ],
+    "display_name": "crime",
+    "filename": "crime.svg",
+    "name": "person with money bags",
+    "related": [],
+    "sequence": [
+      "SUPERVILLAIN",
+      "MONEY BAG"
+    ],
+    "string": "&#x1f9b9;&#x1f4b0;"
+  },
+  {
+    "chars": [
+      "&#x1f46e;",
+      "&#x270b;"
+    ],
+    "display_name": "punishment",
+    "filename": "punishment.svg",
+    "name": "person in jail",
+    "related": [
+      "SCALES"
+    ],
+    "sequence": [
+      "POLICE OFFICER",
+      "RAISED HAND"
+    ],
+    "string": "&#x1f46e;&#x270b;"
+  },
+  {
+    "chars": [
+      "&#x26ea;",
+      "&#x1f44e;"
+    ],
+    "display_name": "moralizing",
+    "filename": "moralizing.svg",
+    "name": "chastening priest",
+    "related": [
+      "SMILING FACE WITH HORNS"
+    ],
+    "sequence": [
+      "CHURCH",
+      "THUMBS DOWN SIGN"
+    ],
+    "string": "&#x26ea;&#x1f44e;"
+  },
+  {
+    "chars": [
+      "&#x1f9d1;",
+      "&#x1f37c;"
+    ],
+    "display_name": "patronizing",
+    "filename": "patronizing.svg",
+    "name": "hand petting adult person",
+    "related": [],
+    "sequence": [
+      "ADULT",
+      "BABY BOTTLE"
+    ],
+    "string": "&#x1f9d1;&#x1f37c;"
+  },
+  {
+    "chars": [
+      "&#x1f37a;",
+      "&#x1f6b6;"
+    ],
+    "display_name": "beer bottle",
+    "filename": "beer_bottle.svg",
+    "name": "beer bottle",
+    "related": [],
+    "sequence": [
+      "BEER MUG",
+      "PEDESTRIAN"
+    ],
+    "string": "&#x1f37a;&#x1f6b6;"
+  },
+  {
+    "chars": [
+      "&#x1f37d;",
+      "&#x1f56f;"
+    ],
+    "display_name": "svíčková na smetaně",
+    "filename": "svickova.svg",
+    "name": "svickova",
+    "related": [],
+    "sequence": [
+      "FORK AND KNIFE WITH PLATE",
+      "CANDLE"
+    ],
+    "string": "&#x1f37d;&#x1f56f;"
+  }
+]

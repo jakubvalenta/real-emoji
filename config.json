@@ -1,9 +1,9 @@
 {
   "baseURL": "https://emoji.now",
   "permalinks": {
-    "posts": "/:year/:month/:day/:slug"
+    "posts": "/:section/:slug"
   },
-  "uglyURLs": true,
+  "uglyURLs": false,
   "canonifyURLs": true,
   "rssLimit": 10,
   "outputs": {

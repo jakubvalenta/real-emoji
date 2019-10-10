@@ -69,12 +69,15 @@ font](https://twitter.github.io/twemoji/) by Twitter licensed under
 [CC-BY](http://creativecommons.org/licenses/by-sa/4.0/).
 
 The design of Real Emoji is based on [Twitter Emoji
-(Twemoji)](https://twitter.github.io/twemoji/). The design of the [Svíčková na
-smetaně emoji](./static/svg/svickova.svg) is based on a [photo by Matyáš Havel
-available at
+(Twemoji)](https://twitter.github.io/twemoji/). The design of the [fetus
+emoji](./static/svg/fetus.svg) is based on a [photo by the National Museum of
+Health and Medicine available at
+Wikipedia](https://en.wikipedia.org/wiki/File:Fetus_3_months.jpg). The design of
+the [Svíčková na smetaně emoji](./static/svg/svickova.svg) is based on a [photo
+by Matyáš Havel available at
 Wikipedia](https://en.wikipedia.org/wiki/Sv%C3%AD%C4%8Dkov%C3%A1#/media/File:Sv%C3%AD%C4%8Dkov%C3%A1_na_smetan%C4%9B.JPG). The
-color of the [ugliness emoji](./static/svg/ugliness.svg) is Pantone 448C, a
-color [voted the ugliest colour in the
+color of the [ugliness emoji](./static/svg/ugly.svg) is Pantone 448C, a color
+[voted the ugliest colour in the
 world](https://www.theguardian.com/fashion/2016/jun/08/stylewatch-pantone-448c-ugliest-colour-world-opaque-couche-australian-smokers-fashion).
 
 ## Contributing

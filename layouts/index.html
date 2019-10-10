@@ -8,10 +8,10 @@
 <div class="bg-white">
   <div class="container">
     <ul class="emojis">
-      {{ range .Site.Data.RealEmoji.emojis }}
+      {{ range where .Site.RegularPages.Reverse "Section" "emoji" }}
       <li>
-        <img src="svg/{{ .filename }}" alt="{{ .display_name }} emoji" />
-        <h3>{{ .display_name }}</h3>
+        <img src="/svg/{{ .Params.filename }}" alt="{{ .Title }} emoji" />
+        <h3>{{ .Title }}</h3>
       </li>
       {{ end }}
     </ul>

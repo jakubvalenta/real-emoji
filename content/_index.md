@@ -50,12 +50,15 @@ which -- if implemented -- would render the current submission process obsolete.
 ## Acknowledgments
 
 The design of Real Emoji is based on [Twitter Emoji
-(Twemoji)](https://twitter.github.io/twemoji/). The design of the [Svíčková na
-smetaně emoji](/emoji/svickova-na-smetane/) is based on a [photo by Matyáš Havel
-available at
+(Twemoji)](https://twitter.github.io/twemoji/). The design of the [fetus
+emoji](/emoji/fetus/) is based on a [photo by the National Museum of Health and
+Medicine available at
+Wikipedia](https://en.wikipedia.org/wiki/File:Fetus_3_months.jpg). The design of
+the [Svíčková na smetaně emoji](/emoji/svickova/) is based on a [photo by Matyáš
+Havel available at
 Wikipedia](https://en.wikipedia.org/wiki/Sv%C3%AD%C4%8Dkov%C3%A1#/media/File:Sv%C3%AD%C4%8Dkov%C3%A1_na_smetan%C4%9B.JPG). The
-color of the [ugliness emoji](/emoji/ugliness/) is Pantone 448C, a color [voted
-the ugliest colour in the
+color of the [ugliness emoji](/emoji/ugly/) is Pantone 448C, a color [voted the
+ugliest colour in the
 world](https://www.theguardian.com/fashion/2016/jun/08/stylewatch-pantone-448c-ugliest-colour-world-opaque-couche-australian-smokers-fashion). The
 term "hugs and kisses" is a quote from Mark Fisher's book [Capitalist
 Realism](https://en.wikipedia.org/wiki/Capitalist_Realism:_Is_There_No_Alternative%3F).

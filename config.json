@@ -1,5 +1,5 @@
 {
-  "baseURL": "https://emoji.new",
+  "baseURL": "https://emoji.now",
   "permalinks": {
     "posts": "/:year/:month/:day/:slug"
   },

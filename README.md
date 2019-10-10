@@ -1,85 +1,63 @@
-# Emojis for grown-ups
+# Real Emoji
 
-30 new emojis that go beyond the hugs and kisses of the standard emoji set.
+A proposal for 35 new emoji that go beyond the hugs and kisses of the standard
+emoji set. See the [Real Emoji website](https://emoji.now/) for more
+information.
 
-![Emojis for grown-ups](data/emojis-for-grownups.png)
+![Real Emoji](./screenshots/real-emoji.png)
 
-You can install the emojis as a custom font. Then you can write the new emojis
-by writing a sequence of standard emojis.
+## Download and installation
 
-![Emojis for grown-ups usage](data/emojis-for-grownups-usage.gif)
+Real Emoji are available as:
 
-## Installation
-
-### iOS
-
-1. Download the [Emojis for grown-ups iOS configuration
-   profile](dist/emojis-for-grownups-ios-profile).
-2. Install the profile:
-
-![iOS configuration profile installation instructions](data/ios-install.png)
-
-### Android [technical instructions]
-
-1. Download the [Emojis for grown-ups font file](dist/EmojisForGrownUps.ttf).
-2. Replace the default emoji font using Android Debugger:
-
-```
-adb shell cp /system/fonts/NotoColorEmoji.ttf /system/fonts/NotoColorEmoji.ttf.bak
-adb push EmojisForGrownUps.ttf /system/fonts/NotoColorEmoji.ttf
-```
-
-### Desktop (Windows, Mac, Linux) [general instructions]
-
-1. Download the [Emojis for grown-ups font file](dist/EmojisForGrownUps.ttf).
-2. Copy it in your operating system's font directory.
-3. Change your operating systems settings to use this font.
-
-### Web
-
-If you're a web designer, you can download an use the [Emojis for grown-ups
-webfont](dist/EmojisForGrownUps-webfont.ttf).
+- Telegram stickers: [download](TODO/stickers)
+- font file: [download and installation instructions](https://emoji.now/font/)
 
 ## Development
 
-Install the following dependencies using your package manager:
-
-- make
-- librsvg
-- nototools (available in [Arch Linux User
-  Repository](https://aur.archlinux.org/packages/nototools-git/))
-- optipng
-- pngquant
-- svgo
-
-Build the required Docker image:
-
-```
-cd twemoji-color-font/scfbuild && make
-```
-
 ### Building the font file
 
-```
-make
-```
+1. Install the following dependencies:
 
-If everything succeeds, you will find the TTF file in the `dist/` directory.
+    - make
+    - librsvg
+    - nototools (available in [Arch Linux User
+      Repository](https://aur.archlinux.org/packages/nototools-git/))
+    - optipng
+    - pngquant
+    - svgo
 
-### Rendering a preview of the font
+2. Build the scfbuild Docker image:
 
-Dependencies:
+    ```
+    cd twemoji-color-font/scfbuild && make
+    ```
 
-- webify (available in [Arch Linux User
-  Repository](https://aur.archlinux.org/packages/webify/))
-- woff2
-- hugo
+3. Build the font file:
 
-```
-make serve
-```
+    ```
+    make font
+    ```
 
-## Credits
+If everything succeeds, you will find the TTF file in the `static/fonts/`
+directory.
+
+### Building the website
+
+1. Install the following dependencies:
+
+    - webify (available in [Arch Linux User
+      Repository](https://aur.archlinux.org/packages/webify/))
+    - woff2
+    - hugo
+
+2. Build the static website and start a local web server:
+
+    ```
+    make serve
+    ```
+
+## Acknowledgments
 
 The build system is inspired by how the [Twemoji package of Fedora
 Linux](https://src.fedoraproject.org/rpms/twitter-twemoji-fonts) is built. It
@@ -90,6 +68,15 @@ The standard emojis are copied from the [Twemoji
 font](https://twitter.github.io/twemoji/) by Twitter licensed under
 [CC-BY](http://creativecommons.org/licenses/by-sa/4.0/).
 
+The design of Real Emoji is based on [Twitter Emoji
+(Twemoji)](https://twitter.github.io/twemoji/). The design of the [Svíčková na
+smetaně emoji](./static/svg/svickova.svg) is based on a [photo by Matyáš Havel
+available at
+Wikipedia](https://en.wikipedia.org/wiki/Sv%C3%AD%C4%8Dkov%C3%A1#/media/File:Sv%C3%AD%C4%8Dkov%C3%A1_na_smetan%C4%9B.JPG). The
+color of the [ugliness emoji](./static/svg/ugliness.svg) is Pantone 448C, a
+color [voted the ugliest colour in the
+world](https://www.theguardian.com/fashion/2016/jun/08/stylewatch-pantone-448c-ugliest-colour-world-opaque-couche-australian-smokers-fashion).
+
 ## Contributing
 
 __Feel free to remix this project.__
@@ -97,6 +84,6 @@ __Feel free to remix this project.__
 The code is licensed under the [Apache License, Version
 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
-The graphics (emoji SVG images) are licensed under the [Creative Commons
+The graphics (SVG images) are licensed under the [Creative Commons
 Attribution-ShareAlike 4.0 International
 License](http://creativecommons.org/licenses/by-sa/4.0/).

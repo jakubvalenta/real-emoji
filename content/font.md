@@ -18,19 +18,19 @@ description: |
 
 ### Windows
 
-1. Download [Emoji.ttf](/fonts/Emoji.ttf).
+1. Download [RealEmoji.ttf](/fonts/RealEmoji.ttf).
 2. Copy the font file to the `Fonts` folder.
 3. See [Twemoji Color Font - Install on Windows](https://github.com/eosrei/twemoji-color-font#install-on-windows) for more information.
 
 ### macOS
 
-1. Download [Emoji-mac.zip](/dist/Emoji-mac.zip).
+1. Download [RealEmoji-mac.zip](/TODO/RealEmoji-mac.zip).
 2. Install the font file using *FontBook* and accept the warning.
 3. See [Twemoji Color Font - Install on OS X](https://github.com/eosrei/twemoji-color-font#install-on-os-x) for more information.
 
 ### Linux
 
-1. Download [Emoji.ttf](/fonts/Emoji.ttf).
+1. Download [RealEmoji.ttf](/fonts/RealEmoji.ttf).
 2. Copy the file to `~/.fonts/`.
 3. See [Twemoji Color Font - Install on Linux](https://github.com/eosrei/twemoji-color-font#install-on-linux) for more information.
 
@@ -44,6 +44,6 @@ description: |
 ### Android
 
 1. Your device needs to **rooted**. This poses a security risk, so unless your device is already rooted, we don't suggest rooting it just to install some emoji.
-2. Download [Emoji.ttf](/fonts/Emoji.ttf).
+2. Download [RealEmoji.ttf](/fonts/RealEmoji.ttf).
 3. Copy the font file using `adb` to `/system/fonts` and replace the default emoji font.
 4. See [How to Install Custom Fonts on your Android Device](https://joyofandroid.com/how-to-install-custom-fonts-on-your-android-device/) for more information.

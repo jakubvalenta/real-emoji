@@ -18,8 +18,7 @@
   </head>
   <body>
     <header class="container">
-      <h1 id="real-emoji">{{ .Site.Title }}</h1>
-      <p>{{ .Site.Params.description }}</p>
+      {{ block "header" . }}<a href="/">&lt;- Go back to the Real Emoji list</a>{{ end }}
     </header>
     <main>
       {{ block "main" . }}

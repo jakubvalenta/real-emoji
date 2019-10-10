@@ -1,3 +1,9 @@
+{{ define "header" }}
+<div class="index-header">
+  <h1 id="real-emoji">{{ .Site.Title }}</h1>
+  <p>{{ .Site.Params.description }}</p>
+</div>
+{{ end }}
 {{ define "main" }}
 <div class="bg-white">
   <div class="container">

@@ -1,0 +1,76 @@
+{{ define "main" }}
+<div class="bg-yellow">
+  <div class="container">
+    <div class="rich">
+      <h1>{{ .Page.Title }}</h1>
+      {{ .Page.Params.description | markdownify }}
+    </div>
+  </div>
+</div>
+<div class="bg-green">
+  <div class="container">
+    <div class="rich">
+      <h2 id="try-it-out" class="sr-only">Try it out</h2>
+    </div>
+    <div class="emoji-panel">
+      <div class="emoji-panel__form">
+        <textarea
+          type="text"
+          id="js-emoji-panel-input"
+          class="emoji-panel__input emoji-string"
+        >
+Try it out! Write something here using the picker on the right...
+{{ range .Site.Data.Emoji.emojis }}
+{{ delimit .chars "" }} is {{ delimit .chars " and " }}
+{{- end }}</textarea
+        >
+      </div>
+      <div id="js-emoji-panel-picker" class="emoji-panel__picker"></div>
+      <noscript>
+        JavaScript is required to show the emoji picker.
+      </noscript>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="rich">
+    {{ .Content }}
+  </div>
+</div>
+{{ $script_emojipanel := resources.Get "node_modules/emojipanel/dist/emojipanel.js" | resources.Minify | resources.Fingerprint -}}
+{{ $json_emojipanel := resources.Get "node_modules/emojipanel/dist/emojis.json" -}}
+<script src="{{ $script_emojipanel.Permalink }}"></script>
+<script>
+  (function() {
+    function typeText(input, text) {
+      var selStart = input.selectionStart;
+      var selEnd = input.selectionEnd;
+      var oldValue = input.value;
+      input.value =
+        oldValue.substring(0, selStart) + text + oldValue.substring(selEnd);
+      input.setSelectionRange(
+        selStart === selEnd ? selStart + text.length : selStart,
+        selStart + text.length
+      );
+      input.focus();
+    }
+
+    function cursorAfterText(input, text) {
+      var index = input.value.lastIndexOf(text);
+      var cursorPos = index + text.length;
+      input.setSelectionRange(cursorPos, cursorPos);
+    }
+
+    var input = document.getElementById('js-emoji-panel-input');
+    cursorAfterText(input, '...');
+
+    var emojiPanel = new EmojiPanel({
+      container: '#js-emoji-panel-picker',
+      json_url: '{{ $json_emojipanel.Permalink }}',
+      search: true,
+      fitzpatrick: false
+    });
+    emojiPanel.addListener('select', emoji => typeText(input, emoji.char));
+  })();
+</script>
+{{ end }}

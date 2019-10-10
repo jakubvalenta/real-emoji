@@ -9,8 +9,8 @@ too weird, too local, too personal or just forgotten.
 Real Emoji contains signs related to human body, life, relationships ... and my
 personal favourite meal.
 
-Real Emoji are available as [Telegram stickers](/stickers) and as a [font
-file](/font). If you wanted to use them in your phone or computer, they would
+Real Emoji are available as [Telegram stickers](/stickers/) and as a [font
+file](/font/). If you wanted to use them in your phone or computer, they would
 first need to be accepted by the [Unicode
 Consortium](https://home.unicode.org/)[^2], an organization that governs the
 universal character set. You can [submit a
@@ -35,6 +35,8 @@ TODO: mention gun emoji, middle finger emoji, Wikipedia GID, Ford pickup emoji,
 white wine emoji, Taiwan flag emoji
 
 TODO: add GitHub link
+
+TODO: Mark Fisher
 
 [^1]: middle class, male, white, Prague/Berlin
 [^2]: members are: Google, Facebook, Apple...

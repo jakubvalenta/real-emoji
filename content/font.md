@@ -1,0 +1,46 @@
+---
+title: Font
+layout: font
+url: font
+description: |
+  Real Emoji are available not only as [Telegram stickers](/stickers/) but also
+  as an emoji font, which is exactly how the standard emoji work. The font is
+  based on [Twitter Emoji (Twemoji)](https://twitter.github.io/twemoji/),
+  therefore it contains also all the standard emoji.
+
+  Once you have the font installed, the new emoji characters can be written as
+  sequences of existing emoji characters.
+---
+## Installation
+
+### Windows
+
+1. Download [Emoji.ttf](/dist/Emoji.ttf).
+2. Copy the font file to the `Fonts` folder.
+3. See [Twemoji Color Font - Install on Windows](https://github.com/eosrei/twemoji-color-font#install-on-windows) for more information.
+
+### macOS
+
+1. Download [Emoji-mac.zip](/dist/Emoji-mac.zip).
+2. Install the font file using *FontBook* and accept the warning.
+3. See [Twemoji Color Font - Install on OS X](https://github.com/eosrei/twemoji-color-font#install-on-os-x) for more information.
+
+### Linux
+
+1. Download [Emoji.ttf](/dist/Emoji.ttf).
+2. Copy the file to `~/.fonts/`.
+3. See [Twemoji Color Font - Install on Linux](https://github.com/eosrei/twemoji-color-font#install-on-linux) for more information.
+
+### iOS
+
+1. Your device needs to be **jailbroken**. This poses a security risk, so unless your device is already jailbroken, we don't suggest jailbreaking it just to install some emojis.
+2. Install the app BytaFont from a Cydia repository.
+3. Use the app BytaFont to replace the default emoji font.
+4. Please search the internet for more information.
+
+### Android
+
+1. Your device needs to **rooted**. This poses a security risk, so unless your device is already rooted, we don't suggest rooting it just to install some emojis.
+2. Download [Emoji.ttf](/dist/Emoji.ttf).
+3. Copy the font file using `adb` to `/system/fonts` and replace the default emoji font.
+4. See [How to Install Custom Fonts on your Android Device](https://joyofandroid.com/how-to-install-custom-fonts-on-your-android-device/) for more information.

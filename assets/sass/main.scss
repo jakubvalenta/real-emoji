@@ -9,8 +9,8 @@ $color_gray_light: #bbb;
 $color_gray_lighter: #f0f0f0;
 $color_yellow: lighten(#ffeeaa, 10%);
 
-$fontname: '{{ site.fontname }}';
-$fontname_try: '{{ site.fontname_try }}';
+$fontname: 'Emoji';
+$fontname_try: 'EmojiTry';
 
 @font-face {
   font-family: '#{$fontname}';
@@ -56,13 +56,6 @@ body {
 }
 .bg-green {
   background: linear-gradient(#5fd38d, #2ca05a);
-  padding: 3em 0;
-
-  .container {
-    background: $color_gray_lighter;
-    padding: 2.5em;
-    border-radius: 0.25rem;
-  }
 }
 
 .sr-only {
@@ -126,17 +119,14 @@ a {
     padding-left: 0;
   }
   li {
-    list-style-position: inside;
+    margin-left: 1.5em;
   }
   ul li {
     list-style-type: '- ';
   }
-  strong {
-    font-weight: normal;
-    text-transform: uppercase;
-  }
   code {
-    font-size: 90%;
+    font-family: 'Inconsolata', monospace;
+    background: $color_white;
   }
   hr {
     clear: both;
@@ -157,7 +147,6 @@ a {
 
 header {
   &.container {
-    max-width: 58em;
     padding-top: 0.75em;
     padding-bottom: 0.85em;
   }
@@ -168,14 +157,15 @@ header {
     margin: 0;
     font-size: 100%;
   }
-  h1 {
-    text-transform: uppercase;
-    font-weight: normal;
-
-    &:after {
-      content: ' \2014';
-    }
+  p:before {
+    content: '--  ';
   }
+  a {
+    text-decoration: none;
+  }
+}
+.index-header {
+  margin-left: 1em;
 }
 
 .emojis {
@@ -273,9 +263,11 @@ header {
     box-shadow: 0 0 0 0.2rem rgba($color_blue, 0.25);
   }
 }
-.EmojiPanel__header,
-.EmojiPanel__footer {
-  border-radius: 0;
+.EmojiPanel {
+  font-family: sans-serif;
+}
+.EmojiPanel__header input {
+  box-sizing: border-box;
 }
 
 table {

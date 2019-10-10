@@ -18,7 +18,7 @@ description: |
 
 ### Windows
 
-1. Download [Emoji.ttf](/dist/Emoji.ttf).
+1. Download [Emoji.ttf](/fonts/Emoji.ttf).
 2. Copy the font file to the `Fonts` folder.
 3. See [Twemoji Color Font - Install on Windows](https://github.com/eosrei/twemoji-color-font#install-on-windows) for more information.
 
@@ -30,7 +30,7 @@ description: |
 
 ### Linux
 
-1. Download [Emoji.ttf](/dist/Emoji.ttf).
+1. Download [Emoji.ttf](/fonts/Emoji.ttf).
 2. Copy the file to `~/.fonts/`.
 3. See [Twemoji Color Font - Install on Linux](https://github.com/eosrei/twemoji-color-font#install-on-linux) for more information.
 
@@ -44,6 +44,6 @@ description: |
 ### Android
 
 1. Your device needs to **rooted**. This poses a security risk, so unless your device is already rooted, we don't suggest rooting it just to install some emoji.
-2. Download [Emoji.ttf](/dist/Emoji.ttf).
+2. Download [Emoji.ttf](/fonts/Emoji.ttf).
 3. Copy the font file using `adb` to `/system/fonts` and replace the default emoji font.
 4. See [How to Install Custom Fonts on your Android Device](https://joyofandroid.com/how-to-install-custom-fonts-on-your-android-device/) for more information.

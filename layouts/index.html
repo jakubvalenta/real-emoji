@@ -8,7 +8,7 @@
 <div class="bg-white">
   <div class="container">
     <ul class="emojis">
-      {{ range .Site.Data.Emoji.emojis }}
+      {{ range .Site.Data.RealEmoji.emojis }}
       <li>
         <img src="svg/{{ .filename }}" alt="{{ .display_name }} emoji" />
         <h3>{{ .display_name }}</h3>

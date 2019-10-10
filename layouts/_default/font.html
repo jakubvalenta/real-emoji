@@ -20,7 +20,7 @@
           class="emoji-panel__input"
         >
 Try it out! Write something here using the picker on the right...
-{{ range .Site.Data.Emoji.emojis }}
+{{ range .Site.Data.RealEmoji.emojis }}
 {{ delimit .chars "" }} is {{ delimit .chars " and " }}
 {{- end }}</textarea>
       </div>

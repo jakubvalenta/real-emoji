@@ -1,0 +1,7 @@
+--ignore-dir=.mypy_cache
+--ignore-dir=__pycache__
+--ignore-dir=build
+--ignore-dir=node_modules
+--ignore-dir=public
+--ignore-dir=resources
+--ignore-dir=twemoji-color-font

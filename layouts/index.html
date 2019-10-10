@@ -7,19 +7,15 @@
 {{ define "main" }}
 <div class="bg-white">
   <div class="container">
-    <ul class="emojis emojis--custom">
+    <ul class="emojis">
       {{ range .Site.Data.Emoji.emojis }}
-      <li class="emoji">
-        <img
-          src="svg/{{ .filename }}"
-          alt="{{ .display_name }} emoji"
-          class="emoji-img"
-        />
+      <li>
+        <img src="svg/{{ .filename }}" alt="{{ .display_name }} emoji" />
         <h3>{{ .display_name }}</h3>
       </li>
       {{ end }}
     </ul>
-    <ul class="buttons">
+    <ul class="index-buttons">
       <li><a href="/stickers/">get Telegram stickers</a></li>
       <li><a href="/font/">download font file</a></li>
     </ul>

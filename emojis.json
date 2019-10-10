@@ -1,453 +1,246 @@
 [
   {
-    "category": "drugs",
-    "description": "",
     "display_name": "weed",
     "name": "marihuana leaf",
     "filename": "weed.svg",
     "related": ["MAPLE LEAF"],
-    "sequence": ["SMOKING SYMBOL", "HERB"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "illegal drug, it would not be implemented by phone manufacturers"
-    }
+    "sequence": ["SMOKING SYMBOL", "HERB"]
   },
   {
-    "category": "drugs",
-    "description": "",
     "display_name": "ecstasy",
     "name": "MDMA pill",
     "filename": "ecstasy.svg",
     "related": [],
-    "sequence": ["PILL", "DANCER"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "illegal drug, it would not be implemented by phone manufacturers"
-    }
+    "sequence": ["PILL", "DANCER"]
   },
   {
-    "category": "drugs",
-    "description": "",
     "display_name": "cocaine",
     "name": "white drug powder",
     "filename": "cocaine.svg",
     "related": ["CREDIT CARD"],
-    "sequence": ["WIND BLOWING FACE", "CLOUD WITH SNOW"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "illegal drug, it would not be implemented by phone manufacturers"
-    }
+    "sequence": ["WIND BLOWING FACE", "CLOUD WITH SNOW"]
   },
   {
-    "category": "drugs",
-    "description": "",
     "display_name": "",
     "name": "LSD",
     "filename": "lsd.svg",
     "related": [],
-    "sequence": ["TONGUE", "RAINBOW"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "illegal drug, it would not be implemented by phone manufacturers"
-    }
+    "sequence": ["TONGUE", "RAINBOW"]
   },
   {
-    "category": "body",
-    "description": "",
     "display_name": "",
     "name": "naked man",
     "filename": "naked_man.svg",
     "related": [],
-    "sequence": ["MAN", "AUBERGINE"],
-    "submission": {
-      "status": "?",
-      "reason": "?"
-    }
+    "sequence": ["MAN", "AUBERGINE"]
   },
   {
-    "category": "body",
-    "description": "",
     "display_name": "",
     "name": "naked woman",
     "filename": "naked_woman.svg",
     "related": [],
-    "sequence": ["WOMAN", "PEACH"],
-    "submission": {
-      "status": "?",
-      "reason": "?"
-    }
+    "sequence": ["WOMAN", "PEACH"]
   },
   {
-    "category": "body",
-    "description": "",
     "display_name": "",
     "name": "sex",
     "filename": "sex.svg",
     "related": ["BED"],
-    "sequence": ["WHITE RIGHT POINTING BACKHAND INDEX", "OK HAND SIGN"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "it would be rejected, because it's adult content, even though this is not in the emoji rules"
-    }
+    "sequence": ["WHITE RIGHT POINTING BACKHAND INDEX", "OK HAND SIGN"]
   },
   {
-    "category": "body",
-    "description": "",
     "display_name": "masturbation",
     "name": "woman masturbating",
     "filename": "masturbation.svg",
     "related": [],
-    "sequence": ["WAVING HAND SIGN", "SPLASHING SWEAT SYMBOL"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "it would be rejected, because it's adult content, even though this is not in the emoji rules"
-    }
+    "sequence": ["WAVING HAND SIGN", "SPLASHING SWEAT SYMBOL"]
   },
   {
-    "category": "body",
-    "description": "",
     "display_name": "",
     "name": "fetus",
     "filename": "fetus.svg",
     "related": [],
-    "sequence": ["PREGNANT WOMAN", "BABY"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["PREGNANT WOMAN", "BABY"]
   },
   {
-    "category": "body",
-    "description": "",
     "display_name": "",
     "name": "abortion",
     "filename": "abortion.svg",
     "related": [],
-    "sequence": ["PREGNANT WOMAN", "NO ENTRY SIGN"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "it would be rejected, because this is a political issue in the USA"
-    }
+    "sequence": ["PREGNANT WOMAN", "NO ENTRY SIGN"]
   },
   {
-    "category": "body",
-    "description": "safe sex",
     "display_name": "",
     "name": "condom",
     "filename": "condom.svg",
     "related": ["SHIELD"],
-    "sequence": ["AUBERGINE", "UMBRELLA WITH RAIN DROPS"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "it would be rejected, because it's adult content, even though this is not in the emoji rules"
-    }
+    "sequence": ["AUBERGINE", "UMBRELLA WITH RAIN DROPS"]
   },
   {
-    "category": "body",
-    "description": "a female version of BRIEFS",
     "display_name": "",
     "name": "panties",
     "filename": "panties.svg",
-    "sequence": ["1fa72", "1f7ea"],
-    "submission": {
-      "status": "going to submit",
-      "reason": "complements BRIEFS"
-    }
+    "sequence": ["1fa72", "1f7ea"]
   },
   {
-    "category": "body",
-    "description": "an explicit version DROP OF BLOOD",
     "display_name": "",
     "name": "menstruation",
     "filename": "menstruation.svg",
     "related": [],
-    "sequence": ["1fa72", "1fa78"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "it would be rejected, because it can already be represented by DROP OF BLOOD"
-    }
+    "sequence": ["1fa72", "1fa78"]
   },
   {
-    "category": "ecology",
-    "description": "",
     "display_name": "climate crisis",
     "name": "globe showing europe-africa in flames",
     "filename": "climate_crisis.svg",
     "related": [],
-    "sequence": ["EARTH GLOBE EUROPE-AFRICA", "FIRE"],
-    "submission": {
-      "status": "going to submit"
-    }
+    "sequence": ["EARTH GLOBE EUROPE-AFRICA", "FIRE"]
   },
   {
-    "category": "ecology",
-    "description": "",
     "display_name": "polution",
     "name": "smoking factory",
     "filename": "polution.svg",
     "related": [],
-    "sequence": ["EARTH GLOBE EUROPE-AFRICA", "FACTORY"],
-    "submission": {
-      "status": "going to submit"
-    }
+    "sequence": ["EARTH GLOBE EUROPE-AFRICA", "FACTORY"]
   },
   {
-    "category": "work",
-    "description": "",
     "display_name": "",
     "name": "automation",
     "filename": "automation.svg",
     "related": [],
-    "sequence": ["ROBOT FACE", "HAMMER"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "too local"
-    }
+    "sequence": ["ROBOT FACE", "HAMMER"]
   },
   {
-    "category": "work",
-    "description": "",
     "display_name": "",
     "name": "platform economy",
     "filename": "platform_economy.svg",
     "related": [],
-    "sequence": ["BIKE", "HAMMER"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "too specific"
-    }
+    "sequence": ["BICYCLE", "HAMMER"]
   },
   {
-    "category": "mental health",
-    "description": "depression",
     "display_name": "mental illness",
     "name": "broken head",
     "filename": "depression.svg",
     "related": [],
-    "sequence": ["WORRIED FACE", "BLACK HEART"],
-    "submission": {
-      "status": "going to submit"
-    }
+    "sequence": ["WORRIED FACE", "BLACK HEART"]
   },
   {
-    "category": "mental health",
-    "description": "",
     "display_name": "",
     "name": "suicide",
     "filename": "suicide.svg",
     "related": [],
-    "sequence": ["CRYING FACE", "HOCHO"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["CRYING FACE", "HOCHO"]
   },
   {
-    "category": "life",
-    "description": "",
     "display_name": "stupidity",
     "name": "stupid face",
     "filename": "stupid.svg",
     "related": ["FACE PALM"],
-    "sequence": ["BRAIN", "NO ENTRY SIGN"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["BRAIN", "NO ENTRY SIGN"]
   },
   {
-    "category": "life",
-    "description": "",
     "display_name": "ugliness",
     "name": "ugly bird",
     "filename": "ugly.svg",
     "related": [],
-    "sequence": ["FRONT-FACING BABY CHICK", "JACK-O-LANTERN"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["FRONT-FACING BABY CHICK", "JACK-O-LANTERN"]
   },
   {
-    "category": "life",
-    "description": "",
     "display_name": "laziness",
     "name": "lazy person",
     "filename": "lazy.svg",
     "related": [],
-    "sequence": ["COUCH AND LAMP", "1f971"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["COUCH AND LAMP", "1f971"]
   },
   {
-    "category": "life",
-    "description": "",
     "display_name": "accident",
     "name": "broken phone",
     "filename": "accident.svg",
     "related": [],
-    "sequence": ["MOBILE PHONE", "BROKEN HEART"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["MOBILE PHONE", "BROKEN HEART"]
   },
   {
-    "category": "life",
-    "description": "error, mistake",
     "display_name": "failure",
     "name": "falling person ",
     "filename": "fail.svg",
     "related": [],
-    "sequence": ["PEDESTRIAN", "BRICK"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["PEDESTRIAN", "BRICK"]
   },
   {
-    "category": "violence",
-    "description": "",
     "display_name": "violence",
     "name": "fist punching face",
     "filename": "violence.svg",
     "related": [],
-    "sequence": ["RIGHT-FACING FIST", "NEUTRAL FACE"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["RIGHT-FACING FIST", "NEUTRAL FACE"]
   },
   {
-    "category": "violence",
-    "description": "",
     "display_name": "",
     "name": "racism",
     "filename": "racism.svg",
     "related": [],
-    "sequence": ["ADULT", "EMOJI MODIFIER FITZPATRICK TYPE-6", "NO ENTRY SIGN"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["ADULT", "EMOJI MODIFIER FITZPATRICK TYPE-6", "NO ENTRY SIGN"]
   },
   {
-    "category": "violence",
-    "description": "",
     "display_name": "",
     "name": "sexual harassment",
     "filename": "harassment.svg",
     "related": [],
-    "sequence": ["SMIRKING FACE", "FACE WITH NO GOOD GESTURE"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["SMIRKING FACE", "FACE WITH NO GOOD GESTURE"]
   },
   {
-    "category": "society",
-    "description": "",
     "display_name": "poverty",
     "name": "beggar",
     "filename": "poverty.svg",
     "related": [],
-    "sequence": ["PERSON WITH FOLDED HANDS", "BREAD"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["PERSON WITH FOLDED HANDS", "BREAD"]
   },
   {
-    "category": "society",
-    "description": "demonstration, revolution",
     "display_name": "protest",
     "name": "people protesting",
     "filename": "protest.svg",
     "related": ["WAVING WHITE FLAG"],
-    "sequence": ["PEDESTRIAN", "PUBLIC ADDRESS LOUDSPEAKER"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["PEDESTRIAN", "PUBLIC ADDRESS LOUDSPEAKER"]
   },
   {
-    "category": "society",
-    "description": "theft, corruption",
     "display_name": "crime",
     "name": "person with money bags",
     "filename": "crime.svg",
     "related": [],
-    "sequence": ["SUPERVILLAIN", "MONEY BAG"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["SUPERVILLAIN", "MONEY BAG"]
   },
   {
-    "category": "society",
-    "description": "",
     "display_name": "punishment",
     "name": "person in jail",
     "filename": "punishment.svg",
     "related": ["SCALES"],
-    "sequence": ["POLICE OFFICER", "RAISED HAND"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["POLICE OFFICER", "RAISED HAND"]
   },
   {
-    "category": "society",
-    "description": "heresy, blasphemy",
-    "display_name": "immoral behavior",
+    "display_name": "moralizing",
     "name": "chastening priest",
-    "filename": "immoral.svg",
+    "filename": "moralizing.svg",
     "related": ["SMILING FACE WITH HORNS"],
-    "sequence": ["CHURCH", "THUMBS DOWN SIGN"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["CHURCH", "THUMBS DOWN SIGN"]
   },
   {
-    "category": "society",
-    "description": "patronizing",
-    "display_name": "condescending behavior",
+    "display_name": "patronizing",
     "name": "hand petting adult person",
-    "filename": "condescending.svg",
+    "filename": "patronizing.svg",
     "related": [],
-    "sequence": ["ADULT", "BABY BOTTLE"],
-    "submission": {
-      "status": "going to submit",
-      "reason": ""
-    }
+    "sequence": ["ADULT", "BABY BOTTLE"]
   },
   {
-    "category": "local",
-    "description": "",
     "display_name": "",
     "name": "beer bottle",
     "filename": "beer_bottle.svg",
     "related": [],
-    "sequence": ["BEER MUG", "PEDESTRIAN"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "it would be rejected, because it's too similar to BEER MUG"
-    }
+    "sequence": ["BEER MUG", "PEDESTRIAN"]
   },
   {
-    "category": "local",
-    "description": "",
     "display_name": "svíčková na smetaně",
     "name": "svickova",
     "filename": "svickova.svg",
     "related": [],
-    "sequence": ["FORK AND KNIFE WITH PLATE", "CANDLE"],
-    "submission": {
-      "status": "not going to submit",
-      "reason": "too local"
-    }
+    "sequence": ["FORK AND KNIFE WITH PLATE", "CANDLE"]
   }
 ]

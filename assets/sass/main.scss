@@ -9,8 +9,8 @@ $color_gray_light: #bbb;
 $color_gray_lighter: #f0f0f0;
 $color_yellow: lighten(#ffeeaa, 10%);
 
-$fontname: 'Emoji';
-$fontname_try: 'EmojiTry';
+$fontname: 'RealEmoji';
+$fontname_try: 'RealEmojiTry';
 
 @font-face {
   font-family: '#{$fontname}';

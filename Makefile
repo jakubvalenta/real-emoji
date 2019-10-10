@@ -1,7 +1,7 @@
-name = Emoji
+name = RealEmoji
 version = 0.1.0
 author = Jakub Valenta
-url = https://lab.saloun.cz/jakub/emoji
+url = https://lab.saloun.cz:8443/jakub/emoji
 license = Creative Commons Attribution 4.0 International
 license_url = http://creativecommons.org/licenses/by/4.0/
 
@@ -75,19 +75,19 @@ build: $(web_deps)  ## Build website
 serve: $(web_deps)  ## Serve website
 	hugo server
 
-build/EmojiTry/emojis.json: $(_python_pkg)/try.py emojis.json
-	mkdir -p build/EmojiTry
+build/RealEmojiTry/emojis.json: $(_python_pkg)/try.py emojis.json
+	mkdir -p build/RealEmojiTry
 	python3 -m emoji.try < emojis.json > "$@"
 
-try: build/EmojiTry/emojis.json  ## Render sequence testing page
+try: build/RealEmojiTry/emojis.json  ## Render sequence testing page
 	$(MAKE) serve \
-		name="EmojiTry" \
-		emojis_json="build/EmojiTry/emojis.json"
+		name="RealEmojiTry" \
+		emojis_json="build/RealEmojiTry/emojis.json"
 
 clean-try:  ## Clean sequence testing files
-	-rm -r build/EmojiTry/svg
-	-rm -f build/EmojiTry/*.ttf
-	-rm build/EmojiTry/emojis.json
+	-rm -r build/RealEmojiTry/svg
+	-rm -f build/RealEmojiTry/*.ttf
+	-rm build/RealEmojiTry/emojis.json
 
 setup:  ## Create Pipenv virtual environment and install dependencies.
 	pipenv --three --site-packages

@@ -29,9 +29,10 @@ emoji](https://www.gizmodo.co.uk/2019/07/ford-secretly-created-the-new-pickup-em
 ## Decisions
 
 Many decisions were made while designing Real Emoji. Some of the more important
-ones include chosing an unrealistic suicide method, not connecting laziness with
-work, showing economic crime instead of violent one, showing structural racism,
-and focusing on moralizing behavior instead of shame.
+ones include not showing graphic violence or sex, chosing an unrealistic suicide
+method, not connecting laziness with work, showing economic crime instead of
+violent one, showing structural racism, and focusing on moralizing behavior
+instead of shame.
 
 ## Use
 
@@ -58,7 +59,7 @@ the [Svíčková na smetaně emoji](/emoji/svickova/) is based on a [photo by Ma
 Havel available at
 Wikipedia](https://en.wikipedia.org/wiki/Sv%C3%AD%C4%8Dkov%C3%A1#/media/File:Sv%C3%AD%C4%8Dkov%C3%A1_na_smetan%C4%9B.JPG). The
 color of the [ugliness emoji](/emoji/ugly/) is Pantone 448C, a color [voted the
-ugliest colour in the
+ugliest color in the
 world](https://www.theguardian.com/fashion/2016/jun/08/stylewatch-pantone-448c-ugliest-colour-world-opaque-couche-australian-smokers-fashion). The
 term "hugs and kisses" is a quote from Mark Fisher's book [Capitalist
 Realism](https://en.wikipedia.org/wiki/Capitalist_Realism:_Is_There_No_Alternative%3F).

@@ -9,12 +9,13 @@ _python_pkg = emoji
 curr_dir = $(shell pwd)
 twemoji_color_font_dir = $(curr_dir)/twemoji-color-font
 build_dir = $(curr_dir)/build/$(name)
-src_dir = static/svg
+src_dir = svg
 svg_dir = $(build_dir)/svg
 svg_twemoji = $(twemoji_color_font_dir)/assets/twemoji-svg
 svg_extra_bw = $(twemoji_color_font_dir)/assets/svg-bw
 build_font = $(build_dir)/$(name).ttf
 emojis_json = emojis.json
+web_svg_dir = static/svg
 web_fonts_dir = $(curr_dir)/static/fonts
 web_font = $(web_fonts_dir)/$(name).ttf
 web_fonts = $(web_fonts_dir)/$(name).eot $(web_fonts_dir)/$(name).woff $(web_fonts_dir)/$(name).svg
@@ -24,7 +25,7 @@ web_data_file = $(web_data_dir)/emojis.json
 web_assets_dir = assets
 web_posts_dir = content/emoji
 web_npm_installed = $(web_assets_dir)/node_modules/normalize.css/normalize.css
-web_deps = $(web_data_file) $(web_fonts) $(web_font_woff2) $(web_npm_installed) $(web_posts_dir)
+web_deps = $(web_svg_dir) $(web_data_file) $(web_fonts) $(web_font_woff2) $(web_npm_installed) $(web_posts_dir)
 
 .PHONY: font clean clean-font-only serve try clean-try setup setup-dev lint reformat help
 
@@ -39,6 +40,13 @@ $(web_font): $(build_font) | $(web_fonts_dir)
 $(svg_dir): $(_python_pkg)/copy.py $(emojis_json) $(src_dir)
 	mkdir -p "$@"
 	python3 -m emoji.copy -s "$(src_dir)" -d "$@" < $(emojis_json)
+
+$(web_svg_dir): $(svg_dir)
+	rm -r "$(web_svg_dir)" || true
+	mkdir -p "$(web_svg_dir)"
+	cp -a "$(src_dir)"/*.svg "$(web_svg_dir)"
+	rm "$(web_svg_dir)"/*-src.svg
+	for f in "$(web_svg_dir)"/*.svg; do svgo -i "$$f"; done
 
 $(build_font): | $(svg_dir)
 	cd $(twemoji_color_font_dir) && \

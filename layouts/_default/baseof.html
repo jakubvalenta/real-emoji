@@ -6,8 +6,6 @@
     <title>{{ block "title" . }}{{ with .Params.Title }}{{ htmlUnescape . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-    <meta name="description" content="{{ if .Params.summary }}{{ .Params.summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-
     {{ $style_normalize := resources.Get "node_modules/normalize.css/normalize.css" -}}
     {{ $style_emojipanel := resources.Get "node_modules/emojipanel/dist/emojipanel.css" -}}
     {{ $style_main := resources.Get "sass/main.scss" | resources.ToCSS -}}
@@ -15,6 +13,17 @@
     {{ $bundle_styles := $all_styles | resources.Concat "css/main.css" | resources.Minify | resources.Fingerprint -}}
     <link rel="stylesheet" href="{{ $bundle_styles.Permalink }}">
     <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="{{ .Site.Title }}" />
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:title" content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
+    <meta name="twitter:title" content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta name="description" content="{{ if .Params.summary }}{{ .Params.summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="og:description" content="{{ if .Params.summary }}{{ .Params.summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta name="twitter:description" content="{{ if .Params.summary }}{{ .Params.summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="og:image" content="{{ .Site.BaseURL }}{{ with .Params.png }}png/{{ . }}{{ else }}{{ .Site.Params.image }}{{ end }}">
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ with .Params.png }}png/{{ . }}{{ else }}{{ .Site.Params.image }}{{ end }}">
   </head>
   <body>
     <header class="container">

@@ -10,7 +10,7 @@
     <ul class="emojis">
       {{ range where .Site.RegularPages.Reverse "Section" "emoji" }}
       <li>
-        <img src="/svg/{{ .Params.filename }}" alt="{{ .Title }} emoji" />
+        <img src="/svg/{{ .Params.svg }}" alt="{{ .Title }} emoji" />
         <h3>{{ .Title }}</h3>
       </li>
       {{ end }}

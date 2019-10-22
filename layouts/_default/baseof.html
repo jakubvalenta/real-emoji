@@ -14,16 +14,13 @@
     <link rel="stylesheet" href="{{ $bundle_styles.Permalink }}">
     <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="{{ .Site.Title }}" />
 
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:title" content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
-    <meta name="twitter:title" content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
-    <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta name="description" content="{{ if .Params.summary }}{{ .Params.summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta property="og:description" content="{{ if .Params.summary }}{{ .Params.summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta name="twitter:description" content="{{ if .Params.summary }}{{ .Params.summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:image" content="{{ .Site.BaseURL }}{{ with .Params.png }}png/{{ . }}{{ else }}{{ .Site.Params.image }}{{ end }}">
-    <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ with .Params.png }}png/{{ . }}{{ else }}{{ .Site.Params.image }}{{ end }}">
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <header class="container">

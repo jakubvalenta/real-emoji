@@ -20,7 +20,6 @@ Real Emoji are available as:
 1. Install the following dependencies:
 
     - make
-    - inkscape
     - librsvg
     - nototools (available in [Arch Linux User
       Repository](https://aur.archlinux.org/packages/nototools-git/))
@@ -47,10 +46,12 @@ directory.
 
 1. Install the following dependencies:
 
+    - hugo
+    - inkscape
+    - optipng
     - webify (available in [Arch Linux User
       Repository](https://aur.archlinux.org/packages/webify/))
     - woff2
-    - hugo
 
 2. Build the static website and start a local web server:
 

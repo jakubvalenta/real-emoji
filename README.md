@@ -4,7 +4,7 @@ A proposal for 35 new emoji that go beyond the hugs and kisses of the standard
 emoji set. See the [Real Emoji website](https://emoji.now/) for more
 information.
 
-![Real Emoji](./screenshots/real-emoji.png)
+![Real Emoji](./static/real-emoji.png)
 
 ## Download and installation
 

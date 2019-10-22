@@ -20,6 +20,7 @@ Real Emoji are available as:
 1. Install the following dependencies:
 
     - make
+    - inkscape
     - librsvg
     - nototools (available in [Arch Linux User
       Repository](https://aur.archlinux.org/packages/nototools-git/))

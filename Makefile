@@ -16,6 +16,7 @@ svg_extra_bw = $(twemoji_color_font_dir)/assets/svg-bw
 build_font = $(build_dir)/$(name).ttf
 emojis_json = emojis.json
 web_svg_dir = static/svg
+web_png_dir = static/png
 web_fonts_dir = $(curr_dir)/static/fonts
 web_font = $(web_fonts_dir)/$(name).ttf
 web_fonts = $(web_fonts_dir)/$(name).eot $(web_fonts_dir)/$(name).woff $(web_fonts_dir)/$(name).svg
@@ -25,7 +26,7 @@ web_data_file = $(web_data_dir)/emojis.json
 web_assets_dir = assets
 web_posts_dir = content/emoji
 web_npm_installed = $(web_assets_dir)/node_modules/normalize.css/normalize.css
-web_deps = $(web_svg_dir) $(web_data_file) $(web_fonts) $(web_font_woff2) $(web_npm_installed) $(web_posts_dir)
+web_deps = $(web_svg_dir) $(web_png_dir) $(web_data_file) $(web_fonts) $(web_font_woff2) $(web_npm_installed) $(web_posts_dir)
 
 .PHONY: font clean clean-font-only serve try clean-try setup setup-dev lint reformat help
 
@@ -47,6 +48,16 @@ $(web_svg_dir): $(svg_dir)
 	cp -a "$(src_dir)"/*.svg "$(web_svg_dir)"
 	rm "$(web_svg_dir)"/*-src.svg
 	for f in "$(web_svg_dir)"/*.svg; do svgo -i "$$f"; done
+
+$(web_png_dir): $(web_svg_dir)
+	rm -r "$@" || true
+	mkdir -p "$@"
+	for path_in in "$<"/*.svg; do \
+		path_in_basename=$$(basename "$$path_in"); \
+		path_out="$@/$${path_in_basename%.*}.png"; \
+		inkscape -z -b white -e "$$path_out" -w 512 -h 512 "$$path_in"; \
+		optipng -preserve "$$path_out"; \
+	done
 
 $(build_font): | $(svg_dir)
 	cd $(twemoji_color_font_dir) && \

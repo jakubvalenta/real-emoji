@@ -5,8 +5,8 @@ $color-white: #fff;
 $color-blue: #06f;
 $color-red: #d00;
 $color-gray: #767676;
-$color-gray_light: #bbb;
-$color-gray_lighter: #f0f0f0;
+$color-gray-light: #bbb;
+$color-gray-lighter: #f0f0f0;
 $color-yellow: lighten(#ffeeaa, 10%);
 $font-family: 'Droid Sans Mono', monospace;
 
@@ -52,7 +52,7 @@ body {
   font-size: 9/12 * 100%;
   line-height: 1.5;
   color: $color-black;
-  background: $color-gray_lighter;
+  background: $color-gray-lighter;
 }
 
 .sr-only {
@@ -71,7 +71,6 @@ a {
   &:active,
   &:focus {
     color: $color-red;
-    border-color: $color-red;
   }
 }
 
@@ -215,6 +214,16 @@ header {
   img {
     width: 100%;
   }
+  a {
+    color: $color-black;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-black;
+    }
+  }
 }
 @media screen and (min-width: 768px) {
   .emojis li {
@@ -266,7 +275,7 @@ header {
   a {
     display: block;
     padding: 0.75em 1.25em;
-    border: 1px solid $color-gray_light;
+    border: 1px solid $color-gray-light;
     text-align: center;
     white-space: nowrap;
   }

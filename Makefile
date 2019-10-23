@@ -86,8 +86,9 @@ clean:  ## Remove the built TTF file, webfonts, and intermediate SVG files
 	-rm -r "$(build_dir)"
 	-rm -r "$(font_dir)"
 
-clean-font-only:  ## Remove the built TTF files
+clean-font-only:  ## Remove the built TTF files and macOS font packages
 	-rm -f $(build_dir)/$(name)*.ttf
+	-rm -f $(build_dir)/$(name)*.zip
 
 $(web_fonts): $(ttf_font)
 	webify "$<"

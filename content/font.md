@@ -26,7 +26,7 @@ description: |
 
 ### macOS
 
-1. Download [RealEmoji-mac.zip](/TODO/RealEmoji-mac.zip).
+1. Download [RealEmoji-OSX-0.1.0.zip](/fonts/RealEmoji-OSX-0.1.0.zip).
 2. Install the font file using *FontBook* and accept the warning.
 3. See [Twemoji Color Font - Install on OS
    X](https://github.com/eosrei/twemoji-color-font#install-on-os-x) for more

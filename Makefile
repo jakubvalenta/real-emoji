@@ -13,14 +13,14 @@ src_dir = svg
 svg_dir = $(build_dir)/svg
 svg_twemoji = $(twemoji_color_font_dir)/assets/twemoji-svg
 svg_extra_bw = $(twemoji_color_font_dir)/assets/svg-bw
-build_font = $(build_dir)/$(name).ttf
 emojis_json = emojis.json
 web_svg_dir = static/svg
 web_png_dir = static/png
-web_fonts_dir = $(curr_dir)/static/fonts
-web_font = $(web_fonts_dir)/$(name).ttf
-web_fonts = $(web_fonts_dir)/$(name).eot $(web_fonts_dir)/$(name).woff $(web_fonts_dir)/$(name).svg
-web_font_woff2 = $(web_fonts_dir)/$(name).woff2
+dist_dir = $(curr_dir)/static/fonts
+ttf_font = $(dist_dir)/$(name).ttf
+mac_font = $(dist_dir)/$(name)-OSX-$(version).zip
+web_fonts = $(dist_dir)/$(name).eot $(dist_dir)/$(name).woff $(dist_dir)/$(name).svg
+web_font_woff2 = $(dist_dir)/$(name).woff2
 web_data_dir = data/$(name)
 web_data_file = $(web_data_dir)/emojis.json
 web_assets_dir = assets
@@ -30,13 +30,10 @@ web_deps = $(web_svg_dir) $(web_png_dir) $(web_data_file) $(web_fonts) $(web_fon
 
 .PHONY: font clean clean-font-only serve try clean-try setup setup-dev lint reformat help
 
-font: $(web_font)  ## Build the TTF file
+font: $(ttf_font) $(mac_font)  ## Build the TTF file and the macOS font package
 
-$(web_fonts_dir):
+$(dist_dir):
 	mkdir -p "$@"
-
-$(web_font): $(build_font) | $(web_fonts_dir)
-	cp -a "$<" "$@"
 
 $(svg_dir): $(_python_pkg)/copy.py $(emojis_json) $(src_dir)
 	mkdir -p "$@"
@@ -59,13 +56,27 @@ $(web_png_dir): $(web_svg_dir)
 		optipng -preserve "$$path_out"; \
 	done
 
-$(build_font): | $(svg_dir)
+$(ttf_font): | $(svg_dir) $(dist_dir)
 	cd $(twemoji_color_font_dir) && \
-	$(MAKE) BUILD_DIR="$(build_dir)" \
+	$(MAKE) all \
+		BUILD_DIR="$(build_dir)" \
+		VERSION="$(version)" \
 		FONT_PREFIX="$(name)" \
 		SVG_TWEMOJI="$(svg_twemoji)" \
 		SVG_EXTRA_BW="$(svg_extra_bw)" \
 		SVG_EXTRA="$(svg_dir)"
+	cp -a "$(build_dir)/$(name).ttf" "$@"
+
+$(mac_font): | $(svg_dir) $(dist_dir)
+	cd $(twemoji_color_font_dir) && \
+	$(MAKE) osx-package \
+		BUILD_DIR="$(build_dir)" \
+		VERSION="$(version)" \
+		FONT_PREFIX="$(name)" \
+		SVG_TWEMOJI="$(svg_twemoji)" \
+		SVG_EXTRA_BW="$(svg_extra_bw)" \
+		SVG_EXTRA="$(svg_dir)"
+	cp -a "$(build_dir)/$(name)-OSX-$(version).zip" "$@"
 
 $(web_posts_dir):
 	mkdir -p "$@"
@@ -78,10 +89,10 @@ clean:  ## Remove the built TTF file, webfonts, and intermediate SVG files
 clean-font-only:  ## Remove the built TTF files
 	-rm -f $(build_dir)/$(name)*.ttf
 
-$(web_fonts): $(web_font)
+$(web_fonts): $(ttf_font)
 	webify "$<"
 
-$(web_font_woff2): $(web_font)
+$(web_font_woff2): $(ttf_font)
 	woff2_compress "$<"
 
 $(web_npm_installed):
@@ -90,7 +101,7 @@ $(web_npm_installed):
 $(web_data_dir):
 	mkdir -p "$@"
 
-$(web_data_file): $(_python_pkg)/build.py $(emojis_json) $(build_font) | $(web_data_dir)
+$(web_data_file): $(_python_pkg)/build.py $(emojis_json) | $(web_data_dir)
 	python3 -m emoji.build < $(emojis_json) > $(web_data_file)
 
 build: $(web_deps)  ## Build website

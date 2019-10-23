@@ -1,5 +1,5 @@
 {
-  "baseURL": "https://emoji.now",
+  "baseURL": "https://real-emoji.jakubvalenta.cz",
   "permalinks": {
     "posts": "/:section/:slug"
   },

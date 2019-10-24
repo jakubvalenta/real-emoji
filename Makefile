@@ -52,7 +52,7 @@ $(web_png_dir): $(web_svg_dir)
 	for path_in in "$<"/*.svg; do \
 		path_in_basename=$$(basename "$$path_in"); \
 		path_out="$@/$${path_in_basename%.*}.png"; \
-		inkscape -z -b white -e "$$path_out" -w 512 -h 512 "$$path_in"; \
+		inkscape -z -e "$$path_out" -w 512 -h 512 "$$path_in"; \
 		optipng -preserve "$$path_out"; \
 	done
 

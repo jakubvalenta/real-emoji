@@ -83,8 +83,9 @@ $(web_posts_dir):
 	python3 -m emoji.posts -d "$(web_posts_dir)" < $(emojis_json)
 
 clean:  ## Remove the built TTF file, webfonts, and intermediate SVG files
-	-rm -r "$(build_dir)"
-	-rm -r "$(font_dir)"
+	-rm -r "$(build_dir)" || true
+	-rm -f $(dist_dir)/$(name)*.ttf
+	-rm -f $(dist_dir)/$(name)*.zip
 
 clean-font-only:  ## Remove the built TTF files and macOS font packages
 	-rm -f $(build_dir)/$(name)*.ttf

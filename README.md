@@ -1,7 +1,7 @@
 # Real Emoji
 
 A proposal for 35 new emoji that go beyond the hugs and kisses of the standard
-emoji set. See the [Real Emoji website](https://real-emoji.jakubvalenta.cz/) for more
+emoji set. See the [Real Emoji website](https://real-emoji.ooooo.page/) for more
 information.
 
 ![Real Emoji](./static/real-emoji.png)
@@ -10,8 +10,8 @@ information.
 
 Real Emoji are available as:
 
-- Telegram stickers: [download](https://real-emoji.jakubvalenta.cz/stickers/)
-- font file: [download and installation instructions](https://real-emoji.jakubvalenta.cz/font/)
+- Telegram stickers: [download](https://real-emoji.ooooo.page/stickers/)
+- font file: [download and installation instructions](https://real-emoji.ooooo.page/font/)
 
 ## Development
 

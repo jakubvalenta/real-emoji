@@ -1,7 +1,7 @@
 name = RealEmoji
 version = 0.1.0
 author = Jakub Valenta
-url = https://lab.saloun.cz:8443/jakub/emoji
+url = https://real-emoji.ooooo.page
 license = Creative Commons Attribution 4.0 International
 license_url = http://creativecommons.org/licenses/by/4.0/
 

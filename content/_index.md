@@ -55,8 +55,11 @@ The design of Real Emoji is based on [Twitter Emoji
 emoji](/emoji/fetus/) is based on a [photo by the National Museum of Health and
 Medicine available at
 Wikipedia](https://en.wikipedia.org/wiki/File:Fetus_3_months.jpg). The design of
-the [Svíčková na smetaně emoji](/emoji/svickova/) is based on a [photo by Matyáš
-Havel available at
+the [moralizing emoji](/emoji/moralizing/) is based on a [woodcut by Julius
+Schnorr von Carolsfeld available at
+Wikipedia](https://en.wikipedia.org/wiki/File:Schnorr_von_Carolsfeld_Bibel_in_Bildern_1860_102.png). The
+design of the [Svíčková na smetaně emoji](/emoji/svickova/) is based on a [photo
+by Matyáš Havel available at
 Wikipedia](https://en.wikipedia.org/wiki/Sv%C3%AD%C4%8Dkov%C3%A1#/media/File:Sv%C3%AD%C4%8Dkov%C3%A1_na_smetan%C4%9B.JPG). The
 color of the [ugliness emoji](/emoji/ugly/) is Pantone 448C, a color [voted the
 ugliest color in the

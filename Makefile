@@ -56,6 +56,10 @@ $(web_png_dir): $(web_svg_dir)
 		optipng -preserve "$$path_out"; \
 	done
 
+$(web_png_dir)/_telegram.png: $(web_svg_dir)/violence.svg
+	inkscape -z -e "$@" -w 100 -h 100 "$<"
+	optipng -preserve "$@"
+
 $(ttf_font): | $(svg_dir) $(dist_dir)
 	cd $(twemoji_color_font_dir) && \
 	$(MAKE) all \

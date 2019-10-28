@@ -1,0 +1,8 @@
+[build]
+base = "/"
+publish = "public/"
+command = "hugo"
+
+[[redirects]]
+from = "/stickers"
+to = "https://telegram.me/addstickers/TheRealEmoji"

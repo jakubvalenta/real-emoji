@@ -1,4 +1,0 @@
----
-layout: stickers
-url: stickers
----

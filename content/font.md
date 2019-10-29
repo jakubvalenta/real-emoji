@@ -47,7 +47,7 @@ description: |
    install some emoji.
 2. Install the app BytaFont from a Cydia repository.
 3. Use the app BytaFont to replace the default emoji font.
-4. Please search the internet for more information.
+4. Please search the web for more information.
 
 ### Android
 

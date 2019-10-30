@@ -75,7 +75,7 @@ Emoji graphics (SVG images) are licensed under the [Creative Commons BY-SA
 License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 [^1]: from my point of view as someone who is part of the middle class, male,
-    white, and lives between Prague and Berlin
+    white, was born in Prague and lives in Berlin
 [^2]: there is actually no [emoji selection
     factor](https://unicode.org/emoji/proposals.html#selection_factors) that
     would exclude controversial emoji, however vendors (e.g. phone

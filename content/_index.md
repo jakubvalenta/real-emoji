@@ -48,7 +48,7 @@ personally don't believe that they would be accepted. There is also a proposal
 to [change the process how emoji are defined](https://emojiwrap.com/issues/36),
 which -- if implemented -- would render the current submission process obsolete.
 
-## Acknowledgments
+## Acknowledgements
 
 The design of Real Emoji is based on [Twitter Emoji
 (Twemoji)](https://twitter.github.io/twemoji/). The design of the [fetus

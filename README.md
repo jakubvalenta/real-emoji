@@ -59,12 +59,11 @@ directory.
     make serve
     ```
 
-## Acknowledgments
+## Acknowledgements
 
-The build system is inspired by how the [Twemoji package of Fedora
-Linux](https://src.fedoraproject.org/rpms/twitter-twemoji-fonts) is built. It
-uses scripts from the [Noto Emoji
-font](https://github.com/googlei18n/noto-emoji).
+The build system is based on [eosrei/twemoji-color-font: Twitter Unicode 12
+emoji color SVGinOT font for
+Linux/MacOS/Windows](https://github.com/eosrei/twemoji-color-font).
 
 The standard emojis are copied from the [Twemoji
 font](https://twitter.github.io/twemoji/) by Twitter licensed under

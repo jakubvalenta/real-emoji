@@ -69,7 +69,7 @@ Realism](https://en.wikipedia.org/wiki/Capitalist_Realism:_Is_There_No_Alternati
 
 ## License
 
-The [code](https://github.com/jakubvalenta/emoji) of Real Emoji is licensed
+The [code](https://github.com/jakubvalenta/real-emoji) of Real Emoji is licensed
 under the [Apache License](http://www.apache.org/licenses/LICENSE-2.0). The Real
 Emoji graphics (SVG images) are licensed under the [Creative Commons BY-SA
 License](http://creativecommons.org/licenses/by-sa/4.0/).

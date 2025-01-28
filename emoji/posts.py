@@ -23,6 +23,7 @@ def main():
 title = "{title}"
 date = {datetime_}
 path = "emoji/{title}"
+authors = ["Jakub Valenta"]
 [extra]
 svg = "{svg_filename}"
 meta_image = "/png/{png_filename}"

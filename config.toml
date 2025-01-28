@@ -1,0 +1,29 @@
+# The base URL of the site; the only required configuration variable.
+base_url = "https://real-emoji.ooooo.page"
+
+# The site title and description; used in feeds by default.
+title = "Real Emoji"
+description = "A proposal for 35 new emoji that go beyond the hugs and kisses of the standard emoji set"
+
+# When set to "true", the Sass files in the `sass` directory in the site root are compiled.
+# Sass files in theme directories are always compiled.
+compile_sass = true
+
+# When set to "true", a feed is automatically generated.
+generate_feeds = true
+
+# The filenames to use for the feeds. Used as the template filenames, too.
+# Defaults to ["atom.xml"], which has a built-in template that renders an Atom 1.0 feed.
+# There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
+feed_filenames = ["rss.xml"]
+
+# The number of articles to include in the feed. All items are included if
+# this limit is not set (the default).
+feed_limit = 10
+
+# You can put any kind of data here. The data
+# will be accessible in all templates
+[extra]
+author = "Jakub Valenta"
+date_created = "2019-2025"
+image = "real-emoji.png"

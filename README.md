@@ -46,7 +46,7 @@ directory.
 
 1. Install the following dependencies:
 
-    - hugo
+    - zola
     - inkscape
     - optipng
     - webify (available in [Arch Linux User

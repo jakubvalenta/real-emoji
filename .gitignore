@@ -1,11 +1,9 @@
-*.lock
 .mypy_cache
 __pycache__
 build
-/assets/node_modules/*
-!/assets/node_modules/emojipanel
-/assets/node_modules/emojipanel/*
-!/assets/node_modules/emojipanel/dist
-!/assets/node_modules/normalize.css
+/static/node_modules/*
+!/static/node_modules/emojipanel
+/static/node_modules/emojipanel/*
+!/static/node_modules/emojipanel/dist
+!/static/node_modules/normalize.css
 public
-resources

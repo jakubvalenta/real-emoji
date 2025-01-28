@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block main -%}
+<div class="bg-yellow">
+  <div class="container">
+    <div class="rich">
+      <h1>{{ section.title }}</h1>
+      {{ section.description | markdown | safe }}
+    </div>
+  </div>
+</div>
+<div class="bg-green">
+  <div class="container">
+    <div class="rich">
+      <h2 id="try-it-out" class="sr-only">Try it out</h2>
+    </div>
+    <div class="emoji-panel">
+      <div class="emoji-panel__form">
+        <textarea
+          type="text"
+          id="js-emoji-panel-input"
+          class="emoji-panel__input"
+        >
+Try it out! Write something here using the picker on the right...
+{% set emojis = load_data(path="data/RealEmoji/emojis.json") -%}
+{% for emoji in emojis %}
+{{ emoji["chars"] | join(sep="") | safe }} is {{ emoji["chars"] | join(sep=" and ") | safe }}
+{%- endfor -%}
+        </textarea>
+      </div>
+      <div id="js-emoji-panel-picker"></div>
+      <noscript>
+        JavaScript is required to show the emoji picker.
+      </noscript>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="rich">
+    {{ section.content | safe }}
+  </div>
+</div>
+<script src="{{ get_url(path='node_modules/emojipanel/dist/emojipanel.js', cachebust=true) | safe }}"></script>
+<script>
+  (function() {
+    function typeText(input, text) {
+      var selStart = input.selectionStart;
+      var selEnd = input.selectionEnd;
+      var oldValue = input.value;
+      input.value =
+        oldValue.substring(0, selStart) + text + oldValue.substring(selEnd);
+      input.setSelectionRange(
+        selStart === selEnd ? selStart + text.length : selStart,
+        selStart + text.length
+      );
+      input.focus();
+    }
+
+    function cursorAfterText(input, text) {
+      var index = input.value.lastIndexOf(text);
+      var cursorPos = index + text.length;
+      input.setSelectionRange(cursorPos, cursorPos);
+    }
+
+    var input = document.getElementById('js-emoji-panel-input');
+    cursorAfterText(input, '...');
+
+    var emojiPanel = new EmojiPanel({
+      container: '#js-emoji-panel-picker',
+      json_url: '{{ get_url(path='node_modules/emojipanel/dist/emojis.json', cachebust=true) | safe }}',
+      search: true,
+      fitzpatrick: false
+    });
+    emojiPanel.addListener('select', emoji => typeText(input, emoji.char));
+  })();
+</script>
+{%- endblock main %}

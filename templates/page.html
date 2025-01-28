@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block main -%}
+<div class="bg-white">
+  <div class="container">
+    <div class="rich single">
+      <img src="/svg/{{ page.extra.svg }}" alt="{{ page.title }} emoji" />
+      <h1>{{ page.title }} emoji</h1>
+    </div>
+  </div>
+</div>
+{%- endblock main %}

@@ -1,0 +1,71 @@
+{% import "macros/email.html" as email -%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <title>
+      {%- set page_title = page.title | default(value=section.title) -%}
+      {% if page_title -%}
+      {% set title = page_title ~ ' | ' ~ config.title -%}
+      {% else -%}
+      {% set title = config.title -%}
+      {% endif -%}
+      {% set description = page.summary | default(value=config.description) | striptags | trim | truncate(length=160) -%}
+      {{ title -}}
+    </title>
+
+    <link
+      rel="stylesheet"
+      href="{{ get_url(path='node_modules/normalize.css/normalize.css', cachebust=true) | safe }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ get_url(path='node_modules/emojipanel/dist/emojipanel.css', cachebust=true) | safe }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ get_url(path='assets/main.css', cachebust=true) | safe }}"
+    />
+    <link
+      type="application/atom+xml"
+      rel="alternate"
+      href="{{ get_url(path='/rss.xml', lang=lang) }}"
+      title="{{ config.title }}"
+    />
+
+    {% if current_url -%}
+    <meta property="og:title" content="{{ page_title }}" />
+    <meta name="description" content="{{ description }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:url" content="{{ current_url | safe }}" />
+    <meta property="og:site_name" content="{{ config.title }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {% if page and page.extra.meta_image -%}
+    <meta property="og:image" content="{{ config.base_url ~ '/' ~ page.extra.meta_image | safe }}" />
+    <meta name="twitter:image" content="{{ config.base_url ~ '/' ~ page.extra.meta_image | safe }}" />
+    {%- endif %}
+    {%- endif %}
+  </head>
+  <body>
+    <header class="container">
+      {% block header %}<a href="/">&lt;- Go back to the Real Emoji list</a>{% endblock %}
+    </header>
+    <main>
+      {% block content -%}
+      {% block main -%}
+      {% endblock main -%}
+      {% endblock content %}
+    </main>
+    <footer class="container">
+      <div class="rich">
+        <p>
+          {{ config.extra.date_created }}
+          <a href="https://www.jakubvalenta.cz/">{{ config.extra.author }}</a>
+          &lt;{{ email::email(address='rzbwv@znvyobk.bet') }}&gt;
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block header -%}
+<div class="index-header">
+  <h1 id="real-emoji">{{ config.title }}</h1>
+  <p>{{ config.description }}</p>
+</div>
+{%- endblock header %}
+{% block main -%}
+<div class="bg-white">
+  <div class="container">
+    <ul class="emojis">
+      {% for page in section.pages | reverse -%}
+      <li>
+        <img src="/svg/{{ page.extra.svg }}" alt="{{ page.title }} emoji" />
+        <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+      </li>
+      {% endfor %}
+    </ul>
+    <ul class="index-buttons">
+      <li><a href="/stickers/">get Telegram stickers</a></li>
+      <li><a href="/font/">download font file</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container" id="text">
+  <div class="rich">
+    {{ section.content | safe }}
+  </div>
+</div>
+{%- endblock main %}

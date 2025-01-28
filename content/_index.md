@@ -1,3 +1,8 @@
++++
+title = "Real Emoji"
+sort_by = "date"
++++
+
 **Real Emoji** is a proposal for an extension of the standard emoji set with 35
 new signs (words) that allow showing (talking about) our[^1] current society.
 

@@ -23,8 +23,8 @@ web_fonts = $(dist_dir)/$(name).eot $(dist_dir)/$(name).woff $(dist_dir)/$(name)
 web_font_woff2 = $(dist_dir)/$(name).woff2
 web_data_dir = data/$(name)
 web_data_file = $(web_data_dir)/emojis.json
-web_assets_dir = assets
-web_posts_dir = content/emoji
+web_assets_dir = static
+web_posts_dir = content
 web_npm_installed = $(web_assets_dir)/node_modules/normalize.css/normalize.css
 web_deps = $(web_svg_dir) $(web_png_dir) $(web_data_file) $(web_fonts) $(web_font_woff2) $(web_npm_installed) $(web_posts_dir)
 
@@ -83,7 +83,7 @@ $(mac_font): | $(svg_dir) $(dist_dir)
 
 $(web_posts_dir):
 	mkdir -p "$@"
-	poetry run python3 python3 -m emoji.posts -d "$(web_posts_dir)" < $(emojis_json)
+	poetry run python3 -m emoji.posts -d "$(web_posts_dir)" < $(emojis_json)
 
 .PHONY: clean
 clean:  ## Remove the built TTF file, webfonts, and intermediate SVG files
@@ -112,11 +112,11 @@ $(web_data_file): $(_python_pkg)/build.py $(emojis_json) | $(web_data_dir)
 	poetry run python3 -m emoji.build < $(emojis_json) > $(web_data_file)
 
 build: $(web_deps)  ## Build website
-	hugo
+	zola build
 
 .PHONY: serve
 serve: $(web_deps)  ## Serve website
-	hugo server
+	zola serve
 
 build/RealEmojiTry/emojis.json: $(_python_pkg)/try.py emojis.json
 	mkdir -p build/RealEmojiTry

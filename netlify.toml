@@ -1,7 +1,17 @@
 [build]
 base = "/"
-publish = "public/"
-command = "hugo"
+publish = "public"
+command = "zola build"
+
+[build.environment]
+ZOLA_VERSION = "0.19.2"
+
+[context.deploy-preview]
+command = "zola build --base-url $DEPLOY_PRIME_URL"
+
+[[redirects]]
+from = "/feed.xml"
+to = "https://real-emoji.ooooo.page/rss.xml"
 
 [[redirects]]
 from = "/stickers"

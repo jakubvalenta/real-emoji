@@ -52,12 +52,12 @@ $(web_png_dir): $(web_svg_dir)
 	for path_in in "$<"/*.svg; do \
 		path_in_basename=$$(basename "$$path_in"); \
 		path_out="$@/$${path_in_basename%.*}.png"; \
-		inkscape -z -e "$$path_out" -w 512 -h 512 "$$path_in"; \
+		inkscape -o "$$path_out" -w 512 -h 512 "$$path_in"; \
 		optipng -preserve "$$path_out"; \
 	done
 
 $(web_png_dir)/_telegram.png: $(web_svg_dir)/violence.svg
-	inkscape -z -e "$@" -w 100 -h 100 "$<"
+	inkscape -o "$@" -w 100 -h 100 "$<"
 	optipng -preserve "$@"
 
 $(ttf_font): | $(svg_dir) $(dist_dir)

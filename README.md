@@ -29,13 +29,13 @@ Real Emoji are available as:
 
 2. Build the scfbuild Docker image:
 
-    ```
+    ```shell
     cd twemoji-color-font/scfbuild && make
     ```
 
 3. Build the font file:
 
-    ```
+    ```shell
     make font
     ```
 
@@ -55,7 +55,7 @@ directory.
 
 2. Build the static website and start a local web server:
 
-    ```
+    ```shell
     make serve
     ```
 

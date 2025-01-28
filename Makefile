@@ -37,7 +37,7 @@ $(dist_dir):
 
 $(svg_dir): $(_python_pkg)/copy.py $(emojis_json) $(src_dir)
 	mkdir -p "$@"
-	python3 -m emoji.copy -s "$(src_dir)" -d "$@" < $(emojis_json)
+	poetry run python3 -m emoji.copy -s "$(src_dir)" -d "$@" < $(emojis_json)
 
 $(web_svg_dir): $(svg_dir)
 	rm -r "$(web_svg_dir)" || true
@@ -84,7 +84,7 @@ $(mac_font): | $(svg_dir) $(dist_dir)
 
 $(web_posts_dir):
 	mkdir -p "$@"
-	python3 -m emoji.posts -d "$(web_posts_dir)" < $(emojis_json)
+	poetry run python3 python3 -m emoji.posts -d "$(web_posts_dir)" < $(emojis_json)
 
 clean:  ## Remove the built TTF file, webfonts, and intermediate SVG files
 	-rm -r "$(build_dir)" || true
@@ -108,7 +108,7 @@ $(web_data_dir):
 	mkdir -p "$@"
 
 $(web_data_file): $(_python_pkg)/build.py $(emojis_json) | $(web_data_dir)
-	python3 -m emoji.build < $(emojis_json) > $(web_data_file)
+	poetry run python3 -m emoji.build < $(emojis_json) > $(web_data_file)
 
 build: $(web_deps)  ## Build website
 	hugo
@@ -118,7 +118,7 @@ serve: $(web_deps)  ## Serve website
 
 build/RealEmojiTry/emojis.json: $(_python_pkg)/try.py emojis.json
 	mkdir -p build/RealEmojiTry
-	python3 -m emoji.try < emojis.json > "$@"
+	poetry run python3 -m emoji.try < emojis.json > "$@"
 
 try: build/RealEmojiTry/emojis.json  ## Render sequence testing page
 	$(MAKE) serve \
@@ -130,21 +130,16 @@ clean-try:  ## Clean sequence testing files
 	-rm -f build/RealEmojiTry/*.ttf
 	-rm build/RealEmojiTry/emojis.json
 
-setup:  ## Create Pipenv virtual environment and install dependencies.
-	pipenv --three --site-packages
-	pipenv install
-	bundler install --path vendor/bundle
+setup:  ## Install Python dependencies
+	poetry install
 
-setup-dev:  ## Install development dependencies
-	pipenv install --dev
 
-lint:  ## Run linting
-	pipenv run flake8 $(_python_pkg)
-	pipenv run mypy $(_python_pkg) --ignore-missing-imports
-	pipenv run isort -c -rc $(_python_pkg)
+lint:  ## Lint Python code
+	poetry run ruff check $(_python_pkg)
+	poetry run mypy $(_python_pkg)
 
 reformat:  ## Reformat Python code using Black
-	black -l 79 --skip-string-normalization $(_python_pkg)
+	poetry run ruff format $(_python_pkg)
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-16s\033[0m %s\n", $$1, $$2}'

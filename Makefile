@@ -28,8 +28,7 @@ web_posts_dir = content/emoji
 web_npm_installed = $(web_assets_dir)/node_modules/normalize.css/normalize.css
 web_deps = $(web_svg_dir) $(web_png_dir) $(web_data_file) $(web_fonts) $(web_font_woff2) $(web_npm_installed) $(web_posts_dir)
 
-.PHONY: font clean clean-font-only serve try clean-try setup setup-dev lint reformat help
-
+.PHONY: font
 font: $(ttf_font) $(mac_font)  ## Build the TTF file and the macOS font package
 
 $(dist_dir):
@@ -86,11 +85,13 @@ $(web_posts_dir):
 	mkdir -p "$@"
 	poetry run python3 python3 -m emoji.posts -d "$(web_posts_dir)" < $(emojis_json)
 
+.PHONY: clean
 clean:  ## Remove the built TTF file, webfonts, and intermediate SVG files
 	-rm -r "$(build_dir)" || true
 	-rm -f $(dist_dir)/$(name)*.ttf
 	-rm -f $(dist_dir)/$(name)*.zip
 
+.PHONY: clean-font-only
 clean-font-only:  ## Remove the built TTF files and macOS font packages
 	-rm -f $(build_dir)/$(name)*.ttf
 	-rm -f $(build_dir)/$(name)*.zip
@@ -113,6 +114,7 @@ $(web_data_file): $(_python_pkg)/build.py $(emojis_json) | $(web_data_dir)
 build: $(web_deps)  ## Build website
 	hugo
 
+.PHONY: serve
 serve: $(web_deps)  ## Serve website
 	hugo server
 
@@ -120,26 +122,35 @@ build/RealEmojiTry/emojis.json: $(_python_pkg)/try.py emojis.json
 	mkdir -p build/RealEmojiTry
 	poetry run python3 -m emoji.try < emojis.json > "$@"
 
+.PHONY: try
 try: build/RealEmojiTry/emojis.json  ## Render sequence testing page
 	$(MAKE) serve \
 		name="RealEmojiTry" \
 		emojis_json="build/RealEmojiTry/emojis.json"
 
+.PHONY: clean-try
 clean-try:  ## Clean sequence testing files
 	-rm -r build/RealEmojiTry/svg
 	-rm -f build/RealEmojiTry/*.ttf
 	-rm build/RealEmojiTry/emojis.json
 
+.PHONY: setup
 setup:  ## Install Python dependencies
 	poetry install
 
+.PHONY: test
+test:  ## Test Python code
+	poetry run pytest $(_python_pkg)
 
+.PHONY: lint
 lint:  ## Lint Python code
 	poetry run ruff check $(_python_pkg)
 	poetry run mypy $(_python_pkg)
 
-reformat:  ## Reformat Python code using Black
+.PHONY: format
+format:  ## Format Python code
 	poetry run ruff format $(_python_pkg)
 
+.PHONY: help
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-16s\033[0m %s\n", $$1, $$2}'

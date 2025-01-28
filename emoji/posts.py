@@ -8,26 +8,26 @@ from pathlib import Path
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-d', '--dst-dir', required=True)
+    parser.add_argument("-d", "--dst-dir", required=True)
     args = parser.parse_args()
     emojis = json.load(sys.stdin)
     out_dir_path = Path(args.dst_dir)
     for i, emoji in enumerate(emojis):
-        title = emoji['display_name'] or emoji['name']
-        datetime_ = f'2019-10-10T00:00:{i:02}+02:00'
-        svg_filename = emoji['filename']
-        png_filename = Path(svg_filename).with_suffix('.png')
-        post_filename = Path(svg_filename).with_suffix('.html')
+        title = emoji["display_name"] or emoji["name"]
+        datetime_ = f"2019-10-10T00:00:{i:02}+02:00"
+        svg_filename = emoji["filename"]
+        png_filename = Path(svg_filename).with_suffix(".png")
+        post_filename = Path(svg_filename).with_suffix(".html")
         post_path = out_dir_path / post_filename
-        post_content = f'''---
+        post_content = f"""---
 title: {title}
 svg: {svg_filename}
 png: {png_filename}
 date: {datetime_}
 ---
-'''
+"""
         post_path.write_text(post_content)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

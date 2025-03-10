@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <title>
       {%- set page_title = page.title | default(value=section.title) -%}
-      {% if page_title -%}
-      {% set title = page_title ~ ' | ' ~ config.title -%}
+      {% if page_title == config.title -%}
+      {% set title = page_title -%}
       {% else -%}
-      {% set title = config.title -%}
+      {% set title = page_title ~ ' | ' ~ config.title -%}
       {% endif -%}
       {% set description = page.summary | default(value=config.description) | striptags | trim | truncate(length=160) -%}
       {{ title -}}
